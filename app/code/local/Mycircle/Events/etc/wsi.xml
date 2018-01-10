@@ -1,0 +1,1630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:typens="urn:{{var wsdl.name}}"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             name="{{var wsdl.name}}"
+             targetNamespace="urn:{{var wsdl.name}}">
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:{{var wsdl.name}}">
+            <xsd:complexType name="catalogProductEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductEntity">
+                <xsd:sequence>
+                    <xsd:element name="product_id" type="xsd:string" />
+                    <xsd:element name="sku" type="xsd:string" />
+                    <xsd:element name="name" type="xsd:string" />
+                    <xsd:element name="set" type="xsd:string" />
+                    <xsd:element name="type" type="xsd:string" />
+                    <xsd:element name="category_ids" type="typens:ArrayOfString" />
+                    <xsd:element name="website_ids" type="typens:ArrayOfString" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductRequestAttributes">
+                <xsd:sequence>
+                    <xsd:element name="attributes" type="typens:ArrayOfString" minOccurs="0" />
+                    <xsd:element name="additional_attributes" type="typens:ArrayOfString" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+
+            <xsd:complexType name="catalogProductCreateEntity">
+                <xsd:sequence>
+                    <xsd:element name="categories" type="typens:ArrayOfString" minOccurs="0" />
+                    <xsd:element name="websites" type="typens:ArrayOfString" minOccurs="0" />
+                    <xsd:element name="name" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="description" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="short_description" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="weight" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="status" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="url_key" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="url_path" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="visibility" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="category_ids" type="typens:ArrayOfString" minOccurs="0" />
+                    <xsd:element name="website_ids" type="typens:ArrayOfString" minOccurs="0" />
+                    <xsd:element name="has_options" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="gift_message_available" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="price" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="special_price" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="special_from_date" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="special_to_date" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="tax_class_id" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="tier_price" type="typens:catalogProductTierPriceEntityArray" minOccurs="0" />
+                    <xsd:element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="meta_keyword" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="meta_description" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="custom_design" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="custom_layout_update" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="options_container" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="additional_attributes" type="typens:associativeArray" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCreateEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductCreateEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeSetEntity">
+                <xsd:sequence>
+                    <xsd:element name="set_id" type="xsd:int" minOccurs="0" />
+                    <xsd:element name="name" type="xsd:string" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeSetEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductAttributeSetEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductTypeEntity">
+                <xsd:sequence>
+                    <xsd:element name="type" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="label" type="xsd:string" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductTypeEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductTypeEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductTierPriceEntity">
+                <xsd:sequence>
+                    <xsd:element name="customer_group_id" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="website" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="qty" type="xsd:int" minOccurs="0" />
+                    <xsd:element name="price" type="xsd:double" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductTierPriceEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductTierPriceEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOfCatalogCategoryEntities">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogCategoryEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogCategoryEntity">
+                <xsd:sequence>
+                    <xsd:element name="category_id" type="xsd:int" />
+                    <xsd:element name="parent_id" type="xsd:int" />
+                    <xsd:element name="name" type="xsd:string" />
+                    <xsd:element name="is_active" type="xsd:int" />
+                    <xsd:element name="position" type="xsd:int" />
+                    <xsd:element name="level" type="xsd:int" />
+                    <xsd:element name="children" type="typens:ArrayOfCatalogCategoryEntities" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogCategoryEntityNoChildren">
+                <xsd:sequence>
+                    <xsd:element name="category_id" type="xsd:int" />
+                    <xsd:element name="parent_id" type="xsd:int" />
+                    <xsd:element name="name" type="xsd:string" />
+                    <xsd:element name="is_active" type="xsd:int" />
+                    <xsd:element name="position" type="xsd:int" />
+                    <xsd:element name="level" type="xsd:int" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOfCatalogCategoryEntitiesNoChildren">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogCategoryEntityNoChildren" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogCategoryTree">
+                <xsd:sequence>
+                    <xsd:element name="category_id" type="xsd:int" />
+                    <xsd:element name="parent_id" type="xsd:int" />
+                    <xsd:element name="name" type="xsd:string" />
+                    <xsd:element name="position" type="xsd:int" />
+                    <xsd:element name="level" type="xsd:int" />
+                    <xsd:element name="children" type="typens:ArrayOfCatalogCategoryEntities" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogCategoryEntityCreate">
+                <xsd:sequence>
+                    <xsd:element name="name" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="is_active" type="xsd:int" minOccurs="0" />
+                    <xsd:element name="position" type="xsd:int" minOccurs="0" />
+                    <xsd:element name="available_sort_by" type="typens:ArrayOfString" minOccurs="0" />
+                    <xsd:element name="custom_design" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="custom_design_apply" type="xsd:int" minOccurs="0" />
+                    <xsd:element name="custom_design_from" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="custom_design_to" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="custom_layout_update" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="default_sort_by" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="description" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="display_mode" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="is_anchor" type="xsd:int" minOccurs="0" />
+                    <xsd:element name="landing_page" type="xsd:int" minOccurs="0" />
+                    <xsd:element name="meta_description" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="page_layout" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="url_key" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="include_in_menu" type="xsd:int" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogCategoryInfo">
+                <xsd:sequence>
+                    <xsd:element name="category_id" type="xsd:string" />
+                    <xsd:element name="is_active" type="xsd:int" />
+                    <xsd:element name="position" type="xsd:string" />
+                    <xsd:element name="level" type="xsd:string" />
+                    <xsd:element name="parent_id" type="xsd:string" />
+                    <xsd:element name="all_children" type="xsd:string" />
+                    <xsd:element name="children" type="xsd:string" />
+                    <xsd:element name="created_at" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="updated_at" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="name" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="url_key" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="description" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="meta_title" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="meta_keywords" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="meta_description" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="path" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="url_path" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="children_count" type="xsd:int" minOccurs="0" />
+                    <xsd:element name="display_mode" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="is_anchor" type="xsd:int" minOccurs="0" />
+                    <xsd:element name="available_sort_by" type="typens:ArrayOfString" minOccurs="0" />
+                    <xsd:element name="custom_design" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="custom_design_apply" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="custom_design_from" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="custom_design_to" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="page_layout" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="custom_layout_update" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="default_sort_by" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="landing_page" type="xsd:int" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogAssignedProduct">
+                <xsd:sequence>
+                    <xsd:element name="product_id" type="xsd:int" />
+                    <xsd:element name="type" type="xsd:string" />
+                    <xsd:element name="set" type="xsd:int" />
+                    <xsd:element name="sku" type="xsd:string" />
+                    <xsd:element name="position" type="xsd:int" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogAssignedProductArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogAssignedProduct" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogAttributeEntity">
+                <xsd:sequence>
+                    <xsd:element name="attribute_id" type="xsd:int" minOccurs="0" />
+                    <xsd:element name="code" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="type" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="required" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="scope" type="xsd:string" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogAttributeEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogAttributeEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogAttributeOptionEntity">
+                <xsd:sequence>
+                    <xsd:element name="label" type="xsd:string" />
+                    <xsd:element name="value" type="xsd:string" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogAttributeOptionEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogAttributeOptionEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductImageEntity">
+                <xsd:sequence>
+                    <xsd:element name="file" type="xsd:string" />
+                    <xsd:element name="label" type="xsd:string" />
+                    <xsd:element name="position" type="xsd:string" />
+                    <xsd:element name="exclude" type="xsd:string" />
+                    <xsd:element name="url" type="xsd:string" />
+                    <xsd:element name="types" type="typens:ArrayOfString" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductImageEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductImageEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeMediaTypeEntity">
+                <xsd:sequence>
+                    <xsd:element name="code" type="xsd:string" />
+                    <xsd:element name="scope" type="xsd:string" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeMediaTypeEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductAttributeMediaTypeEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductImageFileEntity">
+                <xsd:sequence>
+                    <xsd:element name="content" type="xsd:string" />
+                    <xsd:element name="mime" type="xsd:string" />
+                    <xsd:element name="name" type="xsd:string" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeMediaCreateEntity">
+                <xsd:sequence>
+                    <xsd:element name="file" type="typens:catalogProductImageFileEntity" minOccurs="0" />
+                    <xsd:element name="label" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="position" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="types" type="typens:ArrayOfString" minOccurs="0" />
+                    <xsd:element name="exclude" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="remove" type="xsd:string" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductLinkEntity">
+                <xsd:sequence>
+                    <xsd:element name="product_id" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="type" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="set" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="sku" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="position" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="qty" type="xsd:string" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductLinkEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductLinkEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductLinkAttributeEntity">
+                <xsd:sequence>
+                    <xsd:element name="code" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="type" type="xsd:string" minOccurs="0" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductLinkAttributeEntityArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductLinkAttributeEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeFrontendLabelEntity">
+                <xsd:sequence>
+                    <xsd:element name="store_id" type="xsd:string"/>
+                    <xsd:element name="label" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeFrontendLabelArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductAttributeFrontendLabelEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeEntityToCreate">
+                <xsd:sequence>
+                    <xsd:element name="attribute_code" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="frontend_input" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="scope" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="default_value" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="is_unique" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="is_required" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="apply_to" type="typens:ArrayOfString" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="is_configurable" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="is_searchable" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="is_visible_in_advanced_search" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="is_comparable" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="is_used_for_promo_rules" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="is_visible_on_front" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="used_in_product_listing" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="additional_fields" type="typens:associativeArray" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="frontend_label" type="typens:catalogProductAttributeFrontendLabelArray" minOccurs="0" maxOccurs="1" />
+                </xsd:sequence>
+            </xsd:complexType>
+
+            <xsd:complexType name="catalogProductCustomOptionAdditionalFieldsEntity">
+                <xsd:sequence>
+                    <xsd:element name="title" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="price" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="price_type" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="sku" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="max_characters" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="sort_order" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="file_extension" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="image_size_x" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="image_size_y" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="value_id" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionAdditionalFieldsArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="1" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductCustomOptionAdditionalFieldsEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionToAdd">
+                <xsd:sequence>
+                    <xsd:element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="sort_order" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="is_require" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="additional_fields" type="typens:catalogProductCustomOptionAdditionalFieldsArray" minOccurs="1" maxOccurs="1" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionToUpdate">
+                <xsd:sequence>
+                    <xsd:element name="title" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="type" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="sort_order" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="is_require" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <xsd:element name="additional_fields" type="typens:catalogProductCustomOptionAdditionalFieldsArray" minOccurs="0" maxOccurs="1" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionInfoEntity">
+                <xsd:sequence>
+                    <xsd:element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="sort_order" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="is_require" type="xsd:int" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="additional_fields" type="typens:catalogProductCustomOptionAdditionalFieldsArray" minOccurs="1" maxOccurs="1" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionListEntity">
+                <xsd:sequence>
+                    <xsd:element name="option_id" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="sort_order" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="is_require" type="xsd:int" minOccurs="1" maxOccurs="1" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionListArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductCustomOptionListEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionTypesEntity">
+                <xsd:sequence>
+                    <xsd:element name="label" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="value" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionTypesArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductCustomOptionTypesEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionValueInfoEntity">
+                <xsd:sequence>
+                    <xsd:element name="value_id" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="option_id" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="sku" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="sort_order" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="default_price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="default_price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="store_price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="store_price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="default_title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="store_title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionValueListEntity">
+                <xsd:sequence>
+                    <xsd:element name="value_id" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="sku" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="sort_order" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionValueListArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductCustomOptionValueListEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionValueAddEntity">
+                <xsd:sequence>
+                    <xsd:element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="sku" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="sort_order" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionValueAddArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="1" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductCustomOptionValueAddEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductCustomOptionValueUpdateEntity">
+                <xsd:sequence>
+                    <xsd:element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="sku" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <xsd:element name="sort_order" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeOptionLabelEntity">
+                <xsd:sequence>
+                    <xsd:element minOccurs="1" maxOccurs="1" name="store_id" type="typens:ArrayOfString" />
+                    <xsd:element minOccurs="1" maxOccurs="1" name="value" type="xsd:string" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeOptionLabelArray">
+                <xsd:sequence>
+                    <xsd:element minOccurs="1" maxOccurs="unbounded" name="complexObjectArray" type="typens:catalogProductAttributeOptionLabelEntity" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeOptionEntityToAdd">
+                <xsd:sequence>
+                    <xsd:element minOccurs="1" maxOccurs="1" name="label" type="typens:catalogProductAttributeOptionLabelArray" />
+                    <xsd:element minOccurs="1" maxOccurs="1" name="order" type="xsd:int" />
+                    <xsd:element minOccurs="1" maxOccurs="1" name="is_default" type="xsd:int" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeEntity">
+                <xsd:sequence>
+                    <xsd:element minOccurs="1" maxOccurs="1" name="attribute_id" type="xsd:string" />
+                    <xsd:element minOccurs="1" maxOccurs="1" name="attribute_code" type="xsd:string" />
+                    <xsd:element minOccurs="1" maxOccurs="1" name="frontend_input" type="xsd:string" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="scope" type="xsd:string" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="default_value" type="xsd:string" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_unique" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_required" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="apply_to" type="typens:ArrayOfString" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_configurable" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_searchable" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_visible_in_advanced_search" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_comparable" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_used_for_promo_rules" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_visible_on_front" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="used_in_product_listing" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="additional_fields" type="typens:associativeArray" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="options" type="typens:catalogAttributeOptionEntityArray" />
+                    <xsd:element minOccurs="1" maxOccurs="1" name="frontend_label" type="typens:catalogProductAttributeFrontendLabelArray" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductAttributeEntityToUpdate">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" maxOccurs="1" name="scope" type="xsd:string" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="default_value" type="xsd:string" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_unique" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_required" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="apply_to" type="typens:ArrayOfString" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_configurable" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_searchable" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_visible_in_advanced_search" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_comparable" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_used_for_promo_rules" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="is_visible_on_front" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="used_in_product_listing" type="xsd:int" />
+                    <xsd:element minOccurs="0" maxOccurs="1" name="additional_fields" type="typens:associativeArray" />
+                    <xsd:element minOccurs="1" maxOccurs="1" name="frontend_label" type="typens:catalogProductAttributeFrontendLabelArray" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="catalogProductSpecialPriceReturnEntity">
+                <xsd:sequence>
+                    <xsd:element minOccurs="1" maxOccurs="1" name="special_price" type="xsd:string" />
+                    <xsd:element minOccurs="1" maxOccurs="1" name="special_from_date" type="xsd:string" />
+                    <xsd:element minOccurs="1" maxOccurs="1" name="special_to_date" type="xsd:string" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="catalogProductCurrentStoreRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCurrentStoreResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductListRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="filters" type="typens:filters" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductListResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductInfoRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="attributes" type="typens:catalogProductRequestAttributes" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductInfoResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductReturnEntity" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCreateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="type" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="set" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sku" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productData" type="typens:catalogProductCreateEntity" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCreateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductUpdateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productData" type="typens:catalogProductCreateEntity" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductUpdateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductMultiUpdateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productIds" type="typens:ArrayOfString" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productData" type="typens:catalogProductCreateEntityArray" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductMultiUpdateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductSetSpecialPriceRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="specialPrice" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="fromDate" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="toDate" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductSetSpecialPriceResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductGetSpecialPriceRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductGetSpecialPriceResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductSpecialPriceReturnEntity" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductDeleteRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductDeleteResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeCurrentStoreRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeCurrentStoreResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeListRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="setId" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeListResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogAttributeEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeOptionsRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attributeId" type="xsd:int" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeOptionsResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogAttributeOptionEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionAddRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="data" type="typens:catalogProductCustomOptionToAdd" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionAddResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionUpdateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="optionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="data" type="typens:catalogProductCustomOptionToUpdate" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionUpdateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionTypesRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionTypesResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductCustomOptionTypesArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionListRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionListResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductCustomOptionListArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionInfoRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="optionId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionInfoResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductCustomOptionInfoEntity" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionRemoveRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="optionId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionRemoveResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionValueListRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="optionId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionValueListResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductCustomOptionValueListArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionValueInfoRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="valueId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionValueInfoResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductCustomOptionValueInfoEntity" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionValueAddRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="optionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="data" type="typens:catalogProductCustomOptionValueAddArray" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionValueAddResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionValueUpdateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="valueId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="data" type="typens:catalogProductCustomOptionValueUpdateEntity" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionValueUpdateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionValueRemoveRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="valueId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductCustomOptionValueRemoveResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetCreateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attributeSetName" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="skeletonSetId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetCreateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetRemoveRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attributeSetId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="forceProductsRemove" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetRemoveResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetListRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetListResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductAttributeSetEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetAttributeAddRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attributeId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attributeSetId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="attributeGroupId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="sortOrder" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetAttributeAddResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeAddOptionRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attribute" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="data" type="typens:catalogProductAttributeOptionEntityToAdd" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeAddOptionResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetAttributeRemoveRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attributeId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attributeSetId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetAttributeRemoveResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetGroupAddRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attributeSetId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="groupName" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetGroupAddResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+             <xsd:element name="catalogProductAttributeSetGroupRenameRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="groupId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="groupName" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetGroupRenameResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetGroupRemoveRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attributeGroupId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeSetGroupRemoveResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductTypeListRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductTypeListResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductTypeEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeTierPriceInfoRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeTierPriceInfoResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductTierPriceEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeTierPriceUpdateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="tierPrices" type="typens:catalogProductTierPriceEntityArray" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeTierPriceUpdateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaCurrentStoreRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaCurrentStoreResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaListRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaListResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductImageEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaInfoRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="file" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaInfoResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductImageEntity" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaTypesRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="setId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaTypesResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductAttributeMediaTypeEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaCreateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="data" type="typens:catalogProductAttributeMediaCreateEntity" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaCreateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaUpdateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="file" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="data" type="typens:catalogProductAttributeMediaCreateEntity" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaUpdateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaRemoveRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="file" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeMediaRemoveResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkListRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="type" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkListResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductLinkEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkAssignRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="type" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="linkedProductId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="data" type="typens:catalogProductLinkEntity" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkAssignResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkUpdateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="type" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="linkedProductId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="data" type="typens:catalogProductLinkEntity" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkUpdateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkRemoveRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="type" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="linkedProductId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkRemoveResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkTypesRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkTypesResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:ArrayOfString" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkAttributesRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="type" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductLinkAttributesResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductLinkAttributeEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryCurrentStoreRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryCurrentStoreResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryTreeRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="parentId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryTreeResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogCategoryTree" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryLevelRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="website" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="categoryId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryLevelResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:ArrayOfCatalogCategoryEntitiesNoChildren" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryInfoRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="categoryId" type="xsd:int" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="attributes" type="typens:ArrayOfString" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryInfoResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogCategoryInfo" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryCreateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="parentId" type="xsd:int" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="categoryData" type="typens:catalogCategoryEntityCreate" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryCreateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryUpdateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="categoryId" type="xsd:int" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="categoryData" type="typens:catalogCategoryEntityCreate" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryUpdateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryMoveRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="categoryId" type="xsd:int" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="parentId" type="xsd:int" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="afterId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryMoveResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryDeleteRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="categoryId" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryDeleteResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryAssignedProductsRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="categoryId" type="xsd:int" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryAssignedProductsResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogAssignedProductArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryAssignProductRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="categoryId" type="xsd:int" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="position" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryAssignProductResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryUpdateProductRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="categoryId" type="xsd:int" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="position" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryUpdateProductResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryRemoveProductRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="categoryId" type="xsd:int" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="productId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="identifierType" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryRemoveProductResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryAttributeListRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryAttributeListResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogAttributeEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryAttributeOptionsRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attributeId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryAttributeOptionsResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogAttributeOptionEntityArray" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryAttributeCurrentStoreRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="1" name="store" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogCategoryAttributeCurrentStoreResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:int" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeCreateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="data" type="typens:catalogProductAttributeEntityToCreate" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeCreateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeRemoveRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attribute" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeRemoveResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeInfoRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attribute" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeInfoResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="typens:catalogProductAttributeEntity" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeUpdateRequestParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="sessionId" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="attribute" type="xsd:string" />
+                        <xsd:element minOccurs="1" maxOccurs="1" name="data" type="typens:catalogProductAttributeEntityToUpdate" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="catalogProductAttributeUpdateResponseParam">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="result" type="xsd:boolean" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdlsdl:service>
+</wsdl:definitions>

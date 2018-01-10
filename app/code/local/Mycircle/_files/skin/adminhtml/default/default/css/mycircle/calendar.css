@@ -1,0 +1,123 @@
+
+@import "pepper-ginder-custom.css";
+body {
+    background: url("images/ui-bg_fine-grain_65_654b24_60x60.png") repeat scroll 0 0 white;
+    font: 0.7em/1.5em "Trebuchet MS",Verdana,sans-serif;
+}
+h1 {
+    margin: 1.5em;
+    text-align: center;
+}
+h2 {
+    border-top: 1px dotted #aaa;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+h4 {
+    margin-bottom: 0;
+}
+p {
+    margin-top: 0.3em;
+}
+code, pre.code {
+    background-color: #ffc;
+    border: 1px dotted grey;
+    font: 11px/13px monospace;
+    padding: 2px;
+}
+.clear {
+    clear: both;
+}
+a {
+    color: #800;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#share {
+    position: absolute;
+    right: 20px;
+    text-align: right;
+    top: 20px;
+}
+#page {
+    background: url("images/ui-bg_fine-grain_10_f8f7f6_60x60.png") repeat scroll 0 0 white;
+    border: 1px solid #d9d6c4;
+    border-radius: 6px;
+    color: #1f1f1f;
+    font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+    font-size: 1.1em;
+    margin: 1em auto;
+    padding: 2em;
+    position: relative;
+    width: 960px;
+}
+#demos-list {
+    padding: 0;
+}
+#flairs {
+    text-align: center;
+}
+#flairs ul {
+    list-style: outside none none;
+    padding: 0;
+}
+#flairs li {
+    display: inline;
+}
+.demo {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: inline-block;
+    margin: 1em 1%;
+    padding: 0 2%;
+    vertical-align: top;
+    width: 43.5%;
+}
+.demo.full-row {
+    width: 95%;
+}
+.demo ul, .demo ol {
+    list-style-position: inside;
+}
+.demo .box {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+.example {
+    color: #006400;
+}
+.important-note {
+    color: #b22222;
+    font-weight: bold;
+}
+.reference-to {
+    font-size: large;
+    font-weight: bold;
+}
+.code-box {
+    clear: both;
+}
+.code {
+    background-color: white;
+    color: #333;
+    font: small monospace;
+    padding: 5px;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: url("images/ui-bg_fine-grain_10_f8f7f6_60x60.png") repeat scroll 50% 50% #f8f7f6;
+}
+table.ui-datepicker-calendar {
+    border-collapse: separate;
+}
+.ui-datepicker-calendar td {
+    border: 1px solid transparent;
+}
+.ui-datepicker .ui-datepicker-calendar .ui-state-highlight a {
+    background: none repeat scroll 0 0 #743620;
+    color: white;
+}
+#ui-datepicker-div {
+    display: none;
+}

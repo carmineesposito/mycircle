@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Mycircle_Apiservice>
+      <version>0.1.0</version>
+    </Mycircle_Apiservice>
+  </modules>
+  <frontend>
+    <!--<routers>-->
+      <!--<apiservice>-->
+        <!--<use>standard</use>-->
+          <!--<args>-->
+            <!--<module>Mycircle_Apiservice</module>-->
+            <!--<frontName>apiservice</frontName>-->
+          <!--</args>-->
+      <!--</apiservice>-->
+    <!--</routers>-->
+  </frontend>
+  <global>
+    <helpers>
+      <apiservice>
+        <class>Mycircle_Apiservice_Helper</class>
+      </apiservice>
+    </helpers>
+	<blocks>
+	  <apiservice>
+		<class>Mycircle_Apiservice_Block</class>
+	  </apiservice>
+	</blocks>
+	<models>
+	  <apiservice>
+		<class>Mycircle_Apiservice_Model</class>
+		<resourceModel>apiservice_mysql4</resourceModel>
+	  </apiservice>
+	</models>
+  </global>
+</config> 

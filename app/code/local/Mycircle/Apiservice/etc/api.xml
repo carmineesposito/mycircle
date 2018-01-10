@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<config>
+    <api>
+        <resources>
+            <apiservice_api translate="title" module="apiservice">
+                <title>Myapi</title>
+                <acl>apiservice/api</acl>
+                <model>apiservice/api</model>
+                <methods>
+						<checkcerchieupdate translate="title" module="apiservice">
+							<title>checkCerchieUpdate</title>
+							<acl>apiservice/checkcerchieupdate</acl>
+						</checkcerchieupdate>
+						<getprodotti translate="title" module="apiservice">
+							<title>getprodotti</title>
+							<acl>apiservice/getprodotti</acl>
+						</getprodotti>
+						<getpartecipanti translate="title" module="apiservice">
+							<title>getPartecipanti</title>
+							<acl>apiservice/getpartecipanti</acl>
+						</getpartecipanti>
+						<getdettaglioprodottocerchia translate="title" module="apiservice">
+							<title>getDettaglioProdottoCerchia</title>
+							<acl>apiservice/getdettaglioprodottocerchia</acl>
+						</getdettaglioprodottocerchia>
+						<prenotacerchia translate="title" module="apiservice">
+							<title>prenotaCerchia</title>
+							<acl>apiservice/prenotacerchia</acl>
+						</prenotacerchia>
+						<bigliettiacquistati translate="title" module="apiservice">
+							<title>bigliettiAcquistati</title>
+							<acl>apiservice/bigliettiacquistati</acl>
+						</bigliettiacquistati>
+						<creacerchia translate="title" module="apiservice">
+							<title>creaCerchia</title>
+							<acl>apiservice/creacerchia</acl>
+						</creacerchia>
+                </methods>
+            </apiservice_api>
+        </resources>
+        <acl>
+            <resources>
+                <apiservice_api translate="title" module="apiservice">
+                    <title>Apiservice</title>
+                    <sort_order>2000</sort_order>
+					<checkcerchieupdate translate="title" module="apiservice">
+                        <title>checkCerchieUpdate</title>
+                    </checkcerchieupdate>
+					<getprodotti translate="title" module="apiservice">
+                        <title>getProdotti</title>
+                    </getprodotti>
+					<getpartecipanti translate="title" module="apiservice">
+                        <title>getPartecipanti</title>
+                    </getpartecipanti>
+					<getdettaglioprodottocerchia translate="title" module="apiservice">
+                        <title>getDettaglioProdottoCerchia</title>
+                    </getdettaglioprodottocerchia>
+					<prenotacerchia translate="title" module="apiservice">
+                        <title>prenotaCerchia</title>
+                    </prenotacerchia>
+					<bigliettiacquistati translate="title" module="apiservice">
+                        <title>bigliettiAcquistati</title>
+                    </bigliettiacquistati>
+					<creacerchia translate="title" module="apiservice">
+                        <title>creaCerchia</title>
+                    </creacerchia>
+                </apiservice_api>
+            </resources>
+        </acl>
+    </api>
+</config>

@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:typens="urn:{{var wsdl.name}}" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"
+             name="{{var wsdl.name}}" targetNamespace="urn:{{var wsdl.name}}">
+    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Magento">
+            <import namespace="http://schemas.xmlsoap.org/soap/encoding/"
+                    schemaLocation="http://schemas.xmlsoap.org/soap/encoding/"/>
+            <complexType name="catalogProductEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductAdditionalAttributesEntity">
+                <all>
+                    <element name="multi_data" type="typens:associativeMultiArray" minOccurs="0" />
+                    <element name="single_data" type="typens:associativeArray" minOccurs="0" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductEntity">
+                <all>
+                    <element name="product_id" type="xsd:string"/>
+                    <element name="sku" type="xsd:string"/>
+                    <element name="name" type="xsd:string"/>
+                    <element name="set" type="xsd:string"/>
+                    <element name="type" type="xsd:string"/>
+                    <element name="category_ids" type="typens:ArrayOfString"/>
+                    <element name="website_ids" type="typens:ArrayOfString"/>
+                    <element name="short_description" type="xsd:string"/>
+                    <element name="selected_date" type="xsd:string"/>
+                    <element name="in_circles" type="xsd:string"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductRequestAttributes">
+                <all>
+                    <element name="attributes" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="additional_attributes" type="typens:ArrayOfString" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductReturnEntity">
+                <all>
+                    <element name="product_id" type="xsd:string" minOccurs="0"/>
+                    <element name="sku" type="xsd:string" minOccurs="0"/>
+                    <element name="set" type="xsd:string" minOccurs="0"/>
+                    <element name="type" type="xsd:string" minOccurs="0"/>
+                    <element name="categories" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="websites" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="created_at" type="xsd:string" minOccurs="0"/>
+                    <element name="updated_at" type="xsd:string" minOccurs="0"/>
+                    <element name="type_id" type="xsd:string" minOccurs="0"/>
+                    <element name="name" type="xsd:string" minOccurs="0"/>
+                    <element name="description" type="xsd:string" minOccurs="0"/>
+                    <element name="short_description" type="xsd:string" minOccurs="0"/>
+                    <element name="weight" type="xsd:string" minOccurs="0"/>
+                    <element name="status" type="xsd:string" minOccurs="0"/>
+                    <element name="url_key" type="xsd:string" minOccurs="0"/>
+                    <element name="url_path" type="xsd:string" minOccurs="0"/>
+                    <element name="visibility" type="xsd:string" minOccurs="0"/>
+                    <element name="category_ids" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="website_ids" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="has_options" type="xsd:string" minOccurs="0"/>
+                    <element name="gift_message_available" type="xsd:string" minOccurs="0"/>
+                    <element name="price" type="xsd:string" minOccurs="0"/>
+                    <element name="special_price" type="xsd:string" minOccurs="0"/>
+                    <element name="special_from_date" type="xsd:string" minOccurs="0"/>
+                    <element name="special_to_date" type="xsd:string" minOccurs="0"/>
+                    <element name="tax_class_id" type="xsd:string" minOccurs="0"/>
+                    <element name="tier_price" type="typens:catalogProductTierPriceEntityArray" minOccurs="0"/>
+                    <element name="meta_title" type="xsd:string" minOccurs="0"/>
+                    <element name="meta_keyword" type="xsd:string" minOccurs="0"/>
+                    <element name="meta_description" type="xsd:string" minOccurs="0"/>
+                    <element name="custom_design" type="xsd:string" minOccurs="0"/>
+                    <element name="custom_layout_update" type="xsd:string" minOccurs="0"/>
+                    <element name="options_container" type="xsd:string" minOccurs="0"/>
+                    <element name="additional_attributes" type="typens:associativeArray" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductCreateEntity">
+                <all>
+                    <element name="categories" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="websites" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="name" type="xsd:string" minOccurs="0"/>
+                    <element name="description" type="xsd:string" minOccurs="0"/>
+                    <element name="short_description" type="xsd:string" minOccurs="0"/>
+                    <element name="weight" type="xsd:string" minOccurs="0"/>
+                    <element name="status" type="xsd:string" minOccurs="0"/>
+                    <element name="url_key" type="xsd:string" minOccurs="0"/>
+                    <element name="url_path" type="xsd:string" minOccurs="0"/>
+                    <element name="visibility" type="xsd:string" minOccurs="0"/>
+                    <element name="category_ids" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="website_ids" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="has_options" type="xsd:string" minOccurs="0"/>
+                    <element name="gift_message_available" type="xsd:string" minOccurs="0"/>
+                    <element name="price" type="xsd:string" minOccurs="0"/>
+                    <element name="special_price" type="xsd:string" minOccurs="0"/>
+                    <element name="special_from_date" type="xsd:string" minOccurs="0"/>
+                    <element name="special_to_date" type="xsd:string" minOccurs="0"/>
+                    <element name="tax_class_id" type="xsd:string" minOccurs="0"/>
+                    <element name="tier_price" type="typens:catalogProductTierPriceEntityArray" minOccurs="0"/>
+                    <element name="meta_title" type="xsd:string" minOccurs="0"/>
+                    <element name="meta_keyword" type="xsd:string" minOccurs="0"/>
+                    <element name="meta_description" type="xsd:string" minOccurs="0"/>
+                    <element name="custom_design" type="xsd:string" minOccurs="0"/>
+                    <element name="custom_layout_update" type="xsd:string" minOccurs="0"/>
+                    <element name="options_container" type="xsd:string" minOccurs="0"/>
+                    <element name="additional_attributes" type="typens:catalogProductAdditionalAttributesEntity" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductCreateEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductCreateEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductAttributeSetEntity">
+                <all>
+                    <element name="set_id" type="xsd:int" minOccurs="0"/>
+                    <element name="name" type="xsd:string" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductAttributeSetEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductAttributeSetEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductTypeEntity">
+                <all>
+                    <element name="type" type="xsd:string" minOccurs="0"/>
+                    <element name="label" type="xsd:string" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductTypeEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductTypeEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductTierPriceEntity">
+                <all>
+                    <element name="customer_group_id" type="xsd:string" minOccurs="0"/>
+                    <element name="website" type="xsd:string" minOccurs="0"/>
+                    <element name="qty" type="xsd:int" minOccurs="0"/>
+                    <element name="price" type="xsd:double" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductTierPriceEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductTierPriceEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="ArrayOfCatalogCategoryEntities">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogCategoryEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogCategoryEntity">
+                <all>
+                    <element name="category_id" type="xsd:int"/>
+                    <element name="parent_id" type="xsd:int"/>
+                    <element name="name" type="xsd:string"/>
+                    <element name="is_active" type="xsd:int"/>
+                    <element name="position" type="xsd:int"/>
+                    <element name="level" type="xsd:int"/>
+                    <element name="children" type="typens:ArrayOfCatalogCategoryEntities"/>
+                </all>
+            </complexType>
+            <complexType name="catalogCategoryEntityNoChildren">
+                <all>
+                    <element name="category_id" type="xsd:int"/>
+                    <element name="parent_id" type="xsd:int"/>
+                    <element name="name" type="xsd:string"/>
+                    <element name="is_active" type="xsd:int"/>
+                    <element name="position" type="xsd:int"/>
+                    <element name="level" type="xsd:int"/>
+                </all>
+            </complexType>
+            <complexType name="ArrayOfCatalogCategoryEntitiesNoChildren">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogCategoryEntityNoChildren[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogCategoryTree">
+                <all>
+                    <element name="category_id" type="xsd:int"/>
+                    <element name="parent_id" type="xsd:int"/>
+                    <element name="name" type="xsd:string"/>
+                    <element name="position" type="xsd:int"/>
+                    <element name="level" type="xsd:int"/>
+                    <element name="children" type="typens:ArrayOfCatalogCategoryEntities"/>
+                </all>
+            </complexType>
+            <complexType name="catalogCategoryEntityCreate">
+                <all>
+                    <element name="name" type="xsd:string" minOccurs="0"/>
+                    <element name="is_active" type="xsd:int" minOccurs="0"/>
+                    <element name="position" type="xsd:int" minOccurs="0"/>
+                    <!-- position parameter is deprecated, category anyway will be positioned in the end of list
+                        and you can not set position directly, use catalog_category.move instead -->
+                    <element name="available_sort_by" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="custom_design" type="xsd:string" minOccurs="0"/>
+                    <element name="custom_design_apply" type="xsd:int" minOccurs="0"/>
+                    <element name="custom_design_from" type="xsd:string" minOccurs="0"/>
+                    <element name="custom_design_to" type="xsd:string" minOccurs="0"/>
+                    <element name="custom_layout_update" type="xsd:string" minOccurs="0"/>
+                    <element name="default_sort_by" type="xsd:string" minOccurs="0"/>
+                    <element name="description" type="xsd:string" minOccurs="0"/>
+                    <element name="display_mode" type="xsd:string" minOccurs="0"/>
+                    <element name="is_anchor" type="xsd:int" minOccurs="0"/>
+                    <element name="landing_page" type="xsd:int" minOccurs="0"/>
+                    <element name="meta_description" type="xsd:string" minOccurs="0"/>
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0"/>
+                    <element name="meta_title" type="xsd:string" minOccurs="0"/>
+                    <element name="page_layout" type="xsd:string" minOccurs="0"/>
+                    <element name="url_key" type="xsd:string" minOccurs="0"/>
+                    <element name="include_in_menu" type="xsd:int" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogCategoryInfo">
+                <all>
+                    <element name="category_id" type="xsd:string"/>
+                    <element name="is_active" type="xsd:int"/>
+                    <element name="position" type="xsd:string"/>
+                    <element name="level" type="xsd:string"/>
+                    <element name="parent_id" type="xsd:string"/>
+                    <element name="all_children" type="xsd:string"/>
+                    <element name="children" type="xsd:string"/>
+                    <element name="created_at" type="xsd:string" minOccurs="0"/>
+                    <element name="updated_at" type="xsd:string" minOccurs="0"/>
+                    <element name="name" type="xsd:string" minOccurs="0"/>
+                    <element name="url_key" type="xsd:string" minOccurs="0"/>
+                    <element name="description" type="xsd:string" minOccurs="0"/>
+                    <element name="meta_title" type="xsd:string" minOccurs="0"/>
+                    <element name="meta_keywords" type="xsd:string" minOccurs="0"/>
+                    <element name="meta_description" type="xsd:string" minOccurs="0"/>
+                    <element name="path" type="xsd:string" minOccurs="0"/>
+                    <element name="url_path" type="xsd:string" minOccurs="0"/>
+                    <element name="children_count" type="xsd:int" minOccurs="0"/>
+                    <element name="display_mode" type="xsd:string" minOccurs="0"/>
+                    <element name="is_anchor" type="xsd:int" minOccurs="0"/>
+                    <element name="available_sort_by" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="custom_design" type="xsd:string" minOccurs="0"/>
+                    <element name="custom_design_apply" type="xsd:string" minOccurs="0"/>
+                    <element name="custom_design_from" type="xsd:string" minOccurs="0"/>
+                    <element name="custom_design_to" type="xsd:string" minOccurs="0"/>
+                    <element name="page_layout" type="xsd:string" minOccurs="0"/>
+                    <element name="custom_layout_update" type="xsd:string" minOccurs="0"/>
+                    <element name="default_sort_by" type="xsd:string" minOccurs="0"/>
+                    <element name="landing_page" type="xsd:int" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogAssignedProduct">
+                <all>
+                    <element name="product_id" type="xsd:int"/>
+                    <element name="type" type="xsd:string"/>
+                    <element name="set" type="xsd:int"/>
+                    <element name="sku" type="xsd:string"/>
+                    <element name="position" type="xsd:int"/>
+                </all>
+            </complexType>
+            <complexType name="catalogAssignedProductArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogAssignedProduct[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogAttributeEntity">
+                <all>
+                    <element name="attribute_id" type="xsd:int" minOccurs="0"/>
+                    <element name="code" type="xsd:string" minOccurs="0"/>
+                    <element name="type" type="xsd:string" minOccurs="0"/>
+                    <element name="required" type="xsd:string" minOccurs="0"/>
+                    <element name="scope" type="xsd:string" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogAttributeEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogAttributeEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogAttributeOptionEntity">
+                <all>
+                    <element name="label" type="xsd:string"/>
+                    <element name="value" type="xsd:string"/>
+                </all>
+            </complexType>
+            <complexType name="catalogAttributeOptionEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogAttributeOptionEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductImageEntity">
+                <all>
+                    <element name="file" type="xsd:string"/>
+                    <element name="label" type="xsd:string"/>
+                    <element name="position" type="xsd:string"/>
+                    <element name="exclude" type="xsd:string"/>
+                    <element name="url" type="xsd:string"/>
+                    <element name="types" type="typens:ArrayOfString"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductImageEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductImageEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductAttributeMediaTypeEntity">
+                <all>
+                    <element name="code" type="xsd:string"/>
+                    <element name="scope" type="xsd:string"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductAttributeMediaTypeEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType"
+                                   wsdl:arrayType="typens:catalogProductAttributeMediaTypeEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductImageFileEntity">
+                <all>
+                    <element name="content" type="xsd:string"/>
+                    <element name="mime" type="xsd:string"/>
+                    <element name="name" type="xsd:string" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductAttributeMediaCreateEntity">
+                <all>
+                    <element name="file" type="typens:catalogProductImageFileEntity" minOccurs="0"/>
+                    <element name="label" type="xsd:string" minOccurs="0"/>
+                    <element name="position" type="xsd:string" minOccurs="0"/>
+                    <element name="types" type="typens:ArrayOfString" minOccurs="0"/>
+                    <element name="exclude" type="xsd:string" minOccurs="0"/>
+                    <element name="remove" type="xsd:string" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductLinkEntity">
+                <all>
+                    <element name="product_id" type="xsd:string" minOccurs="0"/>
+                    <element name="type" type="xsd:string" minOccurs="0"/>
+                    <element name="set" type="xsd:string" minOccurs="0"/>
+                    <element name="sku" type="xsd:string" minOccurs="0"/>
+                    <element name="position" type="xsd:string" minOccurs="0"/>
+                    <element name="qty" type="xsd:string" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductLinkEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductLinkEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductLinkAttributeEntity">
+                <all>
+                    <element name="code" type="xsd:string" minOccurs="0"/>
+                    <element name="type" type="xsd:string" minOccurs="0"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductLinkAttributeEntityArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductLinkAttributeEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductAttributeFrontendLabelEntity">
+                <all>
+                    <element name="store_id" type="xsd:string" />
+                    <element name="label" type="xsd:string" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductAttributeFrontendLabelArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductAttributeFrontendLabelEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductAttributeEntityToCreate">
+                <all>
+                    <element name="attribute_code" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="frontend_input" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="scope" type="xsd:string" minOccurs="0" />
+                    <element name="default_value" type="xsd:string" minOccurs="0" />
+                    <element name="is_unique" type="xsd:int" minOccurs="0" />
+                    <element name="is_required" type="xsd:int" minOccurs="0" />
+                    <element name="apply_to" type="typens:ArrayOfString" minOccurs="0" />
+                    <element name="is_configurable" type="xsd:int" minOccurs="0" />
+                    <element name="is_searchable" type="xsd:int" minOccurs="0" />
+                    <element name="is_visible_in_advanced_search" type="xsd:int" minOccurs="0" />
+                    <element name="is_comparable" type="xsd:int" minOccurs="0" />
+                    <element name="is_used_for_promo_rules" type="xsd:int" minOccurs="0" />
+                    <element name="is_visible_on_front" type="xsd:int" minOccurs="0" />
+                    <element name="used_in_product_listing" type="xsd:int" minOccurs="0" />
+                    <element name="additional_fields" type="typens:associativeArray" minOccurs="0"/>
+                    <element name="frontend_label" type="typens:catalogProductAttributeFrontendLabelArray" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductAttributeEntityToUpdate">
+                <all>
+                    <element name="scope" type="xsd:string" minOccurs="0" />
+                    <element name="default_value" type="xsd:string" minOccurs="0" />
+                    <element name="is_unique" type="xsd:int" minOccurs="0" />
+                    <element name="is_required" type="xsd:int" minOccurs="0" />
+                    <element name="apply_to" type="typens:ArrayOfString" minOccurs="0" />
+                    <element name="is_configurable" type="xsd:int" minOccurs="0" />
+                    <element name="is_searchable" type="xsd:int" minOccurs="0" />
+                    <element name="is_visible_in_advanced_search" type="xsd:int" minOccurs="0" />
+                    <element name="is_comparable" type="xsd:int" minOccurs="0" />
+                    <element name="is_used_for_promo_rules" type="xsd:int" minOccurs="0" />
+                    <element name="is_visible_on_front" type="xsd:int" minOccurs="0" />
+                    <element name="used_in_product_listing" type="xsd:int" minOccurs="0" />
+                    <element name="additional_fields" type="typens:associativeArray" minOccurs="0"/>
+                    <element name="frontend_label" type="typens:catalogProductAttributeFrontendLabelArray" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductAttributeEntity">
+                <all>
+                    <element name="attribute_id" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="attribute_code" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="frontend_input" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="scope" type="xsd:string" minOccurs="0" />
+                    <element name="default_value" type="xsd:string" minOccurs="0" />
+                    <element name="is_unique" type="xsd:int" minOccurs="0" />
+                    <element name="is_required" type="xsd:int" minOccurs="0" />
+                    <element name="apply_to" type="typens:ArrayOfString" minOccurs="0" />
+                    <element name="is_configurable" type="xsd:int" minOccurs="0" />
+                    <element name="is_searchable" type="xsd:int" minOccurs="0" />
+                    <element name="is_visible_in_advanced_search" type="xsd:int" minOccurs="0" />
+                    <element name="is_comparable" type="xsd:int" minOccurs="0" />
+                    <element name="is_used_for_promo_rules" type="xsd:int" minOccurs="0" />
+                    <element name="is_visible_on_front" type="xsd:int" minOccurs="0" />
+                    <element name="used_in_product_listing" type="xsd:int" minOccurs="0" />
+                    <element name="additional_fields" type="typens:associativeArray" minOccurs="0"/>
+                    <element name="options" type="typens:catalogAttributeOptionEntityArray" minOccurs="0"/>
+                    <element name="frontend_label" type="typens:catalogProductAttributeFrontendLabelArray" minOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductAttributeOptionLabelEntity">
+                <all>
+                    <element name="store_id" type="typens:ArrayOfString" />
+                    <element name="value" type="xsd:string" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductAttributeOptionLabelArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductAttributeOptionLabelEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductAttributeOptionEntityToAdd">
+                <all>
+                    <element name="label" type="typens:catalogProductAttributeOptionLabelArray" />
+                    <element name="order" type="xsd:int" />
+                    <element name="is_default" type="xsd:int" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductCustomOptionAdditionalFieldsEntity">
+                <all>
+                    <element name="title" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="price" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="price_type" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="sku" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="max_characters" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="sort_order" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="file_extension" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="image_size_x" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="image_size_y" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="value_id" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductCustomOptionAdditionalFieldsArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductCustomOptionAdditionalFieldsEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductCustomOptionToAdd">
+                <all>
+                    <element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="sort_order" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="is_require" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <element name="additional_fields" type="typens:catalogProductCustomOptionAdditionalFieldsArray" minOccurs="1" maxOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductCustomOptionToUpdate">
+                <all>
+                    <element name="title" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="type" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="sort_order" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                    <element name="is_require" type="xsd:int" minOccurs="0" maxOccurs="1" />
+                    <element name="additional_fields" type="typens:catalogProductCustomOptionAdditionalFieldsArray" minOccurs="0" maxOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductCustomOptionInfoEntity">
+                <all>
+                    <element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="sort_order" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="is_require" type="xsd:int" minOccurs="1" maxOccurs="1" />
+                    <element name="additional_fields" type="typens:catalogProductCustomOptionAdditionalFieldsArray" minOccurs="1" maxOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductCustomOptionListEntity">
+                <all>
+                    <element name="option_id" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="sort_order" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="is_require" type="xsd:int" minOccurs="1" maxOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductCustomOptionListArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductCustomOptionListEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductCustomOptionTypesEntity">
+                <all>
+                    <element name="label" type="xsd:string"/>
+                    <element name="value" type="xsd:string"/>
+                </all>
+            </complexType>
+            <complexType name="catalogProductCustomOptionTypesArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductCustomOptionTypesEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductCustomOptionValueInfoEntity">
+                <all>
+                    <element name="value_id" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="option_id" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="sku" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="sort_order" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="default_price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="default_price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="store_price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="store_price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="default_title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="store_title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductCustomOptionValueListEntity">
+                <all>
+                    <element name="value_id" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="sku" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="sort_order" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductCustomOptionValueListArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductCustomOptionValueListEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductCustomOptionValueAddEntity">
+                <all>
+                    <element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="sku" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="sort_order" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductCustomOptionValueAddArray">
+                <complexContent>
+                    <restriction base="soapenc:Array">
+                        <attribute ref="soapenc:arrayType" wsdl:arrayType="typens:catalogProductCustomOptionValueAddEntity[]"/>
+                    </restriction>
+                </complexContent>
+            </complexType>
+            <complexType name="catalogProductCustomOptionValueUpdateEntity">
+                <all>
+                    <element name="title" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="price_type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="sku" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="sort_order" type="xsd:string" minOccurs="0" maxOccurs="1" />
+                </all>
+            </complexType>
+            <complexType name="catalogProductSpecialPriceReturnEntity">
+                <all>
+                    <element name="special_price" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="special_from_date" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                    <element name="special_to_date" type="xsd:string" minOccurs="1" maxOccurs="1" />
+                </all>
+            </complexType>
+        </schema>
+    </types>
+
+</definitions>

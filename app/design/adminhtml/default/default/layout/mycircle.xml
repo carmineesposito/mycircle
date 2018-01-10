@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_catalog_product_edit>
+        <reference name="head">
+            <action method="addJs"><script>mycircle/jquery.js</script></action>
+            <action method="addJs"><script>mycircle/jquery-ui.multidatespicker.js</script></action>
+            <action method="addJs"><script>mycircle/jquery-ui-1.11.2/jquery-ui.min.js</script></action>
+            <action method="addJs"><script>mycircle/no-conflict.js</script></action>
+
+        </reference>
+        <reference name="product_tabs">
+            <action method="addTab">
+                <name>Evento</name>
+                <block>events/adminhtml_catalog_product_tab_event</block>
+            </action>
+        </reference>
+    </adminhtml_catalog_product_edit>
+</layout>
