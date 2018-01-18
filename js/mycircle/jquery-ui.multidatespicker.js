@@ -276,18 +276,17 @@
 						return this.multiDatesPicker.dates[type];
 					case 'string':
 					case 'number':
-						var o_dates = new Array();
-						for(var i in this.multiDatesPicker.dates[type])
-							o_dates.push(
-								dateConvert.call(
-									this, 
-									this.multiDatesPicker.dates[type][i], 
-									format
-								)
-							);
-						return o_dates;
-					
-					default: $.error('Format "'+format+'" not supported!');
+                        var o_dates = new Array(),
+                            totalDates = this.multiDatesPicker.dates[type].length;
+                        for(var i = 0; i < totalDates; i++)
+                            o_dates[i] = dateConvert.call(
+                                this,
+                                this.multiDatesPicker.dates[type][i],
+                                format
+                            );
+                        return o_dates;
+
+                    default: $.error('Format "'+format+'" not supported!');
 				}
 			},
 			addDates : function( dates, type ) {
