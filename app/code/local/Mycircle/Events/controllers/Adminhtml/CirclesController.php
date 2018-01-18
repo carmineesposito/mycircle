@@ -13,6 +13,7 @@ class Mycircle_Events_Adminhtml_CirclesController extends Mage_Adminhtml_Control
 			    $this->_title($this->__("Manager Circles"));
 
 				$this->_initAction();
+			    $this->_addContent($this->getLayout()->createBlock('events/adminhtml_circles'));
 				$this->renderLayout();
 		}
 		public function editAction()

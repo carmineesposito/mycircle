@@ -1,0 +1,72 @@
+<?php
+/**
+ * Custom tab template
+ */
+
+$helper = MAge::helper('events');
+
+$availability = $this->getAvailability();
+$days_json = $helper->decodeDaysforEvent($availability);
+
+$day=date('z');
+$year=2014;
+
+$dates = '';
+
+if ($days_json)
+    $dates = "addDates: $days_json,"
+
+?>
+<div id="full-year">
+
+</div>
+<input type="hidden" class="validate-alphanum input-text" value="<?php echo $availability ?>" name="availability" id="availability">
+<script>
+
+    // REQUIRED
+    String.prototype.padLeft = function(l,c) {return Array(l-this.length+1).join(c||" ")+this}
+
+    // replace the 'n'th character of 's' with 't'
+    function replaceAt(s, n, t) {
+        return s.substring(0, n) + t + s.substring(n + 1);
+    }
+
+    if (jQuery('#availability').val() == '')
+        jQuery('#availability').val(jQuery('#availability').val().padLeft(366, "0"));
+
+    var days = jQuery('#availability').val();
+
+    var today = new Date();
+    var y = today.getFullYear();
+    jQuery('#full-year').multiDatesPicker({
+        //addDates: ['10/14/'+y, '02/19/'+y, '01/14/'+y, '11/16/'+y],
+        <?php echo $dates; ?>
+        numberOfMonths: [3,4],
+        defaultDate: '1/1/'+y,
+        onSelect: function(dateText) {
+
+            var ObjectDate = new Object();
+
+            var now = new Date();
+            var date, selectedDate = new Date(dateText);
+            var start = new Date(now.getFullYear(), 0, 0);
+            var diff = selectedDate - start;
+            var oneDay = 1000 * 60 * 60 * 24;
+            var day = Math.ceil(diff / oneDay);
+
+            var select;
+
+            if (days.substring(day - 1, day) == 0)
+                select = 1;
+            else
+                select = 0;
+
+            days = replaceAt(days,day - 1,select);
+
+            jQuery('#availability').val(days);
+
+
+        }
+    });
+</script>
+

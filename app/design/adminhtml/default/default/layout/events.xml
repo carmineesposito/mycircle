@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <events_adminhtml_eventsbackend_index>
+	<reference name="content">
+	  <block type="events/adminhtml_eventsbackend" name="eventsbackend" template="events/eventsbackend.phtml"/>
+	</reference>
+  </events_adminhtml_eventsbackend_index>
+</layout>

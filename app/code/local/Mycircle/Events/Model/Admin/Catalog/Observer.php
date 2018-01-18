@@ -12,7 +12,6 @@ class Mycircle_Events_Model_Admin_Catalog_Observer
             if ($availability)
                 $product->setData('availability',$availability);
 
-
             }
         catch (Exception $e) {
             Mage::getSingleton('adminhtml/session')->addError($e->getMessage());

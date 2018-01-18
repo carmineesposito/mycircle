@@ -3,9 +3,11 @@
     <adminhtml_catalog_product_edit>
         <reference name="head">
             <action method="addJs"><script>mycircle/jquery.js</script></action>
-            <action method="addJs"><script>mycircle/jquery-ui.multidatespicker.js</script></action>
             <action method="addJs"><script>mycircle/jquery-ui-1.11.2/jquery-ui.min.js</script></action>
             <action method="addJs"><script>mycircle/no-conflict.js</script></action>
+            <action method="addJs"><script>mycircle/jquery-ui.multidatespicker.js</script></action>
+            <action method="addItem"><type>skin_css</type><file>css/mycircle/calendar.css</file></action>
+            <action method="addItem"><type>skin_css</type><file>css/mycircle/jquery-ui.min.css</file></action>
 
         </reference>
         <reference name="product_tabs">

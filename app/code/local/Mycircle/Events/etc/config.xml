@@ -169,15 +169,26 @@
     </global>
     <admin>
         <routers>
-            <events>
-                <use>admin</use>
+            <adminhtml>
                 <args>
-                    <module>Mycircle_Events</module>
-                    <frontName>admin_events</frontName>
+                    <modules>
+                        <admin_events before="Mage_Adminhtml">Mycircle_Events_Adminhtml</admin_events>
+                    </modules>
                 </args>
-            </events>
+            </adminhtml>
         </routers>
     </admin>
+    <!--<admin>-->
+        <!--<routers>-->
+            <!--<adminhtml>-->
+                <!--<use>admin</use>-->
+                <!--<args>-->
+                    <!--<module>Mycircle_Events</module>-->
+                    <!--<frontName>admin_events</frontName>-->
+                <!--</args>-->
+            <!--</adminhtml>-->
+        <!--</routers>-->
+    <!--</admin>-->
     <adminhtml>
         <layout>
             <updates>
@@ -224,7 +235,7 @@
                     <circles module="events">
                         <title>Manage Circles</title>
                         <sort_order>0</sort_order>
-                        <action>admin_events/adminhtml_circles</action>
+                        <action>adminhtml/circles</action>
                     </circles>
                 </children>
             </events>
