@@ -1,0 +1,61 @@
+<div class="hero-search-full-page low-sq next-sq">
+
+    <?php echo $this->getChildHtml('home_center-image') ?>
+
+</div>
+
+<div class="ui grid container">
+
+    <!-- Hero Search -->
+    <!-- .thin .animate .shadow .colored -->
+    <div class="h-search-h">
+        <form action="property_page.html" class="hero-search-form">
+
+            <div class="div-c inline-4">
+
+                <div class="divided-column">
+                    <label>luogo</label>
+                    <input type="text" value="" required placeholder="luogo">
+                </div>
+
+                <div class="divided-column">
+                    <label class="placeholder">Guests</label>
+                    <select name="dropdown" size="13" class="dropdown" required>
+                        <option value="0" selected>Guests</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+
+
+                </div>
+
+                <div class="divided-column">
+                    <label class="placeholder">Guests</label>
+                    <div class="calendar-sq" id="rangestart">
+                        <label class="placeholder"  data-big-placeholder="Check In" data-little-placeholder="Check In"></label>
+                        <input type="text" class="filter" value="" required placeholder="enter date">
+
+                    </div>
+                </div>
+
+                <div class="divided-column">
+                    <label>luogo</label>
+                    <input type="submit">
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+</div>

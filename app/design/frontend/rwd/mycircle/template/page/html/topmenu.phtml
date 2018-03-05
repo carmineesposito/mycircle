@@ -19,29 +19,24 @@
  * needs please refer to http://www.magento.com for more information.
  *
  * @category    design
- * @package     base_default
+ * @package     rwd_default
  * @copyright   Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
 <?php
 /**
- * Language switcher template
+ * Top menu for store
  *
- * @see Mage_Page_Block_Switch
+ * @see Mage_Page_Block_Html_Topmenu
  */
 ?>
-<?php if(count($this->getStores())>1): ?>
-    <div class="search-item">
-        <div class="fltp">
-            <select id="select-language" name="dropdown-language" size="13" class="dropdown" title="<?php echo $this->__('Lingua') ?>" onchange="window.location.href=this.value">
-                <?php foreach ($this->getStores() as $_lang): ?>
-                    <?php $_selected = ($_lang->getId() == $this->getCurrentStoreId()) ? ' selected="selected"' : '' ?>
-                    <option value="<?php echo $_lang->getCurrentUrl() ?>"<?php echo $_selected ?>><?php echo $this->escapeHtml($_lang->getName()) ?></option>
-                <?php endforeach; ?>
-            </select>
+<?php $_menu = $this->getHtml('level-top') ?>
 
-            <label class="placeholder"><?php echo $this->escapeHtml($_lang->getName()) ?></label>
-        </div>
-    </div>
-<?php endif; ?>
+<?php if($_menu): ?>
+    <nav id="nav">
+        <ol class="nav-primary">
+            <?php echo $_menu ?>
+        </ol>
+    </nav>
+<?php endif ?>

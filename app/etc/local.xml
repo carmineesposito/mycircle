@@ -40,10 +40,10 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[localhost]]></host>
+                    <host><![CDATA[127.0.0.1]]></host>
                     <username><![CDATA[root]]></username>
-                    <password><![CDATA[r9h5p1]]></password>
-                    <dbname><![CDATA[mycircle]]></dbname>
+                    <password><![CDATA[root]]></password>
+                    <dbname><![CDATA[mycircle_new]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
