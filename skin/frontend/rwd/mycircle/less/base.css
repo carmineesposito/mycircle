@@ -3768,10 +3768,12 @@ hr.padded-sq {
   .white-section {
     padding: 45px 40px;
   }
+
 }
 .white-section.shadow-sq {
   margin-bottom: 75px;
 }
+
 .white-section .typo-section-sq {
   padding-bottom: 0;
 }

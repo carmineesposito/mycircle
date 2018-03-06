@@ -34,9 +34,19 @@
 .property-item {
     align-self: flex-start;
     margin-bottom: @gridGutterWidth;
-
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #a8a8a8;
     /* 1 per row */
     width: 100%;
+
+    width: 23vw;
+    height: 23vw;
+
+    @media @upto-tablet {
+        width: 30vw;
+        height: 30vw;
+    }
 
     .property-item-inner {
         position: relative;
@@ -271,7 +281,9 @@
 /*--- .caption-sq ---*/
 
 .property-item {
-    
+
+
+
     &.caption-sq {
             
         .property-item-inner {
@@ -292,21 +304,21 @@
                 
                 > .image-sq {
                     &:before {
-                        padding-top: 75%;
+                        padding-top: 50%;
                     }
                     &:after {
                         display: none;
                     }
                 }
-                
+
                 .main-details {
                     position: static;
                     //background: pink;
                     height: auto;
                     width: auto;
                     padding: 30px;
-                    
-                    
+
+
                     .title-row {
                         .title-sq {
                             margin-right: 0;

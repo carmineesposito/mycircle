@@ -614,7 +614,7 @@ var SQ = SQ || {};
                     'small-mobile' : '320',
                     'mobile' : '768',
                     'tablet' : '992',
-                    'desktop': '1200'
+                    'desktop': '1500'
                 };
 
                 $.each(breakpoints, function(index, value) {
