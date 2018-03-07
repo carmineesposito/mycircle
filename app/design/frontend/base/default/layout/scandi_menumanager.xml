@@ -13,7 +13,7 @@
 <layout>
     <default>
         <reference name="head">
-            <action method="addItem"><type>skin_css</type><name>scandi/menumanager/css/menumanager.css</name></action>
+            <action method="addItem" after="-"><type>skin_css</type><name>scandi/menumanager/css/menumanager.css</name></action>
         </reference>
     </default>
 </layout>

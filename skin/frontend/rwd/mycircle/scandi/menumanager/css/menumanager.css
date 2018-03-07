@@ -10,7 +10,7 @@
 
 /* Global Style */
 .menu-manager-menu { margin-bottom:15px; }
-.menu-manager-menu li a { color:#fff;text-decoration:none;font-size: 30px; }
+.menu-manager-menu li a { color:#fff;text-decoration:none;font-size: 30px;text-shadow: 2px 1px 0 #000; }
 .menu-manager-menu li.active > a { color:#fff;text-decoration:none; }
 
 /* Type : None */
@@ -25,7 +25,7 @@
 
 /* Type : Horizontal */
 .menu-type-horizontal { position:relative; z-index:100; }
-ul.menu-type-horizontal { width:100%; border: none; text-align: center;margin-top: 60px; display: list-item;}
+ul.menu-type-horizontal { width:100%; border: none; text-align: center;margin-top: 40px;margin-left: 0; display: list-item;}
 .menu-type-horizontal li.level0 > a > span {  }
 .menu-type-horizontal li span { padding:5px 10px; display:inline-block; }
 .menu-type-horizontal li span:hover {  }
@@ -45,10 +45,12 @@ ul.menu-type-horizontal { width:100%; border: none; text-align: center;margin-to
 
 }
 
-.is-resized .menu-manager-menu li.active > a{
+.is-resized .menu-manager-menu li > a{
 
     color: #474747;
     font-size: 1.4em;
+    text-shadow: 1px 1px 0 #fff;
+
 
 }
 .is-resized ul.menu-type-horizontal {

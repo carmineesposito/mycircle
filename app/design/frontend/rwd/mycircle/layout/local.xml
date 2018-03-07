@@ -32,11 +32,14 @@
 
     <default>
         <reference name="header">
-            <block type="scandi_menumanager/menu" name="menu_header">
-                <action method="setMenuId">
-                    <menu_id>mainmenu</menu_id>
-                </action>
+            <block type="ves_megamenu/top" name="menu_header" before="-">
+                <block type="ves_megamenu/html" name="top.menu.top" template="ves/megamenu/top.phtml"/>
             </block>
+            <!--<block type="scandi_menumanager/menu" name="menu_header">-->
+                <!--<action method="setMenuId">-->
+                    <!--<menu_id>mainmenu</menu_id>-->
+                <!--</action>-->
+            <!--</block>-->
         </reference>
     </default>
 

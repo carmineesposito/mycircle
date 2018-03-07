@@ -38,7 +38,16 @@
  * 32. general module.
  
  */
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -51,12 +60,9 @@
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
              Icon
 *******************************/
-
 i.icon {
   display: inline-block;
   opacity: 1;
@@ -81,12 +87,9 @@ i.icon,
 i.icons {
   font-size: 20px;
 }
-
-
 /*******************************
              States
 *******************************/
-
 i.icon.hover {
   opacity: 1 !important;
 }
@@ -99,7 +102,16 @@ i.emphasized.icon {
 i.disabled.icon {
   opacity: 0.45 !important;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -112,12 +124,9 @@ i.disabled.icon {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
           Button SQ
 *******************************/
-
 .button-sq,
 button,
 input[type="button"],
@@ -155,7 +164,7 @@ input[type="submit"] {
   transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
   will-change: '';
   -webkit-tap-highlight-color: transparent;
-  background: #E13C7E;
+  background: #ff5f73;
   color: #fff;
 }
 .button-sq:hover,
@@ -167,7 +176,7 @@ button:focus,
 input[type="button"]:focus,
 input[type="submit"]:focus {
   color: #fff;
-  background-color: #e41d6c;
+  background-color: #ff3c54;
 }
 .button-sq span,
 button span {
@@ -182,24 +191,27 @@ button .icon + span {
   padding-left: 15px;
 }
 .button-sq.small-sq {
-  font-size: 0.813em;
-  padding: .7em 1.2em;
+  font-size: 20px;
+  padding: 1.3em 1.2em;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  margin: 0 15px 0 15px;
 }
 .button-sq.see-through-sq {
   border-radius: 3px;
   border: 1px solid #D4D4D4;
   background: transparent;
-  color: #262626;
+  color: #474747;
 }
 .button-sq.see-through-sq:hover,
 .button-sq.see-through-sq:focus {
-  border-color: #E13C7E;
-  color: #E13C7E;
+  border-color: #474747;
+  color: #474747;
 }
 .button-sq.link-sq {
   background: transparent;
   border: none;
-  color: #262626;
+  color: #474747;
 }
 .button-sq.cancel-sq {
   background: #EAEAEA;
@@ -228,7 +240,7 @@ button .icon + span {
   padding: 5px 10px;
   border-radius: 3px;
   font-size: 12px;
-  color: #262626;
+  color: #474747;
   margin: 0;
   -webkit-transition: color .2s ease-in, background .2s ease-in;
   -moz-transition: color .2s ease-in, background .2s ease-in;
@@ -238,7 +250,7 @@ button .icon + span {
 }
 .clipboad-copy-sq:hover,
 .clipboad-copy-sq:focus {
-  background: #E13C7E;
+  background: #474747;
   color: #fff;
 }
 .button-sq.fullwidth-sq > span {
@@ -246,7 +258,16 @@ button .icon + span {
   -webkit-flex-grow: 1;
   flex-grow: 1;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -259,12 +280,9 @@ button .icon + span {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
           Button SQ
 *******************************/
-
 .shadow-sq {
   position: relative;
 }
@@ -291,7 +309,16 @@ button .icon + span {
   background: rgba(0, 0, 0, 0);
   animation: fade-in-shadow 1s 2s forwards;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -304,12 +331,9 @@ button .icon + span {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
           Logo
 *******************************/
-
 .logo,
 .logo.item {
   display: block;
@@ -317,11 +341,10 @@ button .icon + span {
   line-height: 44px;
   background: transparent;
   color: #888888;
-  font-family: 'Frank Ruhl Libre', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 700;
   padding: 0 10px;
-  margin: auto !important;
   /* Logo Image */
 }
 .logo .icon,
@@ -354,15 +377,22 @@ button .icon + span {
 .header-transparent.is-transparent .logo .logo-transparent + img {
   display: none;
   opacity: 0;
-  width: 100%;
-  height: auto;
 }
 .header-transparent.is-transparent .logo .logo-transparent {
   display: inline-block;
   opacity: 1;
   height: 70px;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -375,12 +405,9 @@ button .icon + span {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
         Hamburger General
 *******************************/
-
 .hamburger {
   padding: 0;
   display: inline-block;
@@ -436,12 +463,9 @@ button .icon + span {
 .hamburger .hamburger-inner:after {
   bottom: -6px;
 }
-
-
 /*******************************
         3DX
 *******************************/
-
 .hamburger-3dx {
   /* is active */
 }
@@ -476,12 +500,9 @@ button .icon + span {
   -webkit-transform: translate3d(0, -6px, 0) rotate(-45deg);
   transform: translate3d(0, -6px, 0) rotate(-45deg);
 }
-
-
 /*******************************
         3DX - Reverse
 *******************************/
-
 .hamburger-3dx-r .hamburger-box {
   -webkit-perspective: 44px;
   perspective: 44px;
@@ -513,12 +534,9 @@ button .icon + span {
   -webkit-transform: translate3d(0, -6px, 0) rotate(-45deg);
   transform: translate3d(0, -6px, 0) rotate(-45deg);
 }
-
-
 /*******************************
         Arrow
 *******************************/
-
 .hamburger-arrow.is-active .hamburger-inner:before,
 .hamburger-arrow.active .hamburger-inner:before {
   -webkit-transform: translate3d(-4.4px, 0, 0) rotate(-45deg) scale(0.7, 1);
@@ -529,12 +547,9 @@ button .icon + span {
   -webkit-transform: translate3d(-4.4px, 0, 0) rotate(45deg) scale(0.7, 1);
   transform: translate3d(-4.4px, 0, 0) rotate(45deg) scale(0.7, 1);
 }
-
-
 /*******************************
         Arrow Right
 *******************************/
-
 .hamburger-arrow-r.is-active .hamburger-inner:before,
 .hamburger-arrow-r.active .hamburger-inner:before {
   -webkit-transform: translate3d(4.4px, 0, 0) rotate(45deg) scale(0.7, 1);
@@ -545,12 +560,9 @@ button .icon + span {
   -webkit-transform: translate3d(4.4px, 0, 0) rotate(-45deg) scale(0.7, 1);
   transform: translate3d(4.4px, 0, 0) rotate(-45deg) scale(0.7, 1);
 }
-
-
 /*******************************
         Arrow Alt
 *******************************/
-
 .hamburger-arrow-alt .hamburger-inner:before {
   transition: top 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: top 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -579,12 +591,9 @@ button .icon + span {
   transition: bottom 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
   transition: bottom 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22), -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
-
-
 /*******************************
         Arrow Alt Right
 *******************************/
-
 .hamburger-arrow-alt-r .hamburger-inner:before {
   transition: top 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: top 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -613,12 +622,9 @@ button .icon + span {
   transition: bottom 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
   transition: bottom 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22), -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
-
-
 /*******************************
         Collapse
 *******************************/
-
 .hamburger-collapse .hamburger-inner {
   top: auto;
   bottom: 0;
@@ -657,12 +663,9 @@ button .icon + span {
   opacity: 0;
   transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear;
 }
-
-
 /*******************************
         Collapse Reverse
 *******************************/
-
 .hamburger-collapse-r .hamburger-inner {
   top: auto;
   bottom: 0;
@@ -701,12 +704,9 @@ button .icon + span {
   transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
-
 /*******************************
         Elastic
 *******************************/
-
 .hamburger-elastic {
   /* is active */
 }
@@ -742,12 +742,9 @@ button .icon + span {
   transform: translate3d(0, -12px, 0) rotate(-270deg);
   transition-delay: 0.1s;
 }
-
-
 /*******************************
         Elastic Reverse
 *******************************/
-
 .hamburger-elastic-r .hamburger-inner {
   top: 0.5px;
   transition-duration: 0.4s;
@@ -780,12 +777,9 @@ button .icon + span {
   transition-delay: 0s;
   opacity: 0;
 }
-
-
 /*******************************
         Emphatic
 *******************************/
-
 .hamburger-emphatic {
   overflow: hidden;
 }
@@ -831,12 +825,9 @@ button .icon + span {
   transition: right 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: right 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
-
 /*******************************
         Emphatic Reversed
 *******************************/
-
 .hamburger-emphatic-r {
   overflow: hidden;
 }
@@ -882,12 +873,9 @@ button .icon + span {
   transition: right 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: right 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
-
 /*******************************
         Slider
 *******************************/
-
 .hamburger-slider .hamburger-inner {
   top: 0.5px;
 }
@@ -918,12 +906,9 @@ button .icon + span {
   -webkit-transform: translate3d(0, -12px, 0) rotate(-90deg);
   transform: translate3d(0, -12px, 0) rotate(-90deg);
 }
-
-
 /*******************************
         Slider Reversed
 *******************************/
-
 .hamburger-slider-r .hamburger-inner {
   top: 0.5px;
 }
@@ -954,12 +939,9 @@ button .icon + span {
   -webkit-transform: translate3d(0, -12px, 0) rotate(90deg);
   transform: translate3d(0, -12px, 0) rotate(90deg);
 }
-
-
 /*******************************
         Spring
 *******************************/
-
 .hamburger-spring .hamburger-inner {
   top: 0.5px;
   transition: background-color 0s 0.15s linear;
@@ -999,12 +981,9 @@ button .icon + span {
   -webkit-transform: translate3d(0, 6px, 0) rotate(-45deg);
   transform: translate3d(0, 6px, 0) rotate(-45deg);
 }
-
-
 /*******************************
         Spring Reversed
 *******************************/
-
 .hamburger-spring-r .hamburger-inner {
   top: auto;
   bottom: 0;
@@ -1043,12 +1022,9 @@ button .icon + span {
   opacity: 0;
   transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0s 0.32s linear;
 }
-
-
 /*******************************
         Stand
 *******************************/
-
 .hamburger-stand .hamburger-inner {
   transition: background-color 0s 0.1s linear, -webkit-transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.1s linear;
@@ -1091,12 +1067,9 @@ button .icon + span {
   transition: bottom 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
-
 /*******************************
         Stand Reversed
 *******************************/
-
 .hamburger-stand-r .hamburger-inner {
   transition: background-color 0s 0.1s linear, -webkit-transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.1s linear;
@@ -1139,12 +1112,9 @@ button .icon + span {
   transition: bottom 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
-
 /*******************************
         Spin
 *******************************/
-
 .hamburger-spin .hamburger-inner {
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -1179,12 +1149,9 @@ button .icon + span {
   transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
-
 /*******************************
         Spin Reversed
 *******************************/
-
 .hamburger-spin-r .hamburger-inner {
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -1219,12 +1186,9 @@ button .icon + span {
   transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
-
 /*******************************
         Sqeeze 
 *******************************/
-
 .hamburger-squeeze .hamburger-inner {
   transition-duration: 0.1s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -1259,12 +1223,9 @@ button .icon + span {
   transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
-
 /*******************************
         Vortex 
 *******************************/
-
 .hamburger-vortex .hamburger-inner {
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
@@ -1306,12 +1267,9 @@ button .icon + span {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-
-
 /*******************************
         Vortex Reversed
 *******************************/
-
 .hamburger-vortex-r .hamburger-inner {
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
@@ -1353,7 +1311,16 @@ button .icon + span {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -1366,12 +1333,9 @@ button .icon + span {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /***************************************
        Sticky Element Default
 ****************************************/
-
 .sticky-element.is-sticky > * {
   top: 0;
   z-index: 100;
@@ -1380,7 +1344,6 @@ button .icon + span {
   .sticky-element.is-sticky > * {
     overflow-y: auto;
   }
-
 }
 .sticky-element.under-mhs > * {
   z-index: 102;
@@ -1439,7 +1402,16 @@ button .icon + span {
 .sticky-all.under-ths > * {
   z-index: 102;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -1676,24 +1648,24 @@ button .icon + span {
   border-left-color: #E13C7E;
 }
 .property-sticky-box .sticky-box-content input[type="text"] {
-  font-family: 'Hind';
+  font-family: 'Ubuntu';
   line-height: 1.2142em;
   padding: 0.78178889em;
   font-size: 0.875em;
   background: transparent;
   border: 1px solid #D4D4D4;
-  color: #262626;
+  color: #474747;
   border-radius: 0;
   transition: color 0.1s ease, border-color 0.1s ease;
 }
 .property-sticky-box .sticky-box-content input[type="text"]::-webkit-input-placeholder {
-  color: #b2b2b2;
+  color: #d3d3d3;
 }
 .property-sticky-box .sticky-box-content input[type="text"]::-ms-input-placeholder {
-  color: #b2b2b2;
+  color: #d3d3d3;
 }
 .property-sticky-box .sticky-box-content input[type="text"] ::-moz-placeholder {
-  color: #b2b2b2;
+  color: #d3d3d3;
 }
 .property-sticky-box .sticky-box-content .button-sq {
   padding: 0;
@@ -1754,7 +1726,7 @@ button .icon + span {
 }
 .property-sticky-box .sticky-box-wishlist .wishlist-sq a {
   font-size: 0.875em;
-  color: #E13C7E;
+  color: #474747;
   display: block;
 }
 .property-sticky-box .sticky-box-wishlist .wishlist-sq a:hover,
@@ -1769,7 +1741,7 @@ button .icon + span {
   font-size: 0.813em;
   font-style: italic;
   opacity: .7;
-  color: #262626;
+  color: #474747;
   padding: 15px 0;
 }
 @media only screen and (max-width: 991px) {
@@ -1783,7 +1755,7 @@ button .icon + span {
   .property-sticky-box .sticky-box-wishlist .share-sq a {
     display: block;
     font-size: 14px;
-    color: #E13C7E;
+    color: #474747;
     text-align: right;
   }
   .property-sticky-box .sticky-box-wishlist .share-sq a:hover,
@@ -2031,7 +2003,16 @@ button .icon + span {
     top: 0;
   }
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -2044,12 +2025,9 @@ button .icon + span {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
         Basic Progressbar
 *******************************/
-
 .basic-progressbar {
   height: 3px;
   background: rgba(0, 0, 0, 0.1);
@@ -2076,7 +2054,16 @@ button .icon + span {
   font-size: 1.375em;
   margin-right: 5px;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -2089,12 +2076,12 @@ button .icon + span {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
         Footer
 *******************************/
-
+#footer {
+  background-color: #34393b;
+}
 #footer .footer-top {
   padding-bottom: 20px;
 }
@@ -2109,18 +2096,22 @@ button .icon + span {
   border: none;
 }
 #footer .footer-bottom {
-  background: #252B33;
   padding: 30px 0 0 0;
 }
 #footer h5 {
   font-weight: 700;
+  color: #fefefe;
+}
+#footer .form-subscribe-header > label {
+  color: #fefefe;
 }
 #footer .list-default-sq li {
   padding: 0.1em 0;
 }
 #footer .list-default-sq li a {
+  line-height: 2.5;
   font-size: 0.875em;
-  color: rgba(38, 38, 38, 0.7);
+  color: #fefefe;
   letter-spacing: 0;
   -webkit-transition: text-decoration 0.3s ease-out;
   -moz-transition: text-decoration 0.3s ease-out;
@@ -2133,7 +2124,7 @@ button .icon + span {
   text-decoration: underline;
 }
 #footer p {
-  color: rgba(38, 38, 38, 0.7);
+  color: rgba(71, 71, 71, 0.7);
   font-size: 0.875em;
 }
 #footer .footer-logo {
@@ -2153,12 +2144,21 @@ button .icon + span {
   color: rgba(255, 255, 255, 0.5);
 }
 #footer .social-links-sq li a:hover {
-  color: #E13C7E;
+  color: #474747;
 }
 #footer .social-links-sq li a i {
   font-size: 16px;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -2206,7 +2206,16 @@ button .icon + span {
 .image-relative {
   position: relative;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -2219,12 +2228,9 @@ button .icon + span {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
         User Info
 *******************************/
-
 .host-background {
   background: #fff;
 }
@@ -2345,7 +2351,7 @@ button .icon + span {
 }
 .host-row .host-avatar-column .social-row .social-links-sq li > a {
   opacity: .4;
-  color: #262626;
+  color: #474747;
 }
 .host-row .host-avatar-column .social-row .social-links-sq li > a:hover,
 .host-row .host-avatar-column .social-row .social-links-sq li > a:focus {
@@ -2380,7 +2386,7 @@ button .icon + span {
 .host-row .host-meta-column .host-name {
   font-size: 1.750em;
   font-weight: 700;
-  color: #262626;
+  color: #474747;
   margin-bottom: 0;
   text-align: center;
 }
@@ -2697,7 +2703,16 @@ button .icon + span {
   width: 180px;
   height: 180px;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -2710,12 +2725,9 @@ button .icon + span {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
         Vendor
 *******************************/
-
 /* ---- Dashboard Menu (de inlocuit) ---- */
 .dashboard-sq {
   background: #fff;
@@ -2814,7 +2826,7 @@ button .icon + span {
 }
 .dashboard-menu > .item {
   display: none;
-  color: #262626;
+  color: #474747;
 }
 .dashboard-menu > ul {
   padding: 30px 0;
@@ -2848,11 +2860,11 @@ button .icon + span {
   display: none;
 }
 .dashboard-menu li > a {
-  color: #262626;
+  color: #474747;
 }
 .dashboard-menu .ui.accordion .title > a,
 .dashboard-menu .ui.accordion .content > a {
-  color: #262626;
+  color: #474747;
   opacity: .7;
   -webkit-transition: opacity 0.2s ease-in;
   -moz-transition: opacity 0.2s ease-in;
@@ -2953,7 +2965,7 @@ button .icon + span {
   }
   .sticky-element.after-element.is-after .dashboard-sticky .dashboard-contact > .icon {
     display: block;
-    color: #E13C7E;
+    color: #474747;
   }
   .sticky-element.after-element.is-after .dashboard-sticky .dashboard-contact > span {
     display: none;
@@ -3110,7 +3122,7 @@ button .icon + span {
   margin-right: 10px;
 }
 .dashboard-description.second-sq ul > li > a {
-  color: #262626;
+  color: #474747;
   opacity: .7;
 }
 .dashboard-description.second-sq .location-sq {
@@ -3145,7 +3157,7 @@ button .icon + span {
   }
 }
 .dashboard-filter li a {
-  color: #262626;
+  color: #474747;
   opacity: .3;
   -webkit-transition: opacity 0.3s ease-out;
   -moz-transition: opacity 0.3s ease-out;
@@ -3158,7 +3170,7 @@ button .icon + span {
   opacity: 1;
 }
 .dashboard-filter li a.active {
-  color: #E13C7E;
+  color: #474747;
   opacity: 1;
   font-weight: 700;
 }
@@ -3168,7 +3180,7 @@ button .icon + span {
   margin-bottom: 40px;
 }
 .become-dashboard-description .ui.column .become-dashboard-inner {
-  background: #fafafa;
+  background: #ffffff;
   padding: 40px;
   min-height: 400px;
 }
@@ -3388,7 +3400,7 @@ button .icon + span {
 }
 .message-title-sq {
   font-weight: 700;
-  font-family: 'Hind', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
 .message-date-sq {
@@ -3404,7 +3416,7 @@ button .icon + span {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: left;
-  color: #262626;
+  color: #474747;
 }
 .message-status-sq {
   font-size: 18px;
@@ -3421,7 +3433,7 @@ button .icon + span {
   height: 100%;
   width: 24px;
   font-size: 24px;
-  color: #262626;
+  color: #474747;
   opacity: .6;
   -webkit-transition: opacity .3s ease-in, text-shadow .3s ease-in;
   -moz-transition: opacity .3s ease-in, text-shadow .3s ease-in;
@@ -3453,7 +3465,7 @@ button .icon + span {
   text-overflow: ellipsis;
   text-align: left;
   font-weight: 700;
-  color: #262626;
+  color: #474747;
 }
 .message-sq.in-pending-sq .message-status-sq {
   color: #4A90E2;
@@ -3501,7 +3513,7 @@ button .icon + span {
 }
 .message-back {
   margin-right: 50px;
-  color: #262626;
+  color: #474747;
   opacity: .6;
 }
 .message-dashboard-details {
@@ -3560,7 +3572,7 @@ button .icon + span {
   font-size: 0.750em;
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
-  color: #262626;
+  color: #474747;
 }
 .message-chat-item-sq {
   display: -webkit-box;
@@ -3767,7 +3779,16 @@ button .icon + span {
   width: 100%;
   height: 400px;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -3780,12 +3801,9 @@ button .icon + span {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
         Property Box
 *******************************/
-
 /*------------------------------------------------------
        Property Box Default - in Half Layout
 -------------------------------------------------------*/
@@ -3862,7 +3880,7 @@ button .icon + span {
   color: #1FCB40;
 }
 .property-item .property-item-inner .preview-sq {
-  color: #E13C7E;
+  color: #474747;
 }
 .property-item .property-item-inner .progress-status {
   font-size: 10px;
@@ -3917,7 +3935,7 @@ button .icon + span {
 .property-item .property-item-inner .main-details .title-row .title-sq {
   flex: 1;
   display: block;
-  font-family: 'Frank Ruhl Libre', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 22px;
   color: #fff;
@@ -3970,7 +3988,7 @@ button .icon + span {
   text-align: left;
 }
 .property-item .property-item-inner .main-details .icons-row .icons-column:first-child i.icon {
-  color: #E13C7E;
+  color: #474747;
 }
 .property-item .property-item-inner .main-details .completed-percentage {
   width: 100%;
@@ -4057,13 +4075,13 @@ button .icon + span {
   margin-right: 0;
   height: 52px;
   -webkit-line-clamp: 2;
-  color: #262626;
+  color: #474747;
 }
 .property-item.caption-sq .property-item-inner .main-details .title-row .avatar-sq {
   display: none;
 }
 .property-item.caption-sq .property-item-inner .main-details .icons-row .icons-column {
-  color: #262626;
+  color: #474747;
   font-size: 0.77777778rem;
 }
 .property-item.caption-sq .property-item-inner .main-details .icons-row .icons-column:first-child {
@@ -4103,7 +4121,7 @@ button .icon + span {
   width: auto;
 }
 .property-item.caption-sq .property-item-inner .main-details .progress-status {
-  color: #262626;
+  color: #474747;
   border-color: #D4D4D4;
 }
 /*--- .small-sq ---*/
@@ -4211,7 +4229,16 @@ h2 .total-properties strong {
     display: inline-block;
   }
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -4289,7 +4316,7 @@ h2 .total-properties strong {
 }
 .property-section-boxed .property-image-wrapper .host-sq:hover,
 .property-section-boxed .property-image-wrapper .host-sq:focus {
-  color: #E13C7E;
+  color: #474747;
 }
 .property-section-boxed .property-image-wrapper .host-sq .avatar-sq {
   margin-right: 10px;
@@ -4300,7 +4327,7 @@ h2 .total-properties strong {
 }
 @media only screen and (max-width: 991px) {
   .property-section-boxed .property-image-wrapper .host-sq .host-name-sq {
-    color: #262626;
+    color: #474747;
     font-weight: 400;
   }
 }
@@ -4400,7 +4427,16 @@ h2 .total-properties strong {
 .property-section-boxed .article-sq-slick.arrows-top-sq .slick-next {
   top: -100px;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -4413,12 +4449,9 @@ h2 .total-properties strong {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
         Photo Grid
 *******************************/
-
 .photo-grid {
   display: -webkit-box;
   display: -moz-box;
@@ -4645,12 +4678,9 @@ h2 .total-properties strong {
 .photo-grid.grid-5 .photo-item:nth-child(5):before {
   padding-top: 200%;
 }
-
-
 /*****************************************
         Photo Upload Grid & style
 *****************************************/
-
 .photo-upload {
   display: -webkit-box;
   display: -moz-box;
@@ -4699,7 +4729,7 @@ h2 .total-properties strong {
   bottom: 0;
   right: 0;
   font-size: 22px;
-  color: #262626;
+  color: #474747;
   -webkit-transition: background 0.3s ease-out;
   -moz-transition: background 0.3s ease-out;
   -o-transition: background 0.3s ease-out;
@@ -4876,7 +4906,16 @@ h2 .total-properties strong {
 .photo-upload .photo-upload-item:nth-child(3n) .image-wrapper {
   margin-right: 0;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -5104,7 +5143,7 @@ h2 .total-properties strong {
 }
 .reviews-row .review-meta .name-sq {
   font-weight: 700;
-  color: #262626;
+  color: #474747;
 }
 .reviews-row .avatar-sq {
   margin: 0 auto 20px auto;
@@ -5132,7 +5171,16 @@ h2 .total-properties strong {
 .reviews-row .comment-sq p {
   text-align: justify;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -5145,12 +5193,9 @@ h2 .total-properties strong {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*********************************************
        Articles Styles
 **********************************************/
-
 /* mixin for converting EM to PX */
 .magic-grid {
   display: -webkit-box;
@@ -5215,7 +5260,7 @@ h2 .total-properties strong {
 }
 .magic-grid .typo-label-sq {
   font-size: 18px;
-  font-family: 'Hind', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: normal;
   margin-bottom: 0;
 }
@@ -5243,7 +5288,7 @@ h2 .total-properties strong {
 }
 .magic-grid .typo-title-sq {
   font-size: 1.375em;
-  font-family: 'Frank Ruhl Libre', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -5252,11 +5297,11 @@ h2 .total-properties strong {
 }
 .magic-grid .read-more-sq {
   display: block;
-  font-family: 'Hind', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700;
   text-align: right;
-  color: #E13C7E;
+  color: #474747;
 }
 .magic-grid .read-more-sq > .icon {
   font-size: 12px;
@@ -5743,7 +5788,7 @@ h2 .total-properties strong {
 }
 .magic-grid.article-sq .typo-sq > a,
 .article-sq.item .typo-sq > a {
-  color: #E13C7E;
+  color: #474747;
   -webkit-transition: color 0.3s ease-out;
   -moz-transition: color 0.3s ease-out;
   -o-transition: color 0.3s ease-out;
@@ -5754,7 +5799,7 @@ h2 .total-properties strong {
 .article-sq.item .typo-sq > a:hover,
 .magic-grid.article-sq .typo-sq > a:focus,
 .article-sq.item .typo-sq > a:focus {
-  color: #b51c59;
+  color: #212121;
 }
 .magic-grid.article-sq .typo-label-sq,
 .article-sq.item .typo-sq .typo-label-sq,
@@ -5762,11 +5807,11 @@ h2 .total-properties strong {
 .article-sq.item .typo-sq .typo-title-sq,
 .magic-grid.article-sq .typo-desc-sq,
 .article-sq.item .typo-sq .typo-desc-sq {
-  color: #262626;
+  color: #474747;
 }
 .magic-grid.article-sq .typo-label-sq,
 .article-sq.item .typo-label-sq {
-  font-family: 'Hind', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: normal;
   margin-bottom: 5px;
   font-size: 18px;
@@ -5781,7 +5826,7 @@ h2 .total-properties strong {
 }
 .magic-grid.article-sq .typo-title-sq,
 .article-sq.item .typo-title-sq {
-  font-family: 'Frank Ruhl Libre', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 24.75px;
   display: block;
@@ -6029,7 +6074,7 @@ h2 .total-properties strong {
   font-size: 0.875em;
   font-weight: 700;
   text-align: right;
-  color: #E13C7E;
+  color: #474747;
   height: 27px;
 }
 .article-sq.item .read-more-sq > .icon {
@@ -6087,13 +6132,13 @@ article.article-sq {
 .article-meta-category-sq {
   text-transform: uppercase;
   opacity: .7;
-  color: #262626;
+  color: #474747;
   letter-spacing: 0;
   margin-bottom: 0;
 }
 .article-title-sq {
   font-weight: 700;
-  color: #262626;
+  color: #474747;
   letter-spacing: 0;
   margin: 5px 0 25px 0;
 }
@@ -6252,7 +6297,7 @@ article.article-sq {
   letter-spacing: 0.05em;
   padding: 30px 0;
   width: 100%;
-  color: #E13C7E;
+  color: #474747;
   opacity: .8;
 }
 .article-content-sq blockquote > * {
@@ -6263,7 +6308,7 @@ article.article-sq {
   display: block;
   width: 60px;
   height: 1px;
-  background: #E13C7E;
+  background: #474747;
 }
 .article-content-sq blockquote:after {
   margin-top: 30px;
@@ -6332,7 +6377,16 @@ article.article-sq {
   height: 400px;
   width: 300px;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -6352,6 +6406,7 @@ article.article-sq {
   position: relative;
   background: #fff;
   padding: 40px;
+  width: 100%;
   /* Animate */
   /* Thin Style */
   /* Colored Style */
@@ -6640,7 +6695,7 @@ article.article-sq {
   }
 }
 .h-search-h.colored-sq {
-  background: #e4508b;
+  background: #595959;
   /* Colored animate */
 }
 .h-search-h.colored-sq .search-item:after {
@@ -6754,7 +6809,7 @@ article.article-sq {
   /* colored animate */
 }
 .hero-search-full-page .h-search-h.colored-sq.shadow-sq:after {
-  background: #e4508b;
+  background: #595959;
 }
 .hero-search-full-page .h-search-h.colored-sq.animate-sq {
   background: transparent;
@@ -6896,7 +6951,7 @@ article.article-sq {
     background: transparent;
   }
   100% {
-    background: #e4508b;
+    background: #595959;
   }
 }
 @-webkit-keyframes background-fade-in-colored {
@@ -6904,7 +6959,7 @@ article.article-sq {
     background: transparent;
   }
   100% {
-    background: #e4508b;
+    background: #595959;
   }
 }
 @keyframes background-fade-in-colored {
@@ -6912,7 +6967,7 @@ article.article-sq {
     background: transparent;
   }
   100% {
-    background: #e4508b;
+    background: #595959;
   }
 }
 @-o-keyframes background-fade-in-colored {
@@ -6920,7 +6975,7 @@ article.article-sq {
     background: transparent;
   }
   100% {
-    background: #e4508b;
+    background: #595959;
   }
 }
 /* fade-in-shadow */
@@ -7236,7 +7291,16 @@ article.article-sq {
     top: 0;
   }
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -7280,7 +7344,7 @@ article.article-sq {
   color: #fff;
 }
 .promo-section .promo-content .button-sq:hover {
-  color: #E13C7E;
+  color: #474747;
 }
 .promo-section .promo-content h2,
 .promo-section .promo-content p {
@@ -7294,8 +7358,8 @@ article.article-sq {
 .promo-section .promo-content.style-01 a.button-sq:hover,
 .promo-section .promo-content.style-01 a:focus,
 .promo-section .promo-content.style-01 a.button-sq:focus {
-  color: #E13C7E;
-  border-color: #E13C7E;
+  color: #474747;
+  border-color: #474747;
 }
 .promo-section .promo-content.style-02 {
   background: rgba(41, 131, 49, 0.5);
@@ -7305,10 +7369,19 @@ article.article-sq {
 .promo-section .promo-content.style-02 a.button-sq:hover,
 .promo-section .promo-content.style-02 a:focus,
 .promo-section .promo-content.style-02 a.button-sq:focus {
-  color: #E13C7E;
-  border-color: #E13C7E;
+  color: #474747;
+  border-color: #474747;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -7330,7 +7403,16 @@ article.article-sq {
 #map {
   height: 100%;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -7343,12 +7425,9 @@ article.article-sq {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
             Accordion
 *******************************/
-
 .ui.accordion,
 .ui.accordion .accordion {
   max-width: 100%;
@@ -7365,9 +7444,9 @@ article.article-sq {
 /* Default Styling */
 .ui.accordion .title:not(.ui) {
   padding: 0.5em 0em;
-  font-family: 'Frank Ruhl Libre', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1em;
-  color: #262626;
+  color: #474747;
 }
 /* Content */
 .ui.accordion .title ~ .content,
@@ -7416,12 +7495,9 @@ article.article-sq {
   font-size: 1em;
   margin: 0em 0.25rem 0em 0rem;
 }
-
-
 /*******************************
             States
 *******************************/
-
 .ui.accordion .active.title .dropdown.icon,
 .ui.accordion .accordion .active.title .dropdown.icon {
   transform: rotate(180deg);
@@ -7429,12 +7505,9 @@ article.article-sq {
 .ui.accordion.menu .item .active.title > .dropdown.icon {
   transform: rotate(180deg);
 }
-
-
 /*******************************
             Types
 *******************************/
-
 /*--------------
      Styled
 ---------------*/
@@ -7476,12 +7549,12 @@ article.article-sq {
 .ui.styled.accordion .accordion .title:hover,
 .ui.styled.accordion .accordion .active.title {
   background: transparent;
-  color: #262626;
+  color: #474747;
 }
 .ui.styled.accordion .accordion .title:hover,
 .ui.styled.accordion .accordion .active.title {
   background: transparent;
-  color: #262626;
+  color: #474747;
 }
 /* Active */
 .ui.styled.accordion .active.title {
@@ -7492,12 +7565,9 @@ article.article-sq {
   background: transparent;
   color: rgba(0, 0, 0, 0.95);
 }
-
-
 /*******************************
             States
 *******************************/
-
 /*--------------
      Active
 ---------------*/
@@ -7505,12 +7575,9 @@ article.article-sq {
 .ui.accordion .accordion .active.content {
   display: block;
 }
-
-
 /*******************************
            Variations
 *******************************/
-
 /*--------------
      Fluid
 ---------------*/
@@ -7562,7 +7629,7 @@ article.article-sq {
   -o-transition: color 0.3s ease-out;
   -ms-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
-  color: #E13C7E;
+  color: #474747;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -7591,7 +7658,7 @@ article.article-sq {
   height: 20px;
   line-height: 20px !important;
   border-radius: 50%;
-  border: 1px solid #E13C7E;
+  border: 1px solid #474747;
   font-size: 8px;
   font-weight: 700;
   margin-right: 15px;
@@ -7605,11 +7672,11 @@ article.article-sq {
 }
 .more-trigger:hover,
 .more-trigger:focus {
-  color: #b51c59;
+  color: #212121;
 }
 .more-trigger:hover .icon,
 .more-trigger:focus .icon {
-  border-color: #b51c59;
+  border-color: #212121;
 }
 .ui.accordion .active.title .more-trigger:after {
   content: attr(data-less);
@@ -7619,7 +7686,7 @@ article.article-sq {
   position: relative;
 }
 .ui.accordion .title:not(.ui) {
-  font-family: 'Hind', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 /*-----------------------------
         Multiple Selection
@@ -7677,7 +7744,7 @@ article.article-sq {
   line-height: 36px;
   padding: 0 16px 0 12px;
   background: #f7f7f7;
-  color: #262626;
+  color: #474747;
   margin-bottom: 20px;
 }
 .ui.accordion.multiple-selection .more-trigger .icon {
@@ -7698,7 +7765,16 @@ article.article-sq {
   padding-bottom: 30px !important;
   border-bottom: 1px solid #D4D4D4;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -7711,12 +7787,9 @@ article.article-sq {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
             Dimmer
 *******************************/
-
 .dimmable {
   position: relative;
 }
@@ -7755,12 +7828,9 @@ article.article-sq {
 .ui.segment > .ui.dimmer {
   border-radius: inherit !important;
 }
-
-
 /*******************************
             States
 *******************************/
-
 .animating.dimmable:not(body),
 .dimmed.dimmable:not(body) {
   overflow: hidden;
@@ -7775,12 +7845,9 @@ article.article-sq {
   width: 0 !important;
   height: 0 !important;
 }
-
-
 /*******************************
            Variations
 *******************************/
-
 /*--------------
       Page
 ---------------*/
@@ -7859,7 +7926,16 @@ body.dimmable > .dimmer {
 .dimmed.dimmable > .ui.simple.inverted.dimmer {
   background-color: rgba(255, 255, 255, 0.85);
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -7872,12 +7948,9 @@ body.dimmable > .dimmer {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
              Modal
 *******************************/
-
 .ui.modal {
   display: none;
   position: fixed;
@@ -7902,12 +7975,9 @@ body.dimmable > .dimmer {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
-
 /*******************************
             Content
 *******************************/
-
 /*--------------
      Close
 ---------------*/
@@ -7932,7 +8002,7 @@ body.dimmable > .dimmer {
 ---------------*/
 .ui.modal > .header {
   display: block;
-  font-family: 'Frank Ruhl Libre', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   background: #FFFFFF;
   margin: 0em;
   padding: 0 0 40px 0;
@@ -8052,7 +8122,7 @@ body.dimmable > .dimmer {
   .ui.modal > .close {
     top: 1.125rem;
     right: 1rem;
-    color: #262626;
+    color: #474747;
   }
 }
 /* Mobile */
@@ -8107,12 +8177,9 @@ body.dimmable > .dimmer {
 .ui.inverted.dimmer > .ui.modal {
   box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.2);
 }
-
-
 /*******************************
              Types
 *******************************/
-
 .ui.basic.modal {
   background-color: transparent;
   border: none;
@@ -8133,7 +8200,7 @@ body.dimmable > .dimmer {
   right: 1.5rem;
 }
 .ui.inverted.dimmer > .basic.modal {
-  color: #262626;
+  color: #474747;
 }
 .ui.inverted.dimmer > .ui.basic.modal > .header {
   color: gray;
@@ -8144,21 +8211,15 @@ body.dimmable > .dimmer {
     color: #FFFFFF;
   }
 }
-
-
 /*******************************
              States
 *******************************/
-
 .ui.active.modal {
   display: block;
 }
-
-
 /*******************************
            Variations
 *******************************/
-
 /*--------------
     Scrolling
 ---------------*/
@@ -8217,7 +8278,7 @@ body.dimmable > .dimmer {
 .ui.fullscreen.modal > .close {
   top: 1.125rem;
   right: 1rem;
-  color: #262626;
+  color: #474747;
 }
 /*--------------
       Size
@@ -8294,12 +8355,9 @@ body.dimmable > .dimmer {
     margin: 0em 0em 0em -570px;
   }
 }
-
-
 /*******************************
              Modal
 *******************************/
-
 /*--------------
      Close
 ---------------*/
@@ -8317,7 +8375,7 @@ body.dimmable > .dimmer {
      Header
 ---------------*/
 .ui.modal > .header {
-  color: #262626;
+  color: #474747;
   margin: 50px 50px 0px 50px;
   border-bottom: 1px solid #D4D4D4;
 }
@@ -8328,7 +8386,7 @@ body.dimmable > .dimmer {
   margin-top: 12px;
   font-size: 18px;
   font-weight: 400;
-  color: #262626;
+  color: #474747;
   opacity: .6;
 }
 /*--------------
@@ -8394,29 +8452,23 @@ body.dimmable > .dimmer {
 .ui.modal > .actions .border-container .button-sq.link-sq.login-sq {
   font-size: 18px;
   text-align: right;
-  color: #E13C7E;
+  color: #474747;
 }
 .ui.modal > .actions .border-container .button-sq.link-sq.login-sq i {
   font-size: 26px;
   margin-left: 10px;
   margin-right: 0;
 }
-
-
 /*******************************
              Types
 *******************************/
-
 .ui.basic.modal > .header p {
   color: #fff;
   opacity: .8;
 }
-
-
 /*******************************
         Background style
 *******************************/
-
 .ui.modal {
   /* Welcome Modal */
 }
@@ -8550,7 +8602,7 @@ body.dimmable > .dimmer {
 .ui.modal.welcome .welcome-wrapper {
   width: calc(100% - 100px);
   margin: 50px auto 0 auto;
-  background: rgba(225, 60, 126, 0.9);
+  background: rgba(71, 71, 71, 0.9);
   padding: 100px;
   text-align: center;
   padding: 50px;
@@ -8703,7 +8755,16 @@ body.dimmable > .dimmer {
     opacity: 1;
   }
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -8716,12 +8777,9 @@ body.dimmable > .dimmer {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
             Popup
 *******************************/
-
 .ui.popup {
   display: none;
   position: absolute;
@@ -8737,13 +8795,13 @@ body.dimmable > .dimmer {
   padding: 0.833em 1em;
   font-weight: normal;
   font-style: normal;
-  color: #262626;
+  color: #474747;
   border-radius: 0;
   box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
 }
 .ui.popup > .header {
   padding: 0em;
-  font-family: 'Frank Ruhl Libre', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1.125em;
   line-height: 1.2;
   font-weight: bold;
@@ -8761,12 +8819,9 @@ body.dimmable > .dimmer {
   z-index: 2;
   box-shadow: 1px 1px 0px 0px #cccccc;
 }
-
-
 /*******************************
             Types
 *******************************/
-
 /*--------------
      Spacing
 ---------------*/
@@ -8916,23 +8971,17 @@ body.dimmable > .dimmer {
 .ui.inverted.top.popup:before {
   background: #000;
 }
-
-
 /*******************************
             Coupling
 *******************************/
-
 /* Immediate Nested Grid */
 .ui.popup > .ui.grid:not(.padded) {
   width: calc(100% + 1.75rem);
   margin: -0.7rem -0.875rem;
 }
-
-
 /*******************************
             States
 *******************************/
-
 .ui.loading.popup {
   display: block;
   visibility: hidden;
@@ -8946,12 +8995,9 @@ body.dimmable > .dimmer {
   transform: translateZ(0px);
   backface-visibility: hidden;
 }
-
-
 /*******************************
             Variations
 *******************************/
-
 /*--------------
      Basic
 ---------------*/
@@ -9031,7 +9077,16 @@ body.dimmable > .dimmer {
 .ui.popup:before {
   box-shadow: 3px 3px 6px 0 #e7e7e7;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -9044,24 +9099,18 @@ body.dimmable > .dimmer {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
           Transitions
 *******************************/
-
 .transition {
   animation-iteration-count: 1;
   animation-duration: 300ms;
   animation-timing-function: ease;
   animation-fill-mode: both;
 }
-
-
 /*******************************
             States
 *******************************/
-
 /* Animating */
 .animating.transition {
   backface-visibility: hidden;
@@ -9087,21 +9136,15 @@ body.dimmable > .dimmer {
 .disabled.transition {
   animation-play-state: paused;
 }
-
-
 /*******************************
           Variations
 *******************************/
-
 .looping.transition {
   animation-iteration-count: infinite;
 }
-
-
 /*******************************
           Transitions
 *******************************/
-
 /*
   Some transitions adapted from Animate CSS
   https://github.com/daneden/animate.css
@@ -9838,12 +9881,9 @@ body.dimmable > .dimmer {
     opacity: 0;
   }
 }
-
-
 /*******************************
        Static Animations
 *******************************/
-
 /*--------------
     Emphasis
 ---------------*/
@@ -10012,7 +10052,16 @@ body.dimmable > .dimmer {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -10025,12 +10074,9 @@ body.dimmable > .dimmer {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
             Dropdown
 *******************************/
-
 .ui.dropdown {
   cursor: pointer;
   position: relative;
@@ -10040,12 +10086,9 @@ body.dimmable > .dimmer {
   transition: box-shadow 0.1s ease, width 0.1s ease;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
-
 /*******************************
             Content
 *******************************/
-
 /*--------------
       Menu
 ---------------*/
@@ -10115,7 +10158,7 @@ body.dimmable > .dimmer {
   text-align: left;
   border-top: none;
   line-height: 1em;
-  color: #262626;
+  color: #474747;
   padding: 0.72222222rem 1.16666667rem !important;
   font-size: 1rem;
   text-transform: none;
@@ -10260,12 +10303,9 @@ body.dimmable > .dimmer {
   width: auto;
   max-height: 2em;
 }
-
-
 /*******************************
             Coupling
 *******************************/
-
 /*--------------
       Menu
 ---------------*/
@@ -10302,12 +10342,9 @@ body.dimmable > .dimmer {
 .ui.button.dropdown .menu {
   min-width: 100%;
 }
-
-
 /*******************************
               Types
 *******************************/
-
 /*--------------
     Selection
 ---------------*/
@@ -10323,7 +10360,7 @@ body.dimmable > .dimmer {
   background: transparent;
   display: inline-block;
   padding: 0.88888889em 2.48888889em 0.88888889em 0.88888889em;
-  color: #262626;
+  color: #474747;
   box-shadow: none;
   border: 1px solid #D4D4D4;
   border-radius: 0;
@@ -10331,7 +10368,7 @@ body.dimmable > .dimmer {
   width: auto;
 }
 .ui.selection.dropdown .text {
-  color: #262626;
+  color: #474747;
 }
 .ui.selection.dropdown.visible,
 .ui.selection.dropdown.active {
@@ -10630,12 +10667,9 @@ select.ui.dropdown {
   margin-top: 0.25em;
   border-radius: 0;
 }
-
-
 /*******************************
             States
 *******************************/
-
 /*--------------------
         Active
 ----------------------*/
@@ -10797,12 +10831,9 @@ select.ui.dropdown {
   pointer-events: none;
   opacity: 0.45;
 }
-
-
 /*******************************
            Variations
 *******************************/
-
 /*--------------
     Direction
 ---------------*/
@@ -11193,7 +11224,7 @@ select.ui.dropdown {
   font-weight: normal;
   font-style: normal;
   text-align: center;
-  color: #262626;
+  color: #474747;
 }
 .ui.dropdown > .dropdown.icon {
   width: auto;
@@ -11225,7 +11256,16 @@ select.ui.dropdown {
 .ui.dropdown .menu .item.active {
   font-weight: 700;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -11324,7 +11364,16 @@ select.ui.dropdown {
 .calendar-sq .calendar:focus .ui.table.inverted tbody tr td.focus {
   box-shadow: inset 0 0 0 1px #85B7D9;
 }
-
+/*!
+ * # Semantic UI - Calendar
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Copyright 2015 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 .calendar-sq.popup {
   box-shadow: 0 0px 3px rgba(140, 140, 140, 0.2);
   margin: 0 !important;
@@ -11562,8 +11611,8 @@ select.ui.dropdown {
 }
 .calendar-sq .ui.table tbody tr td.link.today:before,
 .calendar-sq .ui.table tbody tr td.link.today.focus:before {
-  background: #262626;
-  border-color: #262626;
+  background: #474747;
+  border-color: #474747;
 }
 .calendar-sq .ui.table th > *,
 .calendar-sq .ui.table td > * {
@@ -11599,7 +11648,16 @@ select.ui.dropdown {
   align-items: center;
   height: 100%;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -11745,8 +11803,7 @@ select.ui.dropdown {
 .slick-prev:before,
 .slick-next:before {
   font-family: 'icon';
-  font-size: 20px;
-  line-height: 1;
+  font-size: 100px;
   color: white;
   opacity: 0.75;
   -webkit-font-smoothing: antialiased;
@@ -11945,8 +12002,6 @@ select.ui.dropdown {
   .hero-big .slick-list .slick-track .slick-slide .caption-content,
   .hero-big .slick-list .slick-track .slick-slide .caption-outside {
     width: 1111px;
-    position: absolute;
-    bottom: 20%;
   }
 }
 .hero-big .slick-list .slick-track .slick-slide .caption-content > *,
@@ -11963,6 +12018,8 @@ select.ui.dropdown {
 .hero-big .slick-list .slick-track .slick-slide .caption-content span,
 .hero-big .slick-list .slick-track .slick-slide .caption-outside span {
   color: #fff;
+  text-transform: lowercase;
+  margin-top: 20%;
 }
 .hero-big .slick-list .slick-track .slick-slide .caption-content span,
 .hero-big .slick-list .slick-track .slick-slide .caption-outside span {
@@ -11973,16 +12030,15 @@ select.ui.dropdown {
 .hero-big .slick-list .slick-track .slick-slide .caption-content h2,
 .hero-big .slick-list .slick-track .slick-slide .caption-outside h2 {
   letter-spacing: 0;
-  font-size: 45px;
+  font-size: 25px;
 }
 @media only screen and (min-width: 768px) {
   .hero-big .slick-list .slick-track .slick-slide .caption-content h1,
   .hero-big .slick-list .slick-track .slick-slide .caption-outside h1,
   .hero-big .slick-list .slick-track .slick-slide .caption-content h2,
   .hero-big .slick-list .slick-track .slick-slide .caption-outside h2 {
-    font-size: 55px;
+    font-size: 50px;
     margin-bottom: 35px;
-    te
   }
 }
 .hero-big .slick-list .slick-track .slick-slide .caption-content p,
@@ -12003,7 +12059,7 @@ select.ui.dropdown {
 .hero-big .slick-list .slick-track .slick-slide .caption-outside button:focus,
 .hero-big .slick-list .slick-track .slick-slide .caption-content .button-sq:focus,
 .hero-big .slick-list .slick-track .slick-slide .caption-outside .button-sq:focus {
-  color: #E13C7E;
+  color: #474747;
 }
 .hero-big .slick-list .slick-track .slick-slide .caption-content button.see-through-sq,
 .hero-big .slick-list .slick-track .slick-slide .caption-outside button.see-through-sq,
@@ -12019,7 +12075,7 @@ select.ui.dropdown {
 .hero-big .slick-list .slick-track .slick-slide .caption-outside button.see-through-sq:focus,
 .hero-big .slick-list .slick-track .slick-slide .caption-content .button-sq.see-through-sq:focus,
 .hero-big .slick-list .slick-track .slick-slide .caption-outside .button-sq.see-through-sq:focus {
-  border-color: #E13C7E;
+  border-color: #474747;
 }
 @media only screen and (max-width: 767px) {
   .hero-big .slick-list .slick-track .slick-slide .caption-content {
@@ -12067,13 +12123,13 @@ select.ui.dropdown {
   pointer-events: none;
   z-index: 1;
 }
-@media (min-aspect-ratio: 16/9) {
+@media (min-aspect-ratio: 1.77777778) {
   .hero-big .slick-list .slick-track .slick-slide .video-wrapper {
     top: -100%;
     height: 300%;
   }
 }
-@media (max-aspect-ratio: 16/9) {
+@media (max-aspect-ratio: 1.77777778) {
   .hero-big .slick-list .slick-track .slick-slide .video-wrapper {
     width: 300%;
     left: -100%;
@@ -12106,7 +12162,7 @@ select.ui.dropdown {
 }
 .hero-big .slick-prev {
   left: 50px;
-  z-index: 2;
+  z-index: 999;
 }
 .hero-big .slick-next {
   right: 50px;
@@ -12444,7 +12500,7 @@ select.ui.dropdown {
   /* Shadow style */
 }
 .carousel-sq .slick-list .slick-track .slick-slide {
-  background: #fafafa;
+  background: #ffffff;
   outline: none;
   margin: 0;
   position: relative;
@@ -12489,11 +12545,11 @@ select.ui.dropdown {
   z-index: 1;
 }
 .carousel-sq.center-sq .slick-list .slick-track .slick-slide {
-  margin: 0 10px;
+  margin: 0 45px;
 }
 @media only screen and (min-width: 768px) {
   .carousel-sq.center-sq .slick-list .slick-track .slick-slide {
-    margin: 0 15px;
+    margin: 0 45px;
   }
 }
 .carousel-sq.scaled-sq .slick-list .slick-track .slick-slide {
@@ -12588,7 +12644,7 @@ select.ui.dropdown {
 }
 .carousel-sq.in-grid-sq .slick-next:hover,
 .carousel-sq.in-grid-sq .slick-prev:hover {
-  background: #E13C7E;
+  background: #474747;
 }
 .carousel-sq.in-grid-sq .slick-next {
   right: 10px;
@@ -12656,7 +12712,7 @@ select.ui.dropdown {
   margin: 40px 0;
 }
 .carousel-sq.testimonials-sq .slick-list .slick-track .slick-slide .caption-content .rating .icon {
-  color: #E13C7E;
+  color: #474747;
 }
 .carousel-sq.testimonials-sq .slick-list .slick-track .slick-slide .caption-content .rating > span {
   font-weight: 700;
@@ -12728,10 +12784,12 @@ select.ui.dropdown {
   }
 }
 .carousel-sq.spread-sq .slick-next {
-  right: -60px;
+  right: 60px;
+  z-index: 999;
 }
 .carousel-sq.spread-sq .slick-prev {
-  left: -60px;
+  left: -80px;
+  z-index: 999;
 }
 .photo-container {
   position: relative;
@@ -12965,7 +13023,16 @@ select.ui.dropdown {
     transition: transform 0.2s 0s ease-out;
   }
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -13043,7 +13110,7 @@ select.ui.dropdown {
   /* colored animate shadow */
 }
 .hero-search-full-page .shadow-sq.colored-sq:after {
-  background: #e4508b;
+  background: #595959;
 }
 .hero-search-full-page .shadow-sq.colored-sq.animate-sq:before {
   animation: fade-in-shadow 1s 2.2s forwards;
@@ -13058,7 +13125,7 @@ select.ui.dropdown {
     min-height: 650px;
   }
   .hero-search-full-page.low-sq + * {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 }
 /* Animation Keyframes*/
@@ -13103,7 +13170,16 @@ select.ui.dropdown {
     background: rgba(0, 0, 0, 0.15);
   }
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -13116,12 +13192,9 @@ select.ui.dropdown {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
         Floating Placeholder
 *******************************/
-
 .fltp {
   position: relative;
   height: 60px;
@@ -13136,9 +13209,9 @@ select.ui.dropdown {
   width: 100%;
   font-size: 18px;
   font-weight: 400;
-  font-family: 'Hind', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   text-align: left;
-  color: #262626;
+  color: #474747;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-touch-callout: none;
@@ -13174,9 +13247,8 @@ select.ui.dropdown {
   line-height: 1em;
   font-size: 28px;
   font-weight: 400;
-  font-family: 'Frank Ruhl Libre', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  border: none;
-  color: #262626;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: #474747;
   background: transparent;
   -webkit-transition: transform .3s ease-out, height .3s ease-out;
   -moz-transition: transform .3s ease-out, height .3s ease-out;
@@ -13247,8 +13319,8 @@ select.ui.dropdown {
   height: 100%;
   font-size: 28px;
   font-weight: 400;
-  font-family: 'Frank Ruhl Libre', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  color: #262626;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: #474747;
   min-width: 40px;
   visibility: hidden;
   display: -webkit-box;
@@ -13470,21 +13542,21 @@ select.ui.dropdown {
     /* Hamburger */
   }
   .header-section.header-transparent.is-transparent.floating-search-is-valid .header-content .header-item .fltp.search-sq > .icon {
-    color: #262626;
+    color: #474747;
   }
   .header-section.header-transparent.is-transparent.floating-search-is-valid .header-content .header-item .fltp.search-sq > label.placeholder {
-    color: #262626;
+    color: #474747;
   }
   .header-section.header-transparent.is-transparent.floating-search-is-valid .header-content .header-item .fltp.search-sq input[type="text"] {
-    color: #262626;
+    color: #474747;
   }
   .header-section.header-transparent.is-transparent.floating-search-is-valid .header-content .header-item > .item {
-    color: #262626;
+    color: #474747;
   }
   .header-section.header-transparent.is-transparent.floating-search-is-valid .header-content .header-item .item.hamburger .hamburger-box .hamburger-inner,
   .header-section.header-transparent.is-transparent.floating-search-is-valid .header-content .header-item .item.hamburger .hamburger-box .hamburger-inner:before,
   .header-section.header-transparent.is-transparent.floating-search-is-valid .header-content .header-item .item.hamburger .hamburger-box .hamburger-inner:after {
-    background-color: #262626;
+    background-color: #474747;
   }
   .header-section.header-transparent.is-transparent.floating-search-is-valid .header-content .header-item .item.hamburger.sidemenu-trigger.dimmed.active.close .hamburger-inner,
   .header-section.header-transparent.is-transparent.floating-search-is-valid .header-content .header-item .item.hamburger.sidemenu-trigger.dimmed.active.close .hamburger-inner:before,
@@ -13534,7 +13606,16 @@ select.ui.dropdown {
 .fltp.modal-icons .ui.dropdown.active .text {
   padding-right: 20px;
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -13547,12 +13628,9 @@ select.ui.dropdown {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*******************************
         Price Range General
 *******************************/
-
 .noUi-target,
 .noUi-target * {
   -webkit-touch-callout: none;
@@ -13703,7 +13781,7 @@ select.ui.dropdown {
   border-radius: 3px;
   background: #E8E8E8;
   text-align: center;
-  font-family: 'Hind';
+  font-family: 'Ubuntu';
   color: #414141;
   font-size: 11px;
   padding: 0 5px;
@@ -13765,12 +13843,9 @@ select.ui.dropdown {
 .noUi-vertical .noUi-handle-upper .noUi-tooltip {
   right: 120%;
 }
-
-
 /*******************************
         Price Range Custom 
 *******************************/
-
 .price-range-slider {
   width: 100%;
 }
@@ -13779,21 +13854,18 @@ select.ui.dropdown {
 }
 .price-range-slider .price-range-placeholder {
   font-size: 12px;
-  color: #262626;
+  color: #474747;
   font-weight: 400;
   opacity: .8;
   margin-bottom: 5px;
   width: 100%;
 }
-
-
 /*********************************************
         Price Range Header Section Special 
 **********************************************/
-
 .price-range-placeholder {
   font-size: 12px;
-  color: #262626;
+  color: #474747;
   font-weight: 400;
   opacity: .8;
   width: 100%;
@@ -14013,7 +14085,16 @@ select.ui.dropdown {
     border-right: 4px solid transparent;
   }
 }
-
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
 /*
   These are used to specify exact pixel values in em
   for things like borders that remain constantly
@@ -14026,12 +14107,9 @@ select.ui.dropdown {
 /*-------------------
     Down (:active)
 --------------------*/
-
-
 /*********************************************
        General Classes
 **********************************************/
-
 /*-------------------------------
     Display 
 --------------------------------*/
@@ -14126,7 +14204,7 @@ select.ui.dropdown {
 }
 .inline-menu-sq li a {
   display: block;
-  color: #262626;
+  color: #474747;
   opacity: .6;
   padding: 0 0 17px 0;
   -webkit-transition: opacity 0.2s ease-in;
@@ -14149,8 +14227,8 @@ select.ui.dropdown {
   bottom: 0;
   height: 1px;
   width: 100%;
-  background: #E13C7E;
-  box-shadow: 0 0 5px 0 rgba(225, 60, 126, 0.3);
+  background: #474747;
+  box-shadow: 0 0 5px 0 rgba(71, 71, 71, 0.3);
 }
 .description-list {
   margin: 0 0 6px 0;
@@ -14257,7 +14335,7 @@ select.ui.dropdown {
     Colors
 --------------------------------*/
 .text-color {
-  color: #262626;
+  color: #474747;
 }
 .text-secondary-color {
   color: gray;
@@ -14271,13 +14349,13 @@ h2,
 h3,
 h4,
 .ui.header {
-  color: #262626;
+  color: #474747;
 }
 .background-color {
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 .link-color {
-  color: #E13C7E;
+  color: #474747;
 }
 .link-color:hover {
   color: inherit;
@@ -14349,10 +14427,7 @@ h4,
 /*-------------------------------
     Flex Class Options
 --------------------------------*/
-
-
 /**** Alignment ****/
-
 /* Left */
 /* general */
 .flex-align-left {
@@ -14437,10 +14512,7 @@ h4,
   -webkit-justify-content: center;
   justify-content: center;
 }
-
-
 /**** Order ****/
-
 /* mobile */
 @media only screen and (max-width: 767px) {
   .flex-order-mobile-first {
@@ -14553,10 +14625,7 @@ h4,
     order: 3;
   }
 }
-
-
 /**** Grow ****/
-
 /* true */
 .flex-grow-true {
   -webkit-box-flex: 1;
