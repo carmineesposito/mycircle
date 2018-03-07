@@ -94,10 +94,16 @@
 @largeMonitorWidth: @largeMonitorBreakpoint - (@largeMonitorMinimumGutter * 2) - @scrollbarWidth;
 @largeMonitorGutter: auto;
 
+@mediumMonitorWidth: @mediumlargeMonitorBreakpoint - (@largeMonitorMinimumGutter * 2) - @scrollbarWidth;
+@wideMonitorWidth: @widescreenMonitorBreakpoint - (@largeMonitorMinimumGutter * 2) - @scrollbarWidth;
+
 @mobileGridWidth: @mobileWidth;
 @tabletGridWidth: ~"calc("@tabletWidth~" + "@gridGutterWidth~")";
 @computerGridWidth: ~"calc("@computerWidth~" + "@gridGutterWidth~")";
 @largeMonitorGridWidth: ~"calc("@largeMonitorWidth~" + "@gridGutterWidth~")";
+
+@mediumMonitorGridWidth: ~"calc("@mediumMonitorWidth~" + "@gridGutterWidth~")";
+@wideMonitorGridWidth: ~"calc("@wideMonitorWidth~" + "@gridGutterWidth~")";
 
 @mobileRelaxedGridWidth: @mobileWidth;
 @tabletRelaxedGridWidth: ~"calc("@tabletWidth~" + "@relaxedGridGutterWidth~")";
@@ -454,7 +460,7 @@
 @mobileBreakpoint            : 400px;
 @tabletBreakpoint            : 768px;
 @computerBreakpoint          : 992px;
-@largeMonitorBreakpoint      : 1650px;
+@largeMonitorBreakpoint      : 1200px;
 @mediumlargeMonitorBreakpoint      : 1650px; //  TODO - de verificat și mutat in sqdefault
 @widescreenMonitorBreakpoint : 1920px;
 

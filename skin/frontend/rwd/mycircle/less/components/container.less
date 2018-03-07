@@ -32,6 +32,10 @@
   max-width: @maxWidth !important;
 }
 
+.ui.grid.container.cms-home,.ui.grid.container.cms-home {
+   width: 100% !important;
+}
+
 /* Mobile */
 @media only screen and (max-width: @largestMobileScreen) {
   .ui.container {
@@ -66,13 +70,11 @@
   .ui.grid.container {
     width: @computerGridWidth !important;
   }
-  .ui.grid.container.cms-home {
-    width: @mediumlargeMonitorBreakpoint !important;
-  }
+
 }
 
 /* Large Monitor */
-@media only screen and (min-width: @largeMonitorBreakpoint) {
+ @media only screen and (min-width: @largestSmallMonitor) and (max-width: @mediumlargeMonitorBreakpoint) {
   .ui.container {
     width: @largeMonitorWidth;
     margin-left: @largeMonitorGutter !important;
@@ -86,6 +88,32 @@
   }
 
 }
+
+ /* Wide Monitor */
+ @media only screen and (min-width: @mediumlargeMonitorBreakpoint) and (max-width: @widescreenMonitorBreakpoint) {
+   .ui.container {
+     width: @mediumMonitorWidth;
+     margin-left: @largeMonitorGutter !important;
+     margin-right: @largeMonitorGutter !important;
+   }
+   .ui.grid.container {
+     width: @mediumMonitorGridWidth !important;
+   }
+
+ }
+
+ /* Wide Monitor */
+ @media only screen and (min-width: @widescreenMonitorBreakpoint) {
+   .ui.container {
+     width: @wideMonitorWidth;
+     margin-left: @largeMonitorGutter !important;
+     margin-right: @largeMonitorGutter !important;
+   }
+   .ui.grid.container {
+     width: @wideMonitorGridWidth !important;
+   }
+
+ }
 
 /*******************************
              Types
