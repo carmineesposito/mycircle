@@ -765,15 +765,15 @@ class Ves_Megamenu_Model_Widget extends Mage_Core_Model_Abstract
 	 *
 	 */
 	public function renderContent( $id ){
-		$output = '<div class="ves-widget" data-id="wid-'.$id.'">';
+		//$output = '<div class="ves-widget" data-id="wid-'.$id.'">';
 		if(empty($this->widgets)){
 			$this->loadWidgets();
 		}
 
 		if( isset($this->widgets[$id]) ){
-			$output .= $this->getWidgetContent( $this->widgets[$id]->getType(), unserialize(base64_decode($this->widgets[$id]->getParams())), $this->widgets[$id]->getName() );
+			$output = $this->getWidgetContent( $this->widgets[$id]->getType(), unserialize(base64_decode($this->widgets[$id]->getParams())), $this->widgets[$id]->getName() );
 		}
-		$output .= '</div>';
+		//$output .= '</div>';
 		return $output;
 	}
 	/**

@@ -960,6 +960,7 @@ select::-ms-expand {
 .ui.grid.container.cms-home,
 .ui.grid.container.cms-home {
   width: 100% !important;
+  max-width: 1920px;
 }
 /* Mobile */
 @media only screen and (max-width: 767px) {

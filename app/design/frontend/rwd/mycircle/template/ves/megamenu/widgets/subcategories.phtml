@@ -32,7 +32,7 @@
 }?>
 <div class="widget-subcategories">
   <div class="widget-inner">
-      <ul>
+      <ul class="submenu">
       <?php foreach ($categories as $category_id) { ?>
       <?php 
         $category = is_object($category_id)?$category_id:Mage::getModel('catalog/category')->load($category_id);
@@ -44,7 +44,7 @@
           }
         }
       ?>
-      <li>
+      <li class="item">
         <?php if($category_image): ?>
         <div class="category_image">
           <a href="<?php echo $category->getUrl(); ?>"><img src="<?php echo Mage::getBaseUrl('media').'catalog/category/'.$category_image;?>" alt="<?php echo $category->getName();?>" width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>"/></a>

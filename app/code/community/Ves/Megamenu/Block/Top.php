@@ -400,7 +400,7 @@ class Ves_Megamenu_Block_Top extends Ves_Megamenu_Block_List {
 			$data = $this->getNodes( $parent );
 			
 			// render menu at level 0
-			$output = '<ul class="menu-manager-menu menu-type-horizontal">';
+			$output = '<ul class="main-menu menu-manager-menu menu-type-horizontal">';
 			foreach( $data as $menu ){
  				$menu_class = $menu->getMenuClass();
                 if( isset($menu->getMegaconfig()->align) ){
@@ -412,12 +412,12 @@ class Ves_Megamenu_Block_Top extends Ves_Megamenu_Block_List {
 				if( $this->hasChild($menu->getId()) || $menu->getTypeSubmenu() == 'html' || $menu->getTypeSubmenu() == 'widget'){
 					$menu_class .=' '.$this->getActiveMenuItem($menu);
 
-					$output .= '<li class="parent dropdown '.$menu_class.'" '.$this->renderAttrs($menu).'>';
-					if(!$menu->getIsGroup()) {
-						$output .= '<span class="open-child hidden-md hidden-lg hidden-sm">'.$this->__("(open)").'</span>';
-					}
+					$output .= '<li class="has-submenu'.$menu_class.'" '.$this->renderAttrs($menu).'>';
+//					if(!$menu->getIsGroup()) {
+//						$output .= '<span class="open-child hidden-md hidden-lg hidden-sm">'.$this->__("(open)").'</span>';
+//					}
 
-					$output .= '<a class="dropdown-toggle" data-toggle="dropdown" title="'.$menu->getTitle().'" href="'.$this->getLink( $menu ).'" '.$menu_target.'>';
+					$output .= '<a class="item" title="'.$menu->getTitle().'" href="'.$this->getLink( $menu ).'" '.$menu_target.'>';
 					
 					if( $menu->getMenuIconClass()){ $output .= '<i class="'.$menu->getMenuIconClass().'"></i>';	}
 
@@ -508,9 +508,9 @@ class Ves_Megamenu_Block_Top extends Ves_Megamenu_Block_List {
 			return $output;
 		}elseif( $parent->getTypeSubmenu() == 'widget' ) {
 
-			$output = '<div class="'.$class.'"><div class="menu-content">';
-			$output .= Mage::getModel("ves_megamenu/widget")->renderContent( $parent->getWidgetId() );
-			$output .= '</div></div>';
+			//$output = '<div class="'.$class.'"><div class="menu-content">';
+			$output = Mage::getModel("ves_megamenu/widget")->renderContent( $parent->getWidgetId() );
+			//$output .= '</div></div>';
 			return $output;
 		}elseif( $this->hasChild($parentId) ){
 			
@@ -531,7 +531,7 @@ class Ves_Megamenu_Block_Top extends Ves_Megamenu_Block_List {
 								$col->colwidth = isset($col->colwidth)?$col->colwidth:6;
 								if( isset($col->type) && $col->type == 'menu' && isset($cols[$key]) ){
 									$scol = '<div class="mega-col col-sm-'.$col->colwidth.' '.$colclass.'" '.$this->getColumnDataConfig( $col ).'><div class="mega-col-inner">';
-									$scol .= '<ul>';
+									$scol .= '<ul class="">';
 									foreach( $cols[$key] as $menu ) {
 										 $scol .= $this->renderMenuContent( $menu, $level+1 );
 									}

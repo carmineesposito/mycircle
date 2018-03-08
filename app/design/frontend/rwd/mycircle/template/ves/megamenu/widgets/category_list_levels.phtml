@@ -42,13 +42,7 @@
           $html = "";
 
           $html .='
-          <div class="dropdown-menu level'.$level.'">
-            <div class="dropdown-menu-inner">
-              <div class="row">
-                <div class="mega-col col-sm-12" data-type="menu" data-colwidth="12">
-                  <div class="inner">
-                    <div class="ves-submenu">
-                      <ul>';
+                      <ul class="submenu transition visible">';
                         foreach ($tmp_subcategories as $category_id) {
                           $category = Mage::getModel('catalog/category')->load($category_id);
                           $category_image = "";
@@ -99,12 +93,7 @@
                           }
           $html .='
                           </ul>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>';
+          ';
           return $html;
         }
   }
@@ -115,9 +104,7 @@
 <div class="menu-title"><a href="<?php echo $category_link; ?>" title="<?php echo $widget['widget_name'];?>"><?php echo $widget['widget_name'];?></a></div>
 <?php
 }?>
-<div class="widget-category-list">
-  <div class="widget-inner">
-      <ul>
+      <ul class="submenu">
       <?php foreach ($categories as $category_id) { ?>
       <?php
         
@@ -137,28 +124,28 @@
       <li<?php echo ($subcats)?' class="parent dropdown-submenu"':'';?>>
         <?php if($category_image): ?>
         <div class="category_image">
-          <a href="<?php echo $category->getUrl(); ?>" <?php echo ($subcats)?'class="dropdown-toggle" data-toggle="dropdown"':'';?>><img src="<?php echo Mage::getBaseUrl('media').'catalog/category/'.$category_image;?>" alt="<?php echo $category->getName();?>" width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>"/>
+          <a href="<?php echo $category->getUrl(); ?>" class="item"><img src="<?php echo Mage::getBaseUrl('media').'catalog/category/'.$category_image;?>" alt="<?php echo $category->getName();?>" width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>"/>
           <?php if($subcats): ?>
           <b class="caret"></b>
           <?php endif; ?>
           </a>
         </div>
         <div class="category_name">
-          <a href="<?php echo $category->getUrl(); ?>" <?php echo ($subcats)?'class="dropdown-toggle" data-toggle="dropdown"':'';?>><span class="menu-title"><?php echo $category->getName();?></span>
+          <a href="<?php echo $category->getUrl(); ?>" class="item"><span class="menu-title"><?php echo $category->getName();?></span>
             <?php if($subcats): ?>
               <b class="caret"></b>
               <?php endif; ?>
           </a>
         </div>
         <?php else: ?>
-        <a href="<?php echo $category->getUrl(); ?>" <?php echo ($subcats)?'class="dropdown-toggle" data-toggle="dropdown"':'';?>><span class="menu-title"><?php echo $category->getName();?></span>
+        <a href="<?php echo $category->getUrl(); ?>" class="item"><span class="menu-title"><?php echo $category->getName();?></span>
           <?php if($subcats): ?>
           <b class="caret"></b>
           <?php endif; ?>
         </a>
         <?php endif; ?>
 
-        <?php 
+        <?php
         //Load sub categories
         if($subcats){
           echo getMenuTreeCategories($category_id, $subcats, 2, $show_image, $recursion_level);
@@ -166,6 +153,4 @@
       </li>
       <?php } ?>
       </ul>
-  </div>
-</div>
 <?php } ?>

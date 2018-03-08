@@ -39,7 +39,7 @@
 }?>
 <div class="widget-category-list">
   <div class="widget-inner">
-      <ul>
+      <ul class="submenu">
       <?php foreach ($categories as $category_id) { ?>
       <?php 
         $category = is_object($category_id)?$category_id:Mage::getModel('catalog/category')->load($category_id);
