@@ -1,5 +1,5 @@
 .circle-text {
-    max-width: 460px;
+    width: 460px;
 }
 
 .circle-text:after {
@@ -7,7 +7,8 @@
     display: block;
     width: 100%;
     height:0;
-    padding-bottom: 96%;
+    padding-bottom: 460px;
+    padding-left: 460px;
     border: 15px solid #a8a8a8;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -42,9 +43,9 @@
 
 .circle__inner {
     position: relative;
-    top: 215px;
+    top: 230px;
     bottom: 0;
-    left: 22px;
+    left: 35px;
     width: 100%;
     height: 100%;
 }
@@ -285,8 +286,22 @@
 
 }
 
-/* Large Monitor */
-@media only screen and (max-width: 977px) {
+@media only screen and (max-width: 767px) {
+
+    .circle-text {
+        width: 305px;
+        margin-bottom: 34px;
+    }
+
+    .circle-text:after {
+        padding-bottom: 305px;
+        padding-left: 305px;
+        border: 10px solid #a8a8a8;
+    }
+
+    .circle-text-top {
+        margin-right: 0;
+    }
 
     .circle-promo-top {
         margin-right: 0;
@@ -296,20 +311,130 @@
         margin-left: 0;
     }
 
-    .circle-text-top {
-        margin-right: 0;
+    .circle__content .title-row {
+        font-size: 18px;
     }
+
     .circle-text-bottom {
         margin-left: 0;
     }
+    .button-sq.small-sq {
+        font-size: 11px;
+        padding: 0.8em 0.4em;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        margin: 11px 15px 0 15px;
+    }
+
+    .carousel-sq.center-sq .slick-list .slick-track .slick-slide {
+        margin: 0 12px;
+    }
+
+    .circle__inner {
+        position: relative;
+        top: 150px;
+        bottom: 0;
+        left: 16px;
+        width: 100%;
+        height: 100%;
+        font-size: 0.7em;
+    }
+    .circle__content .date-row {
+        margin-top: 0px;
+        line-height: 12px;
+    }
+
+    .countdown-row {
+        margin-left: 12%;
+        margin-top: 5px;
+    }
+
+    .countdown-row .countdown-item {
+
+        margin: 3px;
+    }
+
+    .circle__content .price-box {
+        font-size: 18px;
+    }
+    .circle__content .join-item img {
+        width: 14%;
+    }
+
+
+}
+
+/* Large Monitor */
+@media only screen and (min-width: 768px) and (max-width: 977px) {
+
+    .circle-text {
+        width: 325px;
+
+    }
+
+    .circle-text:after {
+        padding-bottom: 325px;
+        padding-left: 325px;
+    }
+
+    .button-sq.small-sq {
+        font-size: 11px;
+        padding: 0.8em 0.4em;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        margin: 11px 15px 0 15px;
+    }
+
+    .circle__inner {
+        position: relative;
+        top: 164px;
+        bottom: 0;
+        left: 14px;
+        width: 100%;
+        height: 100%;
+        font-size: 0.8em;
+    }
+    .circle__content .date-row {
+        margin-top: 0px;
+        line-height: 12px;
+    }
+
+    .countdown-row {
+        margin-left: 12%;
+        margin-top: 5px;
+    }
+
+    .countdown-row .countdown-item {
+
+        margin: 3px;
+    }
+
+    .circle__content .price-box {
+        font-size: 18px;
+    }
+    .circle__content .join-item img {
+        width: 14%;
+    }
+
+
 
 }
 
 /* Large Monitor */
 @media only screen and (min-width: 977px) and (max-width: 1199px) {
 
+    .circle-text {
+        width: 325px;
+    }
+
+    .circle-text:after {
+        padding-bottom: 325px;
+        padding-left: 325px;
+    }
+
+
     .circle_promo_content .title-row {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: bold;
         text-align: center;
     }
@@ -336,6 +461,39 @@
         width: 25%;
         margin: 0% 0 0 31%;
     }
+
+    .circle__inner {
+        position: relative;
+        top: 164px;
+        bottom: 0;
+        left: 14px;
+        width: 100%;
+        height: 100%;
+        font-size: 0.8em;
+    }
+    .circle__content .date-row {
+        margin-top: 0px;
+        line-height: 12px;
+    }
+
+    .countdown-row {
+        margin-left: 12%;
+        margin-top: 5px;
+    }
+
+    .countdown-row .countdown-item {
+
+        margin: 3px;
+    }
+
+    .circle__content .price-box {
+        font-size: 18px;
+    }
+    .circle__content .join-item img {
+        width: 14%;
+    }
+
+
 
 
 }

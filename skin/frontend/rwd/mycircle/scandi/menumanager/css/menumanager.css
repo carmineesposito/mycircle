@@ -59,3 +59,23 @@ ul.menu-type-horizontal { width:100%; border: none; text-align: center;margin-to
     margin-top: auto !important;
 }
 
+@media only screen and (max-width: 980px) {
+    .desktop-no-display {
+    }
+    .mobile-no-display {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .desktop-no-display {
+        display: none;
+    }
+    .mobile-no-display {
+    }
+}
+
+
+
+
+

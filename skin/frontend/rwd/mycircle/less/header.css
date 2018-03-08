@@ -204,6 +204,12 @@ on .header-item:
 .header-section.header-fullwidth .header-content > .ui.container.grid {
   width: 100% !important;
 }
+@media only screen and (min-width: 992px) {
+  .header-section.header-fullwidth .header-content > .ui.container.grid {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
 /*-------------------------------
     Header Transparent 
 --------------------------------*/
@@ -3646,7 +3652,7 @@ body.search-visible.modal-is-open .modal .modal-trigger.close-sq {
 }
 @media only screen and (max-width: 767px) {
   .menu-default.burger-sidemenu-styles {
-    width: 85%;
+    width: 50%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -3803,11 +3809,11 @@ body.burger-sidemenu-styles.sidemenu-is-open .header-item.dimmed:after {
 @media only screen and (max-width: 991px) {
   body.burger-sidemenu-styles.sidemenu-is-open.sidemenu-left .header-item.dimmed:after {
     left: inherit;
-    right: -85%;
+    right: -50%;
   }
   body.burger-sidemenu-styles.sidemenu-is-open.sidemenu-right .header-item.dimmed:after {
     right: inherit;
-    left: -85%;
+    left: -50%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -3834,10 +3840,10 @@ body.burger-sidemenu-styles.sidemenu-is-open .header-item.dimmed:after {
 }
 @media only screen and (max-width: 767px) {
   .menu-default.burger-sidemenu-styles.sidemenu-open-left {
-    left: -85%;
+    left: -50%;
   }
   .menu-default.burger-sidemenu-styles.sidemenu-open-right {
-    right: -85%;
+    right: -50%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -3870,10 +3876,10 @@ body.burger-sidemenu-styles.sidemenu-is-open .header-item.dimmed:after {
 }
 @media only screen and (max-width: 767px) {
   .menu-default.burger-sidemenu-styles.sidemenu-open-left.uncover-sq > ul {
-    left: 85%;
+    left: 50%;
   }
   .menu-default.burger-sidemenu-styles.sidemenu-open-right.uncover-sq > ul {
-    left: -85%;
+    left: -50%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -3886,10 +3892,10 @@ body.burger-sidemenu-styles.sidemenu-is-open .header-item.dimmed:after {
 }
 @media only screen and (max-width: 767px) {
   .menu-default.burger-sidemenu-styles.sidemenu-open-left.slide-along-sq > ul {
-    left: 42.5%;
+    left: 25%;
   }
   .menu-default.burger-sidemenu-styles.sidemenu-open-right.slide-along-sq > ul {
-    left: -42.5%;
+    left: -25%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -3902,10 +3908,10 @@ body.burger-sidemenu-styles.sidemenu-is-open .header-item.dimmed:after {
 }
 @media only screen and (max-width: 767px) {
   .menu-default.burger-sidemenu-styles.sidemenu-open-left.slide-out-sq > ul {
-    left: 127.5%;
+    left: 75%;
   }
   .menu-default.burger-sidemenu-styles.sidemenu-open-right.slide-out-sq > ul {
-    left: -127.5%;
+    left: -75%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -3950,24 +3956,24 @@ body {
 }
 @media only screen and (max-width: 767px) {
   body.sidemenu-is-open.sidemenu-left.burger-sidemenu-styles {
-    left: 85%;
+    left: 50%;
   }
   body.sidemenu-is-open.sidemenu-left.burger-sidemenu-styles .header-section.header-sticky.is-sticky .header-content {
-    left: 85%;
+    left: 50%;
   }
   body.sidemenu-is-open.sidemenu-left.burger-sidemenu-styles .mobile-fixed-trigger,
   body.sidemenu-is-open.sidemenu-left.burger-sidemenu-styles .sticky-elemnt.is-sticky {
-    right: -85%;
+    right: -50%;
   }
   body.sidemenu-is-open.sidemenu-right.burger-sidemenu-styles {
-    left: -85%;
+    left: -50%;
   }
   body.sidemenu-is-open.sidemenu-right.burger-sidemenu-styles .header-section.header-sticky.is-sticky .header-content {
-    left: -85%;
+    left: -50%;
   }
   body.sidemenu-is-open.sidemenu-right.burger-sidemenu-styles .mobile-fixed-trigger,
   body.sidemenu-is-open.sidemenu-right.burger-sidemenu-styles .sticky-elemnt.is-sticky {
-    right: 85%;
+    right: 50%;
   }
 }
 @media only screen and (min-width: 768px) {

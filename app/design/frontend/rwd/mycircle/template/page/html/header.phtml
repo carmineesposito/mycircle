@@ -28,15 +28,24 @@
  */
 ?>
 
-<header class="header-section ths header-shadow equal-tablet-header-items equal-mobile-header-items header-sticky header-resize header-transparent is-transparent">
+<header class="header-section ths header-shadow equal-tablet-header-items equal-mobile-header-items header-sticky header-resize header-transparent is-transparent header-fullwidth">
     <div class="header-content">
 
         <div class="ui container grid">
-            <div class="header-item header-left flex-order-tablet-second flex-order-mobile-second flex-grow-tablet-true flex-grow-mobile-true">
-                <?php echo $this->getChildHtml('store_language') ?>
+            <div class="header-item header-left flex-order-tablet-first flex-order-mobile-first flex-shrink-true flex-align-left">
+                <a class="sidemenu-trigger close-sq hamburger hamburger-spin item hidden-desktop hidden-large-desktop" data-trigger-for="menu02">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </a>
+                <div class="mobile-no-display">
+                    <?php echo $this->getChildHtml('store_language') ?>
+                </div>
+                <!-- Sidemenu Trigger -->
+
             </div>
 
-            <div class="header-item header-center flex-align-center flex-order-tablet-first flex-order-mobile-first flex-grow-large-desktop-true flex-grow-desktop-true flex-grow-tablet-false flex-grow-mobile-false">
+            <div class="header-item header-center flex-align-center flex-order-tablet-second flex-order-mobile-second flex-grow-large-desktop-true flex-grow-desktop-true flex-grow-tablet-false flex-grow-mobile-false">
 
                 <a class="logo item" href="homepage.html">
 
@@ -92,7 +101,17 @@
             </div>
         </div>
 
-        <?php echo $this->getChildHtml('menu_header') ?>
+        <div class="header-item header-left flex-order-tablet-first flex-order-mobile-first flex-grow-tablet-true flex-grow-mobile-true">
+            <div class="item menu-default burger-mobile-sidemenu burger-tablet-sidemenu sidemenu-open-left icons-left profile-priority slide-out-sq dimmed flexMenu dropdown-open-left" data-burger="menu02">
+
+            <?php echo $this->getChildHtml('menu_header') ?>
+            <div class="desktop-no-display">
+                <?php echo $this->getChildHtml('store_language') ?>
+            </div>
+            </div>
+        </div>
+
+
 
     </div>
 
