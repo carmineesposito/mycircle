@@ -13,7 +13,7 @@
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    background: url(http://localhost/mycircle2/media/wysiwyg/banners/parco1.jpg);
+    background-image: url(http://localhost/mycircle2/media/wysiwyg/banners/parco1.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100%;
