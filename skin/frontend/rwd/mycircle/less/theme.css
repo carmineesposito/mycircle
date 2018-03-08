@@ -3052,7 +3052,7 @@ button .icon + span {
     overflow-y: auto;
     text-align: center;
     background: #fff;
-    box-shadow: 0 0px 3px rgba(140, 140, 140, 0.2);
+    box-shadow: 0 0px 3px #ffffff;
   }
   .sticky-element.is-after .dashboard-sticky .dashboard-menu > ul.transition.slide.in,
   .sticky-element:not(.after-element) .dashboard-sticky .dashboard-menu > ul.transition.slide.in,
@@ -3091,7 +3091,7 @@ button .icon + span {
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 5px solid rgba(140, 140, 140, 0.2);
+  border-top: 5px solid #ffffff;
   z-index: 5;
 }
 .sticky-element.is-after .dashboard-sticky .dashboard-menu.has-submenu > .item.active:after,
@@ -11382,7 +11382,7 @@ select.ui.dropdown {
  *
  */
 .calendar-sq.popup {
-  box-shadow: 0 0px 3px rgba(140, 140, 140, 0.2);
+  box-shadow: 0 0px 3px #ffffff;
   margin: 0 !important;
   /* Top */
   /* Bottom */
@@ -11412,7 +11412,7 @@ select.ui.dropdown {
 .calendar-sq.popup.top:before {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 5px solid rgba(140, 140, 140, 0.2);
+  border-top: 5px solid #ffffff;
   bottom: -6px;
 }
 .calendar-sq.popup.top:after {
@@ -11437,7 +11437,7 @@ select.ui.dropdown {
 .calendar-sq.popup.bottom:before {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 5px solid rgba(140, 140, 140, 0.2);
+  border-bottom: 5px solid #ffffff;
   top: -6px;
   box-shadow: none;
 }
@@ -11463,7 +11463,7 @@ select.ui.dropdown {
 .calendar-sq.popup.center.left:before {
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
-  border-left: 5px solid rgba(140, 140, 140, 0.2);
+  border-left: 5px solid #ffffff;
   box-shadow: none;
   background: transparent;
   right: -5px;
@@ -11482,7 +11482,7 @@ select.ui.dropdown {
 .calendar-sq.popup.center.right:before {
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
-  border-right: 5px solid rgba(140, 140, 140, 0.2);
+  border-right: 5px solid #ffffff;
   box-shadow: none;
   background: transparent;
   left: -5px;
@@ -13361,7 +13361,7 @@ select.ui.dropdown {
 .fltp .ui.dropdown.active .menu,
 .fltp .ui.dropdown.visible .menu {
   border-color: transparent !important;
-  box-shadow: 0 0px 3px rgba(140, 140, 140, 0.2);
+  box-shadow: 0 0px 3px #ffffff;
 }
 .fltp .ui.dropdown.active .menu > .item,
 .fltp .ui.dropdown.visible .menu > .item {
@@ -13381,7 +13381,7 @@ select.ui.dropdown {
 .fltp .ui.dropdown.active:before {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 5px solid rgba(140, 140, 140, 0.2);
+  border-bottom: 5px solid #ffffff;
   bottom: 0;
   left: 13px;
   box-shadow: none;
@@ -13398,7 +13398,7 @@ select.ui.dropdown {
   border-bottom: none;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 5px solid rgba(140, 140, 140, 0.2);
+  border-top: 5px solid #ffffff;
   top: 0;
   bottom: inherit;
 }

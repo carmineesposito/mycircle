@@ -27,7 +27,7 @@
 
 /* Type : Horizontal */
 .menu-type-horizontal { position:relative; z-index:100; }
-ul.menu-type-horizontal { width:100%; border: none; text-align: center;margin-top: 40px !important;margin-left: 0; display: list-item;}
+ul.menu-type-horizontal { width:100%; border: none; text-align: center;padding-top: 10px !important;margin-left: 0; display: list-item;}
 .menu-type-horizontal li.level0 > a > span {  }
 .menu-type-horizontal li span { padding:5px 10px;  }
 .menu-type-horizontal li span:hover {  }
