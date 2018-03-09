@@ -57,15 +57,11 @@
     <div class="ui layout main-wrapper" id="top">
 
         <?php echo $this->getChildHtml('before_content') ?>
-        <?php echo $this->getChildHtml('breadcrumbs') ?>
-
 
         <div class="ui grid container <?php echo $this->getBodyClass() ? $this->getBodyClass():'' ?>">
                 <?php echo $this->getChildHtml('global_messages') ?>
                 <?php echo $this->getChildHtml('content') ?>
         </div>
-
-
 
     </div>
 

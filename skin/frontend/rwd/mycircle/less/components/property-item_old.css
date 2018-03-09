@@ -1,0 +1,461 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+        Property Box
+*******************************/
+/*------------------------------------------------------
+       Property Box Default - in Half Layout
+-------------------------------------------------------*/
+.property-item {
+  align-self: flex-start;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 15px solid #a8a8a8;
+  /* 1 per row */
+  width: 100%;
+  width: 23vw;
+  height: 23vw;
+}
+@media only screen and (max-width: 991px) {
+  .property-item {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+.property-item .property-item-inner {
+  position: relative;
+}
+.property-item .property-item-inner .price-tag-sq {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  padding: 0 25px;
+  z-index: 10;
+  height: 40px;
+  line-height: 40px;
+  background: rgba(36, 43, 51, 0.9);
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+}
+.property-item .property-item-inner .price-tag-sq > span {
+  font-weight: 400;
+  font-size: 0.778em;
+}
+.property-item .property-item-inner .add-wishlist {
+  position: absolute;
+  top: 27px;
+  right: 25px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+}
+.property-item .property-item-inner .add-wishlist > i.icon {
+  font-size: 36px;
+  margin: 0;
+  width: 36px;
+  height: 36px;
+  color: rgba(0, 0, 0, 0.12);
+  position: relative;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.property-item .property-item-inner .complete-sq,
+.property-item .property-item-inner .preview-sq {
+  position: absolute;
+  top: 27px;
+  right: 25px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+}
+.property-item .property-item-inner .complete-sq > i.icon,
+.property-item .property-item-inner .preview-sq > i.icon {
+  font-size: 36px;
+  margin: 0;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.property-item .property-item-inner .complete-sq {
+  color: #1FCB40;
+}
+.property-item .property-item-inner .preview-sq {
+  color: #474747;
+}
+.property-item .property-item-inner .progress-status {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 7px 12px;
+  letter-spacing: 2.85px;
+}
+.property-item .property-item-inner .main-details {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 25px;
+  height: 80%;
+  width: calc(100% - 50px);
+  padding-bottom: 30px;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.property-item .property-item-inner .main-details .title-row {
+  width: 100%;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.property-item .property-item-inner .main-details .title-row .title-sq {
+  flex: 1;
+  display: block;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  margin-right: 25px;
+  line-height: 1.4em;
+  /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-height: 100px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  pointer-events: auto;
+}
+.property-item .property-item-inner .main-details .title-row .avatar-sq {
+  width: 36px;
+  height: 36px;
+  pointer-events: auto;
+}
+.property-item .property-item-inner .main-details .icons-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.property-item .property-item-inner .main-details .icons-row .icons-column {
+  text-align: center;
+  color: #fff;
+  font-size: 0.875em;
+}
+.property-item .property-item-inner .main-details .icons-row .icons-column i.icon {
+  margin-bottom: 10px;
+}
+.property-item .property-item-inner .main-details .icons-row .icons-column:first-child {
+  -ms-flex-item-align: start;
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+  text-align: left;
+}
+.property-item .property-item-inner .main-details .icons-row .icons-column:first-child i.icon {
+  color: #474747;
+}
+.property-item .property-item-inner .main-details .completed-percentage {
+  width: 100%;
+}
+.property-item .property-item-inner .main-details .completed-percentage p,
+.property-item .property-item-inner .main-details .completed-percentage strong {
+  display: inline-block;
+  font-size: 12px;
+  color: #fff;
+}
+.property-item .property-item-inner .main-details .editable-buttons {
+  width: calc(100% + 50px);
+  margin-top: 30px;
+  margin-left: -25px;
+  margin-bottom: -30px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.property-item .property-item-inner .main-details .editable-buttons > .button {
+  width: 50%;
+  margin: 0;
+}
+.property-item .property-item-inner > .image-sq {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.property-item .property-item-inner > .image-sq:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 133.33333%;
+}
+.property-item .property-item-inner > .image-sq:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 13%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 2;
+}
+.property-item .property-item-inner > .image-sq img {
+  width: 100%;
+  height: auto;
+}
+.property-item .property-item-inner:hover .add-wishlist > i.icon {
+  color: #fff;
+}
+/*--- .caption-sq ---*/
+.property-item.caption-sq .property-item-inner {
+  background: #fff;
+}
+.property-item.caption-sq .property-item-inner .add-wishlist .icon {
+  color: rgba(255, 255, 255, 0.53);
+  text-shadow: 0 7px 20px rgba(0, 0, 0, 0.09);
+}
+.property-item.caption-sq .property-item-inner .price-tag-sq {
+  left: 30px;
+  padding: 0 15px;
+}
+.property-item.caption-sq .property-item-inner > .image-sq:before {
+  padding-top: 50%;
+}
+.property-item.caption-sq .property-item-inner > .image-sq:after {
+  display: none;
+}
+.property-item.caption-sq .property-item-inner .main-details {
+  position: static;
+  height: auto;
+  width: auto;
+  padding: 30px;
+}
+.property-item.caption-sq .property-item-inner .main-details .title-row .title-sq {
+  margin-right: 0;
+  height: 52px;
+  -webkit-line-clamp: 2;
+  color: #474747;
+}
+.property-item.caption-sq .property-item-inner .main-details .title-row .avatar-sq {
+  display: none;
+}
+.property-item.caption-sq .property-item-inner .main-details .icons-row .icons-column {
+  color: #474747;
+  font-size: 0.77777778rem;
+}
+.property-item.caption-sq .property-item-inner .main-details .icons-row .icons-column:first-child {
+  background: #E13C7E;
+  border-radius: 4px;
+  padding: 0 10px 0 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  color: #fff;
+  font-weight: 700;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.property-item.caption-sq .property-item-inner .main-details .icons-row .icons-column:first-child > .icon {
+  display: block;
+  border-right: 1px solid #fff;
+  padding-right: 10px;
+  margin-right: 10px;
+  padding-left: 5px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 22px;
+  height: auto;
+  width: auto;
+}
+.property-item.caption-sq .property-item-inner .main-details .progress-status {
+  color: #474747;
+  border-color: #D4D4D4;
+}
+/*--- .small-sq ---*/
+.property-item.small-sq .property-item-inner .avatar-sq {
+  display: none;
+}
+.property-item.small-sq .property-item-inner .main-details .title-row .title-sq {
+  margin-right: 0;
+}
+.property-item.small-sq .property-item-inner .main-details .icons-row {
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.property-item.small-sq .property-item-inner .main-details .icons-row .icons-column {
+  width: 33.3%;
+}
+.property-item.small-sq .property-item-inner .main-details .icons-row .icons-column:first-child {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.property-item.caption-sq.small-sq .property-item-inner .price-tag-sq {
+  top: 15px;
+  left: 15px;
+}
+.property-item.caption-sq.small-sq .property-item-inner .add-wishlist {
+  top: 15px;
+  right: 15px;
+}
+.property-item.caption-sq.small-sq .property-item-inner .main-details {
+  padding: 15px;
+}
+.property-item.caption-sq.small-sq .property-item-inner .main-details .title-row {
+  margin-bottom: 5px;
+}
+.property-item.caption-sq.small-sq .property-item-inner .main-details .icons-row .icons-column {
+  width: auto;
+}
+.property-item.caption-sq.small-sq .property-item-inner .main-details .icons-row .icons-column:first-child {
+  position: absolute;
+  left: 15px;
+  bottom: 123px;
+}
+.property-item.caption-sq.small-sq .property-item-inner .main-details .icons-row .icons-column:first-child .icon {
+  border: none;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+/*--- .shadow-sq ---*/
+.property-item.shadow-sq {
+  position: relative;
+}
+/*--- .shadow-sq ---*/
+.property-item.short-sq .property-item-inner > .image-sq:before {
+  padding-top: 60%;
+}
+.property-item.short-sq .property-item-inner .main-details .icons-row .icons-column:first-child .icon {
+  color: #fff;
+}
+.property-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  .property-row.inline-2 .property-item {
+    margin: 0 0 3px 3px;
+    width: calc((100% - 3px)/2);
+  }
+  .property-row.inline-2 .property-item:nth-child(2n+1) {
+    margin-left: 0;
+  }
+}
+.total-properties span {
+  font-size: 20px;
+}
+.total-properties i {
+  font-size: 20px;
+}
+h2 .total-properties {
+  display: block;
+}
+h2 .total-properties strong {
+  font-weight: 400;
+}
+@media only screen and (min-width: 992px) {
+  h2 .total-properties {
+    float: right;
+    display: inline-block;
+  }
+}

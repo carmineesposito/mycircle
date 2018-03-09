@@ -1,0 +1,126 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+            Container
+*******************************/
+/* All Sizes */
+.ui.container {
+  display: block;
+  max-width: 100% !important;
+}
+.ui.grid.container.cms-home,
+.ui.grid.container.cms-home {
+  width: 100% !important;
+}
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .ui.container {
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .ui.grid.container {
+    width: auto !important;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui.container {
+    width: 715px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .ui.grid.container {
+    width: calc( 715px  +  40px ) !important;
+  }
+}
+/* Small Monitor */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ui.container {
+    width: 921px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .ui.grid.container {
+    width: calc( 921px  +  40px ) !important;
+  }
+}
+/* Large Monitor */
+@media only screen and (min-width: 1199px) and (max-width: 1650px) {
+  .ui.container {
+    width: 1111px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .ui.grid.container {
+    width: calc( 1111px  +  40px ) !important;
+  }
+  .ui.grid.container.cms-home {
+    width: 1920px !important;
+  }
+}
+/* Wide Monitor */
+@media only screen and (min-width: 1650px) and (max-width: 1920px) {
+  .ui.container {
+    width: 1561px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .ui.grid.container {
+    width: calc( 1561px  +  40px ) !important;
+  }
+}
+/* Wide Monitor */
+@media only screen and (min-width: 1920px) {
+  .ui.container {
+    width: 1831px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .ui.grid.container {
+    width: calc( 1831px  +  40px ) !important;
+  }
+}
+/*******************************
+             Types
+*******************************/
+/* Fluid */
+.ui.fluid.container {
+  width: 100%;
+}
+/*******************************
+           Variations
+*******************************/
+.ui[class*="left aligned"].container {
+  text-align: left;
+}
+.ui[class*="center aligned"].container {
+  text-align: center;
+}
+.ui[class*="right aligned"].container {
+  text-align: right;
+}
+.ui.justified.container {
+  text-align: justify;
+  hyphens: auto;
+}

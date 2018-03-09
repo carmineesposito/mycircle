@@ -1,0 +1,265 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*-------------------------------------------------
+        Reviews Header - Rating & Progressbar
+--------------------------------------------------*/
+.reviews-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-width: 768px) {
+  .reviews-header {
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+}
+.reviews-header .rating-big {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  padding-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .reviews-header .rating-big {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+.reviews-header .rating-big .rating-badge {
+  border: 1px solid #D4D4D4;
+  border-radius: 8px;
+  margin: 0 0px 20px 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: center;
+  align-content: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+@media only screen and (min-width: 768px) {
+  .reviews-header .rating-big .rating-badge {
+    margin: 0 40px 20px 0;
+  }
+}
+.reviews-header .rating-big .rating-badge > span {
+  font-size: 24px;
+  font-weight: 900;
+  padding: 20px;
+  display: block;
+  border-right: 1px solid #D4D4D4;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  text-align: center;
+}
+.reviews-header .rating-big .rating-badge .icon {
+  font-size: 24px;
+  display: inline-block;
+  color: #E13C7E;
+  margin: 0 20px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+.reviews-header .rating-big .rating-badge .icon:before {
+  display: inline-block;
+}
+.reviews-header .rating-big .rating-info {
+  font-size: 12px;
+  line-height: 14px;
+}
+@media only screen and (min-width: 768px) {
+  .reviews-header .rating-big .rating-info {
+    max-width: 150px;
+  }
+}
+.reviews-header .rating-percentage {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .reviews-header .rating-percentage {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    width: auto;
+  }
+}
+.reviews-header .rating-percentage .rating-column {
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .reviews-header .rating-percentage .rating-column {
+    width: 50%;
+    padding-left: 40px;
+  }
+}
+.reviews-header .rating-percentage .rating-label {
+  margin-bottom: 15px;
+}
+/*-------------------------------------------------
+        Reviews Search
+--------------------------------------------------*/
+.reviews-search {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.reviews-search input[type="text"] {
+  border: none;
+  padding-left: 80px;
+}
+.reviews-search label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -10px;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.reviews-search label .icon {
+  font-size: 20px;
+}
+.reviews-search input[type="text"]:focus + label {
+  color: #E13C7E;
+}
+.reviews-search input[type="text"]:focus + label .icon {
+  font-weight: 600;
+}
+/*-------------------------------------------------
+        Reviews Feed - Comments
+--------------------------------------------------*/
+@media only screen and (min-width: 768px) {
+  .reviews-feed {
+    margin-left: 40px;
+  }
+}
+.reviews-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-width: 768px) {
+  .reviews-row {
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+}
+.reviews-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.reviews-row .review-meta {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 0 10px;
+}
+@media only screen and (min-width: 768px) {
+  .reviews-row .review-meta {
+    width: 150px;
+  }
+}
+.reviews-row .review-meta .name-sq {
+  font-weight: 700;
+  color: #474747;
+}
+.reviews-row .avatar-sq {
+  margin: 0 auto 20px auto;
+}
+@media only screen and (min-width: 768px) {
+  .reviews-row .comment-sq {
+    padding-left: 40px;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+  }
+}
+.reviews-row .comment-sq .date-sq {
+  display: block;
+  font-size: 0.750em;
+  opacity: .5;
+  margin-bottom: 10px;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .reviews-row .comment-sq .date-sq {
+    text-align: left;
+  }
+}
+.reviews-row .comment-sq p {
+  text-align: justify;
+}

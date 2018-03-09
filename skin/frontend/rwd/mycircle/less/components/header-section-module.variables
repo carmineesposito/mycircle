@@ -73,7 +73,7 @@
 //  Height
 
 @middleHeaderSectionHeightMobile:    50px;
-@middleHeaderSectionHeight:          60px; 
+@middleHeaderSectionHeight:          160px;
 @middleHeaderSectionHeightResized:   60px;
 
 // Item Height 
@@ -132,7 +132,7 @@
 //  Height
 
 @bottomHeaderSectionHeightMobile:    50px;
-@bottomHeaderSectionHeight:          80px; 
+@bottomHeaderSectionHeight:          140px;
 @bottomHeaderSectionHeightResized:   66px;
 
 // Item Height 

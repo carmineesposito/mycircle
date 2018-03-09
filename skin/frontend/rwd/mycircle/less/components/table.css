@@ -1,0 +1,434 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+             Table
+*******************************/
+/* Prototype */
+.ui.table {
+  width: 100%;
+  background: #FFFFFF;
+  margin: 1em 0em;
+  border: 1px solid #D4D4D4;
+  box-shadow: none;
+  border-radius: 0;
+  text-align: left;
+  color: #474747;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+.ui.table:first-child {
+  margin-top: 0em;
+}
+.ui.table:last-child {
+  margin-bottom: 0em;
+}
+/*******************************
+             Parts
+*******************************/
+/* Table Content */
+.ui.table th,
+.ui.table td {
+  transition: background 0.1s ease, color 0.1s ease;
+}
+/* Headers */
+.ui.table thead {
+  box-shadow: none;
+}
+.ui.table thead th {
+  cursor: auto;
+  background: #F9FAFB;
+  text-align: inherit;
+  color: #474747;
+  padding: 0.94444444em 0.72222222em;
+  vertical-align: inherit;
+  font-style: none;
+  font-weight: bold;
+  text-transform: none;
+  border-bottom: 1px solid #FAFAFA;
+  border-left: none;
+}
+.ui.table thead tr > th:first-child {
+  border-left: none;
+}
+.ui.table thead tr:first-child > th:first-child {
+  border-radius: 0 0em 0em 0em;
+}
+.ui.table thead tr:first-child > th:last-child {
+  border-radius: 0em 0 0em 0em;
+}
+.ui.table thead tr:first-child > th:only-child {
+  border-radius: 0 0 0em 0em;
+}
+/* Footer */
+.ui.table tfoot {
+  box-shadow: none;
+}
+.ui.table tfoot th {
+  cursor: auto;
+  border-top: 1px solid #D4D4D4;
+  background: #F9FAFB;
+  text-align: inherit;
+  color: #474747;
+  padding: 0.72222222em 0.72222222em;
+  vertical-align: middle;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+}
+.ui.table tfoot tr > th:first-child {
+  border-left: none;
+}
+.ui.table tfoot tr:first-child > th:first-child {
+  border-radius: 0em 0em 0em 0;
+}
+.ui.table tfoot tr:first-child > th:last-child {
+  border-radius: 0em 0em 0 0em;
+}
+.ui.table tfoot tr:first-child > th:only-child {
+  border-radius: 0em 0em 0 0;
+}
+/* Table Row */
+.ui.table tr td {
+  border-top: 1px solid #FAFAFA;
+}
+.ui.table tr:first-child td {
+  border-top: none;
+}
+/* Table Cells */
+.ui.table td {
+  padding: 0.72222222em 0.72222222em;
+  text-align: inherit;
+}
+/* Icons */
+.ui.table > .icon {
+  vertical-align: baseline;
+}
+.ui.table > .icon:only-child {
+  margin: 0em;
+}
+/* Table Segment */
+.ui.table.segment {
+  padding: 0em;
+}
+.ui.table.segment:after {
+  display: none;
+}
+.ui.table.segment.stacked:after {
+  display: block;
+}
+/*******************************
+            Coupling
+*******************************/
+/* UI Image */
+.ui.table th .image,
+.ui.table th .image img,
+.ui.table td .image,
+.ui.table td .image img {
+  max-width: none;
+}
+/*******************************
+          Variations
+*******************************/
+/*--------------
+    Stackable
+---------------*/
+@media only screen and (max-width: 991px) {
+  .ui[class*="tablet stackable"].table,
+  .ui[class*="tablet stackable"].table tbody,
+  .ui[class*="tablet stackable"].table tr,
+  .ui[class*="tablet stackable"].table tr > th,
+  .ui[class*="tablet stackable"].table tr > td {
+    width: 100% !important;
+    display: block !important;
+  }
+  .ui[class*="tablet stackable"].table {
+    padding: 0em;
+  }
+  .ui[class*="tablet stackable"].table thead {
+    display: block;
+  }
+  .ui[class*="tablet stackable"].table tfoot {
+    display: block;
+  }
+  .ui[class*="tablet stackable"].table tr {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.1) inset !important;
+  }
+  .ui[class*="tablet stackable"].table tr > th,
+  .ui[class*="tablet stackable"].table tr > td {
+    background: none;
+    border: none !important;
+    padding: 0.25em 0.75em;
+    box-shadow: none !important;
+  }
+  /* Definition Table */
+  .ui.definition[class*="tablet stackable"].table thead th:first-child {
+    box-shadow: none !important;
+  }
+}
+/*--------------
+ Text Alignment
+---------------*/
+.ui.table[class*="left aligned"],
+.ui.table [class*="left aligned"] {
+  text-align: left;
+}
+.ui.table[class*="center aligned"],
+.ui.table [class*="center aligned"] {
+  text-align: center;
+}
+.ui.table[class*="right aligned"],
+.ui.table [class*="right aligned"] {
+  text-align: right;
+}
+/*------------------
+ Vertical Alignment
+------------------*/
+.ui.table[class*="top aligned"],
+.ui.table [class*="top aligned"] {
+  vertical-align: top;
+}
+.ui.table[class*="middle aligned"],
+.ui.table [class*="middle aligned"] {
+  vertical-align: middle;
+}
+.ui.table[class*="bottom aligned"],
+.ui.table [class*="bottom aligned"] {
+  vertical-align: bottom;
+}
+/*--------------
+    Collapsing
+---------------*/
+.ui.table th.collapsing,
+.ui.table td.collapsing {
+  width: 1px;
+  white-space: nowrap;
+}
+/*--------------
+     Fixed
+---------------*/
+.ui.fixed.table {
+  table-layout: fixed;
+}
+.ui.fixed.table th,
+.ui.fixed.table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*--------------
+   Selectable
+---------------*/
+.ui.selectable.table tbody tr:hover,
+.ui.table tbody tr td.selectable:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+.ui.selectable.inverted.table tbody tr:hover,
+.ui.inverted.table tbody tr td.selectable:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+/* Selectable Cell Link */
+.ui.table tbody tr td.selectable {
+  padding: 0em;
+}
+.ui.table tbody tr td.selectable > a:not(.ui) {
+  display: block;
+  color: inherit;
+  padding: 0.72222222em 0.72222222em;
+}
+/* Other States */
+.ui.selectable.table tr.error:hover,
+.ui.table tr td.selectable.error:hover,
+.ui.selectable.table tr:hover td.error {
+  background: #ffe7e7 !important;
+  color: #943634 !important;
+}
+.ui.selectable.table tr.warning:hover,
+.ui.table tr td.selectable.warning:hover,
+.ui.selectable.table tr:hover td.warning {
+  background: #fff4e4 !important;
+  color: #493107 !important;
+}
+.ui.selectable.table tr.active:hover,
+.ui.table tr td.selectable.active:hover,
+.ui.selectable.table tr:hover td.active {
+  background: #E0E0E0 !important;
+  color: #474747 !important;
+}
+.ui.selectable.table tr.positive:hover,
+.ui.table tr td.selectable.positive:hover,
+.ui.selectable.table tr:hover td.positive {
+  background: #f7ffe6 !important;
+  color: #275b28 !important;
+}
+.ui.selectable.table tr.negative:hover,
+.ui.table tr td.selectable.negative:hover,
+.ui.selectable.table tr:hover td.negative {
+  background: #ffe7e7 !important;
+  color: #943634 !important;
+}
+/*--------------
+  Column Count
+---------------*/
+/* Grid Based */
+.ui.one.column.table td {
+  width: 100%;
+}
+.ui.two.column.table td {
+  width: 50%;
+}
+.ui.three.column.table td {
+  width: 33.33333333%;
+}
+.ui.four.column.table td {
+  width: 25%;
+}
+.ui.five.column.table td {
+  width: 20%;
+}
+.ui.six.column.table td {
+  width: 16.66666667%;
+}
+.ui.seven.column.table td {
+  width: 14.28571429%;
+}
+.ui.eight.column.table td {
+  width: 12.5%;
+}
+.ui.nine.column.table td {
+  width: 11.11111111%;
+}
+.ui.ten.column.table td {
+  width: 10%;
+}
+.ui.eleven.column.table td {
+  width: 9.09090909%;
+}
+.ui.twelve.column.table td {
+  width: 8.33333333%;
+}
+.ui.thirteen.column.table td {
+  width: 7.69230769%;
+}
+.ui.fourteen.column.table td {
+  width: 7.14285714%;
+}
+.ui.fifteen.column.table td {
+  width: 6.66666667%;
+}
+.ui.sixteen.column.table td {
+  width: 6.25%;
+}
+/* Column Width */
+.ui.table th.one.wide,
+.ui.table td.one.wide {
+  width: 8.33333333%;
+}
+.ui.table th.two.wide,
+.ui.table td.two.wide {
+  width: 16.66666667%;
+}
+.ui.table th.three.wide,
+.ui.table td.three.wide {
+  width: 25%;
+}
+.ui.table th.four.wide,
+.ui.table td.four.wide {
+  width: 33.33333333%;
+}
+.ui.table th.five.wide,
+.ui.table td.five.wide {
+  width: 41.66666667%;
+}
+.ui.table th.six.wide,
+.ui.table td.six.wide {
+  width: 50%;
+}
+.ui.table th.seven.wide,
+.ui.table td.seven.wide {
+  width: 58.33333333%;
+}
+.ui.table th.eight.wide,
+.ui.table td.eight.wide {
+  width: 66.66666667%;
+}
+.ui.table th.nine.wide,
+.ui.table td.nine.wide {
+  width: 75%;
+}
+.ui.table th.ten.wide,
+.ui.table td.ten.wide {
+  width: 83.33333333%;
+}
+.ui.table th.eleven.wide,
+.ui.table td.eleven.wide {
+  width: 91.66666667%;
+}
+.ui.table th.twelve.wide,
+.ui.table td.twelve.wide {
+  width: 100%;
+}
+.ui.table th.thirteen.wide,
+.ui.table td.thirteen.wide {
+  width: 108.33333333%;
+}
+.ui.table th.fourteen.wide,
+.ui.table td.fourteen.wide {
+  width: 116.66666667%;
+}
+.ui.table th.fifteen.wide,
+.ui.table td.fifteen.wide {
+  width: 125%;
+}
+.ui.table th.sixteen.wide,
+.ui.table td.sixteen.wide {
+  width: 133.33333333%;
+}
+/*--------------
+     Celled
+---------------*/
+.ui.celled.table tr th,
+.ui.celled.table tr td {
+  border-left: 1px solid #FAFAFA;
+}
+.ui.celled.table tr th:first-child,
+.ui.celled.table tr td:first-child {
+  border-left: none;
+}
+/*--------------
+      Sizes
+---------------*/
+/* Small */
+.ui.small.table {
+  font-size: 0.9em;
+}
+/* Standard */
+.ui.table {
+  font-size: 1em;
+}
+/* Large */
+.ui.large.table {
+  font-size: 1.1em;
+}

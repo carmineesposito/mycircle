@@ -1,0 +1,64 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+             Icon
+*******************************/
+i.icon {
+  display: inline-block;
+  opacity: 1;
+  margin: 0em 0.25rem 0em 0em;
+  width: auto;
+  height: 1em;
+  font-family: 'Icons';
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-align: center;
+  speak: none;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+}
+i.icon:before {
+  background: none !important;
+}
+i.icon,
+i.icons {
+  font-size: 20px;
+}
+/*******************************
+             States
+*******************************/
+i.icon.hover {
+  opacity: 1 !important;
+}
+i.icon.active {
+  opacity: 1 !important;
+}
+i.emphasized.icon {
+  opacity: 1 !important;
+}
+i.disabled.icon {
+  opacity: 0.45 !important;
+}

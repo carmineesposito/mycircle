@@ -10,8 +10,15 @@
 
 /* Global Style */
 .menu-manager-menu { margin-bottom:15px; }
-.menu-manager-menu li a, .menu-manager-menu li a.item { color:#fff;text-decoration:none;font-size: 30px;text-shadow: 2px 1px 0 #000; }
+.menu-manager-menu li a, .menu-manager-menu li a.item { color:#a8a8a8;text-decoration:none;font-size: 30px; }
+.ths.header-transparent.is-transparent .item {color:#a8a8a8;text-decoration:none;font-size: 30px;}
 .menu-manager-menu li.active > a { color:#fff;text-decoration:none; }
+
+/* Home Style */
+.cms-home .menu-manager-menu { margin-bottom:15px; }
+.cms-home .menu-manager-menu li a, .cms-home .menu-manager-menu li a.item { color:#fff;text-decoration:none;font-size: 30px;text-shadow: 2px 1px 0 #000; }
+.cms-home .menu-manager-menu li.active > a { color:#fff;text-decoration:none; }
+
 
 /* Type : None */
 .menu-type-none,

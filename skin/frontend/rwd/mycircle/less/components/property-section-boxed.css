@@ -1,0 +1,198 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*------------------------------------------
+        Property Section Boxed
+-------------------------------------------*/
+@media only screen and (max-width: 991px) {
+  .property-section-boxed .carousel-sq .slick-list {
+    overflow: visible;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .property-section-boxed .carousel-sq .slick-list .slick-track .slick-slide {
+    margin: 0 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .property-section-boxed .carousel-sq .slick-list .slick-track .slick-slide {
+    margin: 0 10px;
+  }
+}
+.property-section-boxed .carousel-sq .caption-content {
+  height: 500px;
+  pointer-events: none;
+}
+.property-section-boxed .carousel-sq .slick-arrow {
+  top: inherit;
+  bottom: 30px;
+  z-index: 1;
+}
+.property-section-boxed .carousel-sq .slick-arrow:before {
+  color: #fff;
+  font-weight: 700;
+}
+.property-section-boxed .carousel-sq .slick-prev {
+  left: 30px;
+}
+.property-section-boxed .carousel-sq .slick-next {
+  left: 70px;
+}
+.property-section-boxed .property-image-wrapper {
+  position: relative;
+}
+@media only screen and (max-width: 991px) {
+  .property-section-boxed .property-image-wrapper .host-sq {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .property-section-boxed .property-image-wrapper .host-sq {
+    position: absolute;
+    bottom: 30px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .property-section-boxed .property-image-wrapper .host-sq {
+    left: 50px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .property-section-boxed .property-image-wrapper .host-sq {
+    left: 0;
+  }
+}
+.property-section-boxed .property-image-wrapper .host-sq:hover,
+.property-section-boxed .property-image-wrapper .host-sq:focus {
+  color: #474747;
+}
+.property-section-boxed .property-image-wrapper .host-sq .avatar-sq {
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+.property-section-boxed .property-image-wrapper .host-sq .host-name-sq {
+  font-size: 12px;
+}
+@media only screen and (max-width: 991px) {
+  .property-section-boxed .property-image-wrapper .host-sq .host-name-sq {
+    color: #474747;
+    font-weight: 400;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .property-section-boxed .property-image-wrapper .host-sq .host-name-sq {
+    font-weight: 600;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .property-section-boxed .white-section .carousel-sq {
+    margin-left: calc(-1111px/12 - 7*40px/12 - 40px);
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .property-section-boxed .white-section .carousel-sq {
+    margin-left: calc(-40px/2 - 40px);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .property-section-boxed .white-section .carousel-sq {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .property-section-boxed .white-section .carousel-sq {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+.property-section-boxed .title-sq {
+  font-size: 32px;
+  font-weight: 700;
+  display: -webkit-box;
+  max-height: 150px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 26px;
+  margin-top: 40px;
+}
+.property-section-boxed .icons-row .icons-column {
+  width: auto;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.property-section-boxed .icons-row .icons-column .rating-sq {
+  background: #E13C7E;
+  border-radius: 4px;
+  padding: 0 10px 0 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+}
+.property-section-boxed .icons-row .icons-column .rating-sq > .icon {
+  display: block;
+  border-right: 1px solid #fff;
+  padding-right: 10px;
+  margin-right: 10px;
+  padding-left: 5px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 22px;
+  height: auto;
+  width: auto;
+}
+.property-section-boxed .description-sq {
+  line-height: 26px;
+}
+.property-section-boxed .map-wrapper {
+  height: 350px;
+}
+.property-section-boxed h3 {
+  text-align: center;
+  margin: 80px 0;
+}
+.property-section-boxed .article-sq-slick.arrows-top-sq .slick-prev,
+.property-section-boxed .article-sq-slick.arrows-top-sq .slick-next {
+  top: -100px;
+}

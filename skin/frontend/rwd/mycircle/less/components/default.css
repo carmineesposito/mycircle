@@ -1,0 +1,673 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+      HTML Default Elements
+*******************************/
+/*-----------------------------
+      Image
+------------------------------*/
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+/*-----------------------------
+      Table
+------------------------------*/
+table {
+  margin-bottom: 30px;
+  border: none;
+  width: 100%;
+}
+table thead th {
+  background: none;
+  color: rgba(71, 71, 71, 0.5);
+  font-weight: 400;
+  text-align: left;
+}
+table th,
+table td {
+  border: none;
+}
+@media only screen and (min-width: 768px) {
+  table th,
+  table td {
+    border-bottom: 1px solid #D4D4D4;
+    padding: 30px 20px;
+  }
+}
+table th > *,
+table td > * {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+table .avatar-sq {
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 767px) {
+  table.responsive thead {
+    display: none;
+  }
+  table.responsive tr {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    border-bottom: 1px solid #D4D4D4;
+    padding: 30px 0;
+  }
+}
+/*-----------------------------
+      Blockquote
+------------------------------*/
+blockquote {
+  font-style: italic;
+  font-size: 1.27777778rem;
+  display: block;
+  width: 80%;
+  margin: 0;
+  padding: 2em 0;
+  letter-spacing: 0.1em;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote cite {
+  font-style: normal;
+  font-size: 0.83333333rem;
+}
+/*-----------------------------
+      List
+------------------------------*/
+ul,
+ol {
+  list-style-type: none;
+  margin: 1em 0em;
+  padding: 0em 0em;
+}
+ul:first-child,
+ol:first-child {
+  margin-top: 0em;
+  padding-top: 0em;
+}
+ul:last-child,
+ol:last-child {
+  margin-bottom: 0em;
+  padding-bottom: 0em;
+}
+/* List Item */
+ul li,
+ol li {
+  display: list-item;
+  table-layout: fixed;
+  list-style-type: none;
+  list-style-position: outside;
+  padding: 0.16666667em 0em;
+}
+ul > li:first-child:after,
+ol > li:first-child:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+ul li:first-child,
+ol li:first-child {
+  padding-top: 0em;
+}
+ul li:last-child,
+ol li:last-child {
+  padding-bottom: 0em;
+}
+/* Child List */
+ul ul,
+ol ol {
+  clear: both;
+  margin: 0em;
+  padding: 0.75em 0em 0.25em 0.5em;
+}
+/* Child Item */
+ul ul li,
+ol ol li {
+  padding: 0.11111111em 0em;
+  line-height: inherit;
+}
+/* Bulleted */
+ul {
+  margin-left: 1.25rem;
+}
+ul li {
+  position: relative;
+}
+ul li:before {
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  top: auto;
+  left: auto;
+  margin-left: -1rem;
+  content: '';
+  opacity: 1;
+  color: inherit;
+  vertical-align: top;
+}
+ul ul {
+  padding-left: 1rem;
+}
+/* Ordered List */
+ol,
+ol ol {
+  counter-reset: ordered;
+  margin-left: 1.25rem;
+  list-style-type: none;
+}
+ol li {
+  list-style-type: none;
+  position: relative;
+}
+ol > li:before {
+  position: relative;
+  top: auto;
+  left: auto;
+  user-select: none;
+  pointer-events: none;
+  margin-left: -1.25rem;
+  counter-increment: ordered;
+  content: counters(ordered, ".") " ";
+  text-align: right;
+  color: #474747;
+  vertical-align: top;
+  opacity: 0.8;
+}
+/* Definition List */
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0 0 1em;
+}
+/*-----------------------------
+      Adress
+------------------------------*/
+/* Address Tag */
+address {
+  margin: 0em 0em 1em;
+}
+/*-----------------------------
+      Code
+------------------------------*/
+/* Code Tag */
+code {
+  background-color: #eee;
+  padding: 0.125em 0.25em;
+}
+/* Mark & Ins Tag */
+mark,
+ins {
+  background: #E13C7E;
+  color: white;
+  padding: 0.125em 0.25em;
+  text-decoration: none;
+}
+pre {
+  font-family: Consolas, Monaco, "Courier New", Courier, monospace;
+  font-size: 14px;
+  max-width: 100%;
+  width: 100%;
+  overflow: auto;
+  padding: 0;
+  position: relative;
+  white-space: normal;
+  line-height: 22px;
+}
+pre code {
+  padding: 25px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  letter-spacing: 0.01em;
+}
+/* HR */
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px solid #D4D4D4;
+  width: 100%;
+}
+/*-----------------------------
+           Forms
+------------------------------*/
+form {
+  position: relative;
+  max-width: 100%;
+}
+/*---------- Label ------------*/
+label {
+  display: block;
+  margin: 0em 0em 1em 0em;
+  color: #474747;
+  font-size: 0.94444444em;
+  font-weight: normal;
+  text-transform: none;
+}
+/*---------- Inputs -----------*/
+textarea,
+input:not([type]),
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="text"],
+input[type="url"] {
+  width: 100%;
+  vertical-align: top;
+}
+/* Set max height on unusual input */
+::-webkit-datetime-edit,
+::-webkit-inner-spin-button {
+  height: 1.2142em;
+}
+input:not([type]),
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="text"],
+input[type="url"] {
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 0;
+  outline: none;
+  -webkit-appearance: none;
+  tap-highlight-color: rgba(255, 255, 255, 0);
+  line-height: 1.2142em;
+  padding: 0.78178889em 0.88888889em;
+  font-size: 1em;
+  background: transparent;
+  border: 1px solid #D4D4D4;
+  color: #474747;
+  border-radius: 0;
+  box-shadow: 0em 0em 0em 0em transparent inset;
+  transition: color 0.1s ease, border-color 0.1s ease;
+}
+input[type="text"]::-webkit-input-placeholder,
+input[type="text"]::-moz-placeholder,
+input[type="text"]:-moz-placeholder,
+input[type="text"]:-ms-input-placeholder {
+  position: relative;
+  color: green !important;
+}
+input[type="text"]::-webkit-input-placeholder:before,
+input[type="text"]::-moz-placeholder:before,
+input[type="text"]:-moz-placeholder:before,
+input[type="text"]:-ms-input-placeholder:before {
+  content: 'jkl';
+  top: 2px;
+  left: 4px;
+  position: absolute;
+  font-size: 14px;
+  text-align: center;
+  color: red;
+  z-index: 99999;
+}
+/* Focus */
+input:not([type]):focus,
+input[type="date"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="text"]:focus,
+input[type="url"]:focus {
+  color: rgba(0, 0, 0, 0.95);
+  border-color: #E13C7E;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: 0px 0em 0em 0em #bbbbbb inset;
+}
+/*--------- Textarea ---------*/
+/* Text Area */
+textarea {
+  margin: 0;
+  -webkit-appearance: none;
+  tap-highlight-color: rgba(255, 255, 255, 0);
+  padding: 0.88888889em 0.88888889em;
+  font-size: 1em;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  background: transparent;
+  border: 1px solid #D4D4D4;
+  outline: none;
+  color: #474747;
+  border-radius: 0;
+  box-shadow: 0em 0em 0em 0em transparent inset;
+  transition: color 0.1s ease, border-color 0.1s ease;
+  line-height: 1.2857;
+  resize: vertical;
+}
+/* Focus */
+textarea:focus {
+  color: rgba(0, 0, 0, 0.95);
+  border-color: #E13C7E;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: 0px 0em 0em 0em #bbbbbb inset;
+  -webkit-appearance: none;
+}
+/*--------- Checkbox and Radio ---------*/
+/* HTML Checkbox */
+@font-face {
+  font-family: 'Checkbox';
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBD8AAAC8AAAAYGNtYXAYVtCJAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5Zn4huwUAAAF4AAABYGhlYWQGPe1ZAAAC2AAAADZoaGVhB30DyAAAAxAAAAAkaG10eBBKAEUAAAM0AAAAHGxvY2EAmgESAAADUAAAABBtYXhwAAkALwAAA2AAAAAgbmFtZSC8IugAAAOAAAABknBvc3QAAwAAAAAFFAAAACAAAwMTAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADoAgPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6AL//f//AAAAAAAg6AD//f//AAH/4xgEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAEUAUQO7AvgAGgAAARQHAQYjIicBJjU0PwE2MzIfAQE2MzIfARYVA7sQ/hQQFhcQ/uMQEE4QFxcQqAF2EBcXEE4QAnMWEP4UEBABHRAXFhBOEBCoAXcQEE4QFwAAAAABAAABbgMlAkkAFAAAARUUBwYjISInJj0BNDc2MyEyFxYVAyUQEBf9SRcQEBAQFwK3FxAQAhJtFxAQEBAXbRcQEBAQFwAAAAABAAAASQMlA24ALAAAARUUBwYrARUUBwYrASInJj0BIyInJj0BNDc2OwE1NDc2OwEyFxYdATMyFxYVAyUQEBfuEBAXbhYQEO4XEBAQEBfuEBAWbhcQEO4XEBACEm0XEBDuFxAQEBAX7hAQF20XEBDuFxAQEBAX7hAQFwAAAQAAAAIAAHRSzT9fDzz1AAsEAAAAAADRsdR3AAAAANGx1HcAAAAAA7sDbgAAAAgAAgAAAAAAAAABAAADwP/AAAAEAAAAAAADuwABAAAAAAAAAAAAAAAAAAAABwQAAAAAAAAAAAAAAAIAAAAEAABFAyUAAAMlAAAAAAAAAAoAFAAeAE4AcgCwAAEAAAAHAC0AAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAIAAAAAQAAAAAAAgAHAGkAAQAAAAAAAwAIADkAAQAAAAAABAAIAH4AAQAAAAAABQALABgAAQAAAAAABgAIAFEAAQAAAAAACgAaAJYAAwABBAkAAQAQAAgAAwABBAkAAgAOAHAAAwABBAkAAwAQAEEAAwABBAkABAAQAIYAAwABBAkABQAWACMAAwABBAkABgAQAFkAAwABBAkACgA0ALBDaGVja2JveABDAGgAZQBjAGsAYgBvAHhWZXJzaW9uIDIuMABWAGUAcgBzAGkAbwBuACAAMgAuADBDaGVja2JveABDAGgAZQBjAGsAYgBvAHhDaGVja2JveABDAGgAZQBjAGsAYgBvAHhSZWd1bGFyAFIAZQBnAHUAbABhAHJDaGVja2JveABDAGgAZQBjAGsAYgBvAHhGb250IGdlbmVyYXRlZCBieSBJY29Nb29uLgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAC4AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format('truetype');
+}
+input[type="checkbox"],
+input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  font-size: 0.875em;
+  padding-left: calc(1em + 20px);
+  padding-right: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.45em;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 0.225em;
+  left: 0;
+  margin-right: 6px;
+  border-radius: 0px;
+  height: 1em;
+  width: 1em;
+  border: 1px solid #D4D4D4;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+input[type="checkbox"] + label:hover,
+input[type="radio"] + label:hover {
+  color: #474747;
+}
+input[type="checkbox"] + label:hover:before,
+input[type="radio"] + label:hover:before {
+  border-color: #E13C7E;
+  border-width: 2px;
+}
+input[type="checkbox"]:checked + label:before,
+input[type="radio"]:checked + label:before {
+  border-radius: 50%;
+  background: #E13C7E;
+  border-color: #E13C7E;
+}
+input[type="checkbox"]:checked + label:hover:before,
+input[type="radio"]:checked + label:hover:before {
+  border-color: #E13C7E;
+}
+input[type="checkbox"] + label:after {
+  font-family: 'Checkbox';
+  content: '\e800';
+  top: 0;
+  left: .125em;
+  position: absolute;
+  line-height: 1.45em;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.15);
+  font-weight: 400;
+  font-size: 0.938em;
+}
+input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+input[type="radio"] + label:after {
+  border-radius: 50%;
+  content: '' !important;
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  top: 0.225em;
+  left: 0;
+  transform: scale(0.7);
+  position: absolute;
+  text-align: center;
+  background-color: #fff;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+input[type="radio"]:checked + label:after {
+  transform: scale(0.4);
+}
+label > input[type="checkbox"],
+label > input[type="radio"] {
+  opacity: 1;
+  vertical-align: middle;
+  position: relative;
+  border: 1px solid #D4D4D4;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+  outline: none;
+  width: 22px;
+  height: 22px;
+  margin-right: 4px;
+  -webkit-appearance: none;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  transition: all 1s linear;
+}
+label > input[type="checkbox"]:checked,
+label > input[type="radio"]:checked {
+  background-color: #474747;
+  border-color: #474747;
+}
+.firefox label > input[type="checkbox"],
+.firefox label > input[type="radio"] {
+  margin-right: 0;
+  top: -2px;
+}
+input[type="radio"] + label:before,
+label > input[type="radio"] {
+  border-radius: 50%;
+}
+/* checkbox symbol */
+input[type="checkbox"] + label:hover:before {
+  border-radius: 50%;
+}
+/* Checkbox Icon Style*/
+input[type="checkbox"].checkbox-radio-desc-icon-style + label,
+input[type="radio"].checkbox-radio-desc-icon-style + label {
+  padding: 10px;
+  height: 120px;
+  border: 1px solid #D4D4D4;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+input[type="checkbox"].checkbox-radio-desc-icon-style + label:before,
+input[type="radio"].checkbox-radio-desc-icon-style + label:before,
+input[type="checkbox"].checkbox-radio-desc-icon-style + label:after,
+input[type="radio"].checkbox-radio-desc-icon-style + label:after {
+  display: none;
+}
+input[type="checkbox"].checkbox-radio-desc-icon-style + label > i,
+input[type="radio"].checkbox-radio-desc-icon-style + label > i {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+input[type="checkbox"].checkbox-radio-desc-icon-style:checked + label,
+input[type="radio"].checkbox-radio-desc-icon-style:checked + label {
+  border-color: #E13C7E;
+  color: #E13C7E;
+}
+/*--------- Select ---------*/
+select {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* Custom selects */
+select {
+  outline: none;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  line-height: 1.2142em;
+  padding: 0.78178889em 0.88888889em;
+  font-size: 1em;
+  background-color: transparent;
+  border: 1px solid #D4D4D4;
+  color: #474747;
+  border-radius: 0;
+  box-shadow: 0em 0em 0em 0em transparent inset;
+  /* Remove arrow from firefox */
+  text-indent: 0.01px;
+  text-overflow: "";
+  background-image: linear-gradient(45deg, transparent 50%, #474747), linear-gradient(135deg, #474747, transparent 50%);
+  background-position: calc(100% - 15px) 50%,
+          calc(100% - 10px) 50%;
+  background-size: 5px 5px,
+          5px 5px;
+  background-repeat: no-repeat;
+}
+select[multiple] {
+  background-image: none;
+}
+/* Targeting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    padding-right: 45px !important;
+  }
+}
+@-moz-document url-prefix() {
+  select {
+    /*background-image: none;*/
+  }
+}
+/* IE Fix */
+select::-ms-expand {
+  display: none;
+}
+.lt-ie9 select,
+.lt-ie10 select {
+  background: none;
+  padding-right: 3px !important;
+}
+/*-----------------------------
+      Special Sections
+------------------------------*/
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#page-wrapper > * {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+}
+#page-wrapper > *:nth-last-child(2):not(.header-section) {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+#page-wrapper > *:last-child:not(#footer) {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+#header,
+#footer {
+  flex: none;
+  /* 2 */
+}

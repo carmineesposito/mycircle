@@ -1,0 +1,51 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+        Basic Progressbar
+*******************************/
+.basic-progressbar {
+  height: 3px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.basic-progressbar .inner {
+  background: #1FCB41;
+  width: 0%;
+  height: 100%;
+  border-radius: 6px;
+}
+.completed-percentage {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .completed-percentage {
+    width: calc((100% - 60px)/3);
+  }
+}
+.completed-percentage p {
+  font-size: 0.875em;
+}
+.completed-percentage p strong {
+  font-size: 1.375em;
+  margin-right: 5px;
+}

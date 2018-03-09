@@ -1,0 +1,156 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+          Button SQ
+*******************************/
+.button-sq,
+button,
+input[type="button"],
+input[type="submit"] {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  cursor: pointer;
+  min-height: 1em;
+  outline: none;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  line-height: 1em;
+  margin: 0;
+  border-radius: 0;
+  padding: 0.88888889em 1.5em;
+  letter-spacing: 0.075em;
+  border: none;
+  font-size: 1em;
+  user-select: none;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  will-change: '';
+  -webkit-tap-highlight-color: transparent;
+  background: #ff5f73;
+  color: #fff;
+}
+.button-sq:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.button-sq:focus,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus {
+  color: #fff;
+  background-color: #ff3c54;
+}
+.button-sq span,
+button span {
+  display: inline-block;
+}
+.button-sq span + .icon,
+button span + .icon {
+  margin-left: 15px;
+}
+.button-sq .icon + span,
+button .icon + span {
+  padding-left: 15px;
+}
+.button-sq.small-sq {
+  font-size: 20px;
+  padding: 1.3em 1.2em;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  margin: 0 15px 0 15px;
+}
+.button-sq.see-through-sq {
+  border-radius: 3px;
+  border: 1px solid #D4D4D4;
+  background: transparent;
+  color: #474747;
+}
+.button-sq.see-through-sq:hover,
+.button-sq.see-through-sq:focus {
+  border-color: #474747;
+  color: #474747;
+}
+.button-sq.link-sq {
+  background: transparent;
+  border: none;
+  color: #474747;
+}
+.button-sq.cancel-sq {
+  background: #EAEAEA;
+  color: rgba(0, 0, 0, 0.4);
+}
+.button-sq.cancel-sq:hover,
+.button-sq.cancel-sq:active {
+  background: #dddddd;
+  color: black;
+}
+.button-sq.facebook-button {
+  border: 1px solid #3B5998;
+  color: #3B5998;
+  background: transparent;
+}
+.button-sq.google-button {
+  border: 1px solid #DC4A38;
+  color: #DC4A38;
+  background: transparent;
+}
+/* Clipboard Copy */
+.clipboad-copy-sq {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #474747;
+  margin: 0;
+  -webkit-transition: color .2s ease-in, background .2s ease-in;
+  -moz-transition: color .2s ease-in, background .2s ease-in;
+  -o-transition: color .2s ease-in, background .2s ease-in;
+  -ms-transition: color .2s ease-in, background .2s ease-in;
+  transition: color .2s ease-in, background .2s ease-in;
+}
+.clipboad-copy-sq:hover,
+.clipboad-copy-sq:focus {
+  background: #474747;
+  color: #fff;
+}
+.button-sq.fullwidth-sq > span {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}

@@ -1,0 +1,251 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+             Reset
+*******************************/
+/* Border-Box */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+/* iPad Input Shadows */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* mobile firefox too! */
+}
+/*******************************
+             Page
+*******************************/
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Ubuntu Italic'), local('Ubuntu-Italic'), url(https://fonts.gstatic.com/s/ubuntu/v11/4iCu6KVjbNBYlgoKej70l0w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Ubuntu Bold Italic'), local('Ubuntu-BoldItalic'), url(https://fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejZPslyPN4Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(https://fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoC1CzjsGyI.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(https://fonts.gstatic.com/s/ubuntu/v11/4iCs6KVjbNBYlgoKfw7z.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(https://fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCxCvjsGyI.ttf) format('truetype');
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 18px;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: visible;
+  min-width: 320px;
+  background: #ffffff;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #474747;
+  font-smoothing: antialiased;
+}
+/*******************************
+             Headers
+*******************************/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  line-height: 1.2857em;
+  margin: calc(2rem -  0.14285em ) 0em 1rem;
+  font-weight: normal;
+  padding: 0em;
+}
+h1 {
+  min-height: 1rem;
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.667em;
+}
+h3 {
+  font-size: 1.625em;
+}
+h4 {
+  font-size: 1.375em;
+}
+h5 {
+  font-size: 1.25em;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+  margin-top: 0em;
+}
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child {
+  margin-bottom: 0em;
+}
+/*******************************
+             Text
+*******************************/
+p {
+  margin: 0em 0em 1em;
+  line-height: 1.5em;
+}
+p:first-child {
+  margin-top: 0em;
+}
+p:last-child {
+  margin-bottom: 0em;
+}
+/*-------------------
+        Links
+--------------------*/
+a {
+  color: #474747;
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+/*******************************
+          Highlighting
+*******************************/
+/* Site */
+::-webkit-selection {
+  background-color: #CCE2FF;
+  color: #474747;
+}
+::-moz-selection {
+  background-color: #CCE2FF;
+  color: #474747;
+}
+::selection {
+  background-color: #CCE2FF;
+  color: #474747;
+}
+/* Form */
+textarea::-webkit-selection,
+input::-webkit-selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: #474747;
+}
+textarea::-moz-selection,
+input::-moz-selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: #474747;
+}
+textarea::selection,
+input::selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: #474747;
+}
+/*******************************
+        Global Overrides
+*******************************/
+::selection {
+  background: #E13C7E;
+  color: white;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #E13C7E;
+  /* Firefox */
+  color: white;
+  text-shadow: none;
+}
+::-webkit-selection {
+  background: #E13C7E;
+  /* Safari */
+  color: white;
+  text-shadow: none;
+}
+/*******************************
+             Page
+*******************************/
+/*** No overrdides here ***/
+body {
+  overflow-x: hidden;
+  letter-spacing: 0.03em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #474747;
+  background-color: #ffffff;
+}
+/*******************************
+             Heading
+*******************************/
+/* h6 */
+h6 {
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  line-height: 1.2857em;
+  margin: calc(2rem -  0.14285em ) 0em 1rem;
+  font-weight: normal;
+  padding: 0em;
+}
+h6,
+.h6 {
+  font-size: 1.125em;
+}
+h6:first-child {
+  margin-top: 0em;
+}
+h6:last-child {
+  margin-bottom: 0em;
+}
+strong {
+  font-weight: 700;
+}

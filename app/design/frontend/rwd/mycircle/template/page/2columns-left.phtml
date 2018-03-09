@@ -39,34 +39,45 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
 
 <head>
-<?php echo $this->getChildHtml('head') ?>
+    <!--    <link rel="stylesheet" type="text/css" href="http://localhost/mycircle2/skin/frontend/rwd/mycircle/icon/style.css" media="all" />-->
+    <!--    <link rel="stylesheet/less" href="--><?php //echo $this->getSkinUrl() ?><!--less/base.less" type="text/less" />-->
+    <!--    <link rel="stylesheet/less" href="--><?php //echo $this->getSkinUrl() ?><!--less/header.less" type="text/less" />-->
+    <!--    <link rel="stylesheet/less" href="--><?php //echo $this->getSkinUrl() ?><!--less/theme.less" type="text/less" />-->
+    <?php echo $this->getChildHtml('head') ?>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
 <?php echo $this->getChildHtml('after_body_start') ?>
-<div class="wrapper">
+<div id="page-wrapper">
     <?php echo $this->getChildHtml('global_notices') ?>
-    <div class="page">
-        <?php echo $this->getChildHtml('header') ?>
-        <div class="main-container col2-left-layout">
-            <div class="main">
-                <?php echo $this->getChildHtml('breadcrumbs') ?>
-                <?php // This left_first block will display above the main content on smaller viewports ?>
-                <?php if ($_leftContent = $this->getChildHtml('left_first')): ?>
-                <div class="col-left sidebar col-left-first"><?php echo $_leftContent;   ?></div>
-                <?php endif; ?>
-                <div class="col-main">
-                    <?php echo $this->getChildHtml('global_messages') ?>
-                    <?php echo $this->getChildHtml('content') ?>
-                </div>
-                <div class="col-left sidebar"><?php echo $this->getChildHtml('left') ?></div>
-            </div>
+    <!--DEFAULT HEADER-->
+
+    <?php echo $this->getChildHtml('header') ?>
+    <div class="col-left sidebar"><?php echo $this->getChildHtml('left_first') ?></div>
+    <div class="ui layout main-wrapper" id="top">
+        <?php echo $this->getChildHtml('breadcrumbs') ?>
+        <?php echo $this->getChildHtml('before_content') ?>
+
+        <div class="ui grid container <?php echo $this->getBodyClass() ? $this->getBodyClass():'' ?>">
+            <?php echo $this->getChildHtml('global_messages') ?>
+            <?php echo $this->getChildHtml('content') ?>
         </div>
-        <?php echo $this->getChildHtml('footer_before') ?>
-        <?php echo $this->getChildHtml('footer') ?>
-        <?php echo $this->getChildHtml('global_cookie_notice') ?>
-        <?php echo $this->getChildHtml('before_body_end') ?>
+
+
+
     </div>
-</div>
-<?php echo $this->getAbsoluteFooter() ?>
+
+    <!-- Modals -->
+
+    <?php echo $this->getChildHtml('footer_before') ?>
+    <?php echo $this->getChildHtml('footer') ?>
+    <?php echo $this->getChildHtml('global_cookie_notice') ?>
+    <?php echo $this->getChildHtml('before_body_end') ?>
+
+
+</div><!--end #page-wrapper-->
+<?php echo $this->getChildHtml('second_head') ?>
+
 </body>
+
 </html>

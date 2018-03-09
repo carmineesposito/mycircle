@@ -1,0 +1,51 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+          Button SQ
+*******************************/
+.shadow-sq {
+  position: relative;
+}
+.shadow-sq:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 85%;
+  height: 80%;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.15);
+  z-index: -1;
+}
+.shadow-sq.light-shadow-sq:before {
+  width: 75%;
+  box-shadow: 0 30px 75px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1);
+}
+.shadow-sq.animate-sq:before {
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
+  animation: fade-in-shadow 1s 2s forwards;
+}

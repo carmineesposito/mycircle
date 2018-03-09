@@ -1,0 +1,81 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+          Logo
+*******************************/
+.logo,
+.logo.item {
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  background: transparent;
+  color: #888888;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 10px;
+  /* Logo Image */
+}
+.logo .icon,
+.logo.item .icon {
+  font-size: 24px;
+  margin: 0;
+}
+.logo img,
+.logo.item img {
+  width: auto;
+  height: 100%;
+  vertical-align: top;
+  border: 0;
+}
+.logo.rounded-sq,
+.logo.item.rounded-sq {
+  border-radius: 10px;
+}
+.logo.square-sq,
+.logo.item.square-sq {
+  width: 44px;
+  text-align: center;
+}
+.logo-transparent {
+  display: none;
+}
+.header-transparent.is-transparent .logo {
+  background: transparent;
+}
+.header-transparent.is-transparent .logo .logo-transparent + img {
+  display: none;
+  opacity: 0;
+}
+.header-transparent.is-transparent .logo .logo-transparent {
+  display: inline-block;
+  opacity: 1;
+  height: 70px;
+}
+@media only screen and (max-width: 767px) {
+  .header-transparent.is-transparent .logo .logo-transparent {
+    display: inline-block;
+    opacity: 1;
+    height: 30px;
+  }
+}

@@ -1,0 +1,91 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/***************************************
+       Sticky Element Default
+****************************************/
+.sticky-element.is-sticky > * {
+  top: 0;
+  z-index: 100;
+}
+@media only screen and (min-width: 992px) {
+  .sticky-element.is-sticky > * {
+    overflow-y: auto;
+  }
+}
+.sticky-element.under-mhs > * {
+  z-index: 102;
+}
+/* Responsive Classes */
+@media only screen and (max-width: 767px) {
+  .sticky-mobile > * {
+    position: relative;
+  }
+  .sticky-mobile.is-sticky > * {
+    position: fixed;
+  }
+  .sticky-mobile.under-ths > * {
+    z-index: 102;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .sticky-tablet > * {
+    position: relative;
+  }
+  .sticky-tablet.is-sticky > * {
+    position: fixed;
+  }
+  .sticky-tablet.under-ths > * {
+    z-index: 102;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .sticky-desktop > * {
+    position: relative;
+  }
+  .sticky-desktop.is-sticky > * {
+    position: fixed;
+  }
+  .sticky-desktop.under-ths > * {
+    z-index: 102;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .sticky-large-desktop > * {
+    position: relative;
+  }
+  .sticky-large-desktop.is-sticky > * {
+    position: fixed;
+  }
+  .sticky-large-desktop.under-ths > * {
+    z-index: 102;
+  }
+}
+.sticky-all > * {
+  position: relative;
+}
+.sticky-all.is-sticky > * {
+  position: fixed;
+}
+.sticky-all.under-ths > * {
+  z-index: 102;
+}

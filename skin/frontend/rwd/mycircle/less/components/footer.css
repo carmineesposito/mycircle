@@ -1,0 +1,95 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+        Footer
+*******************************/
+#footer {
+  background-color: #34393b;
+}
+#footer .footer-top {
+  padding-bottom: 20px;
+}
+#footer .footer-top > .ui.grid:first-child > .row {
+  border-top: 1px solid #D4D4D4;
+  padding-top: 45px;
+}
+#footer .footer-top .ui.column {
+  padding-bottom: 40px;
+}
+#footer .footer-top.borderless-sq > .ui.grid:first-child > .row {
+  border: none;
+}
+#footer .footer-bottom {
+  padding: 30px 0 0 0;
+}
+#footer h5 {
+  font-weight: 700;
+  color: #fefefe;
+}
+#footer .form-subscribe-header > label {
+  color: #fefefe;
+}
+#footer .list-default-sq li {
+  padding: 0.1em 0;
+}
+#footer .list-default-sq li a {
+  line-height: 2.5;
+  font-size: 0.875em;
+  color: #fefefe;
+  letter-spacing: 0;
+  -webkit-transition: text-decoration 0.3s ease-out;
+  -moz-transition: text-decoration 0.3s ease-out;
+  -o-transition: text-decoration 0.3s ease-out;
+  -ms-transition: text-decoration 0.3s ease-out;
+  transition: text-decoration 0.3s ease-out;
+}
+#footer .list-default-sq li a:hover,
+#footer .list-default-sq li a:focus {
+  text-decoration: underline;
+}
+#footer p {
+  color: rgba(71, 71, 71, 0.7);
+  font-size: 0.875em;
+}
+#footer .footer-logo {
+  margin-bottom: 25px;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+}
+#footer .footer-logo img {
+  height: 37px;
+  width: auto;
+  margin-right: 25px;
+}
+#footer .social-links-sq li {
+  margin-right: 15px;
+}
+#footer .social-links-sq li a {
+  color: rgba(255, 255, 255, 0.5);
+}
+#footer .social-links-sq li a:hover {
+  color: #474747;
+}
+#footer .social-links-sq li a i {
+  font-size: 16px;
+}

@@ -1,0 +1,322 @@
+/*
+ * # Myhotel - 1.0.0
+ * http://www.seventhqueen.com/
+ *
+ *
+ * Copyright 2012 SeventhQueen
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*
+  These are used to specify exact pixel values in em
+  for things like borders that remain constantly
+  sized as emSize adjusts
+
+  Since there are many more sizes than names for sizes,
+  these are named by their original pixel values.
+
+*/
+/*-------------------
+    Down (:active)
+--------------------*/
+/*******************************
+            Popup
+*******************************/
+.ui.popup {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  /* Fixes content being squished when inline (moz only) */
+  min-width: min-content;
+  z-index: 1900;
+  border: 1px solid #e5e5e5;
+  line-height: 1.5em;
+  max-width: 250px;
+  background: #FFFFFF;
+  padding: 0.833em 1em;
+  font-weight: normal;
+  font-style: normal;
+  color: #474747;
+  border-radius: 0;
+  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+}
+.ui.popup > .header {
+  padding: 0em;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 1.125em;
+  line-height: 1.2;
+  font-weight: bold;
+}
+.ui.popup > .header + .content {
+  padding-top: 0.5em;
+}
+.ui.popup:before {
+  position: absolute;
+  content: '';
+  width: 0.75em;
+  height: 0.75em;
+  background: #FFFFFF;
+  transform: rotate(45deg);
+  z-index: 2;
+  box-shadow: 1px 1px 0px 0px #cccccc;
+}
+/*******************************
+            Types
+*******************************/
+/*--------------
+     Spacing
+---------------*/
+.ui.popup {
+  margin: 0em;
+}
+/* Extending from Top */
+.ui.top.popup {
+  margin: 0em 0em 0.75em;
+}
+.ui.top.left.popup {
+  transform-origin: left bottom;
+}
+.ui.top.center.popup {
+  transform-origin: center bottom;
+}
+.ui.top.right.popup {
+  transform-origin: right bottom;
+}
+/* Extending from Vertical Center */
+.ui.left.center.popup {
+  margin: 0em 0.75em 0em 0em;
+  transform-origin: right 50%;
+}
+.ui.right.center.popup {
+  margin: 0em 0em 0em 0.75em;
+  transform-origin: left 50%;
+}
+/* Extending from Bottom */
+.ui.bottom.popup {
+  margin: 0.75em 0em 0em;
+}
+.ui.bottom.left.popup {
+  transform-origin: left top;
+}
+.ui.bottom.center.popup {
+  transform-origin: center top;
+}
+.ui.bottom.right.popup {
+  transform-origin: right top;
+}
+/*--------------
+     Pointer
+---------------*/
+/*--- Below ---*/
+.ui.bottom.center.popup:before {
+  margin-left: -0.325em;
+  top: -0.325em;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  box-shadow: -1px -1px 0px 0px #cccccc;
+}
+.ui.bottom.left.popup {
+  margin-left: 0em;
+}
+/*rtl:rename*/
+.ui.bottom.left.popup:before {
+  top: -0.325em;
+  left: 1em;
+  right: auto;
+  bottom: auto;
+  margin-left: 0em;
+  box-shadow: -1px -1px 0px 0px #cccccc;
+}
+.ui.bottom.right.popup {
+  margin-right: 0em;
+}
+/*rtl:rename*/
+.ui.bottom.right.popup:before {
+  top: -0.325em;
+  right: 1em;
+  bottom: auto;
+  left: auto;
+  margin-left: 0em;
+  box-shadow: -1px -1px 0px 0px #cccccc;
+}
+/*--- Above ---*/
+.ui.top.center.popup:before {
+  top: auto;
+  right: auto;
+  bottom: -0.325em;
+  left: 50%;
+  margin-left: -0.325em;
+}
+.ui.top.left.popup {
+  margin-left: 0em;
+}
+/*rtl:rename*/
+.ui.top.left.popup:before {
+  bottom: -0.325em;
+  left: 1em;
+  top: auto;
+  right: auto;
+  margin-left: 0em;
+}
+.ui.top.right.popup {
+  margin-right: 0em;
+}
+/*rtl:rename*/
+.ui.top.right.popup:before {
+  bottom: -0.325em;
+  right: 1em;
+  top: auto;
+  left: auto;
+  margin-left: 0em;
+}
+/*--- Left Center ---*/
+/*rtl:rename*/
+.ui.left.center.popup:before {
+  top: 50%;
+  right: -0.325em;
+  bottom: auto;
+  left: auto;
+  margin-top: -0.325em;
+  box-shadow: 1px -1px 0px 0px #cccccc;
+}
+/*--- Right Center  ---*/
+/*rtl:rename*/
+.ui.right.center.popup:before {
+  top: 50%;
+  left: -0.325em;
+  bottom: auto;
+  right: auto;
+  margin-top: -0.325em;
+  box-shadow: -1px 1px 0px 0px #cccccc;
+}
+/* Arrow Color By Location */
+.ui.bottom.popup:before {
+  background: #FFFFFF;
+}
+.ui.right.center.popup:before,
+.ui.left.center.popup:before {
+  background: #FFFFFF;
+}
+.ui.top.popup:before {
+  background: #FFFFFF;
+}
+/* Inverted Arrow Color */
+.ui.inverted.bottom.popup:before {
+  background: #000;
+}
+.ui.inverted.right.center.popup:before,
+.ui.inverted.left.center.popup:before {
+  background: #000;
+}
+.ui.inverted.top.popup:before {
+  background: #000;
+}
+/*******************************
+            Coupling
+*******************************/
+/* Immediate Nested Grid */
+.ui.popup > .ui.grid:not(.padded) {
+  width: calc(100% + 1.75rem);
+  margin: -0.7rem -0.875rem;
+}
+/*******************************
+            States
+*******************************/
+.ui.loading.popup {
+  display: block;
+  visibility: hidden;
+  z-index: -1;
+}
+.ui.animating.popup,
+.ui.visible.popup {
+  display: block;
+}
+.ui.visible.popup {
+  transform: translateZ(0px);
+  backface-visibility: hidden;
+}
+/*******************************
+            Variations
+*******************************/
+/*--------------
+     Basic
+---------------*/
+.ui.basic.popup:before {
+  display: none;
+}
+/*--------------
+     Wide
+---------------*/
+.ui.wide.popup {
+  max-width: 350px;
+}
+.ui[class*="very wide"].popup {
+  max-width: 550px;
+}
+@media only screen and (max-width: 767px) {
+  .ui.wide.popup,
+  .ui[class*="very wide"].popup {
+    max-width: 250px;
+  }
+}
+/*--------------
+     Fluid
+---------------*/
+.ui.fluid.popup {
+  width: 100%;
+  max-width: none;
+}
+/*--------------
+     Colors
+---------------*/
+/* Inverted colors  */
+.ui.inverted.popup {
+  background: #000;
+  color: #fff;
+  border: none;
+  box-shadow: none;
+}
+.ui.inverted.popup .header {
+  background-color: none;
+  color: #fff;
+}
+.ui.inverted.popup:before {
+  background-color: #000;
+  box-shadow: none !important;
+}
+/*--------------
+     Flowing
+---------------*/
+.ui.flowing.popup {
+  max-width: none;
+}
+/*--------------
+     Sizes
+---------------*/
+.ui.mini.popup {
+  font-size: 0.72222222rem;
+}
+.ui.tiny.popup {
+  font-size: 0.83333333rem;
+}
+.ui.small.popup {
+  font-size: 0.94444444rem;
+}
+.ui.popup {
+  font-size: 1rem;
+}
+.ui.large.popup {
+  font-size: 1.16666667rem;
+}
+.ui.huge.popup {
+  font-size: 1.44444444rem;
+}
+.ui.popup {
+  border: none;
+}
+.ui.popup:before {
+  box-shadow: 3px 3px 6px 0 #e7e7e7;
+}
