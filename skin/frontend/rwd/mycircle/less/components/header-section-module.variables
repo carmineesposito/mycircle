@@ -10,7 +10,7 @@
 //  Typography
 
 @topHeaderSectionFontFamily: @headerFont;
-@topHeaderSectionFontSize: 16px;
+@topHeaderSectionFontSize: 22px;
 @topHeaderSectionLetterSpacing: 0.3px;
 
 //  Height
@@ -31,7 +31,7 @@
 
 @topHeaderSectionBackgroundColor: #fff; //#240b5d; //#fff;
 @topHeaderSectionTextColor: #1f1f1f; //#fff; //#000;
-@topHeaderSectionLinkColor: #E13C7E; //#000;
+@topHeaderSectionLinkColor: #d3a4b0; //#000;
 @topHeaderSectionAccentColor: #E13C7E; //#000;
 
 

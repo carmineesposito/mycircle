@@ -61,7 +61,7 @@ on .header-item:
 	.flex();
 	//.flex-shrink(0); 
 	.flex-align-items(center);
-	.flex-justify(center); 
+	.flex-justify(center);
 	height: 100%;
 	padding: 0px !important;
 }
@@ -204,6 +204,7 @@ body.modal-is-open.search-visible .header-section.mhs.has-modal .burger-modal-st
 				font-size: @fontSize;
                 letter-spacing: @letterSpacing;
                 color: @textColor;
+				text-transform: lowercase;
 				
 				& when (@height = @heightMobile) {
 					height: @height;
@@ -782,7 +783,6 @@ body.modal-is-open.search-visible .header-section.mhs.has-modal .burger-modal-st
 
     @modalAccentColorAux : "@{headerSection}ModalAccentColor";
     @modalAccentColor : @@modalAccentColorAux;
-	
 	
 	&.@{class} .menu-default.burger-modal-styles {
 		background: @modalBackground;

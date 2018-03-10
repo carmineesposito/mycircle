@@ -305,9 +305,10 @@ on .header-item:
 .header-section.ths .header-content {
   background: #fff;
   font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 22px;
   letter-spacing: 0.3px;
   color: #1f1f1f;
+  text-transform: lowercase;
 }
 @media only screen and (max-width: 991px) {
   .header-section.ths .header-content {
@@ -360,7 +361,7 @@ on .header-item:
 }
 .header-section.ths a.item:hover,
 .header-section.ths a.item:focus {
-  color: #E13C7E;
+  color: #d3a4b0;
 }
 .header-section.ths input::-moz-placeholder {
   color: #8f8f8f;
@@ -401,25 +402,25 @@ on .header-item:
 .header-section.ths .ui.dropdown .menu .selected.item,
 .header-section.ths input[type="checkbox"]:checked + label:before,
 .header-section.ths input[type="radio"]:checked + label:before {
-  border-color: #E13C7E;
+  border-color: #d3a4b0;
 }
 .header-section.ths input[type="checkbox"]:checked + label:before,
 .header-section.ths input[type="radio"]:checked + label:before {
-  background-color: #E13C7E;
+  background-color: #d3a4b0;
 }
 .header-section.ths select {
   background-image: linear-gradient(45deg, transparent 50%, #1f1f1f), linear-gradient(135deg, #1f1f1f, transparent 50%);
 }
 .header-section.ths select:focus,
 .header-section.ths select:active {
-  background-image: linear-gradient(45deg, transparent 50%, #E13C7E), linear-gradient(135deg, #E13C7E, transparent 50%);
+  background-image: linear-gradient(45deg, transparent 50%, #d3a4b0), linear-gradient(135deg, #d3a4b0, transparent 50%);
 }
 .header-section.ths .ui.dropdown .menu > .item:not(.active):hover {
   background-color: transparent;
-  color: #E13C7E;
+  color: #d3a4b0;
 }
 .header-section.ths .ui.dropdown .menu .selected.item {
-  background-color: #E13C7E;
+  background-color: #d3a4b0;
   color: white;
 }
 .header-section.ths .calendar-sq .ui.table tbody tr td.link.today:before {
@@ -428,17 +429,17 @@ on .header-item:
 }
 .header-section.ths .calendar-sq .ui.table tbody tr td.link.focus:not(.today),
 .header-section.ths .calendar-sq .ui.table tbody tr td.link.range:not(.today) {
-  color: #E13C7E;
+  color: #d3a4b0;
 }
 .header-section.ths .calendar-sq .ui.table tbody tr td.link.focus:before,
 .header-section.ths .calendar-sq .ui.table tbody tr td.link.active:before,
 .header-section.ths .calendar-sq .ui.table tbody tr td.link.active.focus:before,
 .header-section.ths .calendar-sq .ui.table tbody tr td.link.range.focus:before {
-  border-color: #E13C7E;
+  border-color: #d3a4b0;
 }
 .header-section.ths .calendar-sq .ui.table tbody tr td.link.active:before,
 .header-section.ths .calendar-sq .ui.table tbody tr td.link.active.focus:before {
-  background: #E13C7E;
+  background: #d3a4b0;
 }
 .header-section.ths .hamburger .hamburger-box .hamburger-inner,
 .header-section.ths .hamburger .hamburger-box .hamburger-inner:before,
@@ -862,7 +863,7 @@ on .header-item:
 .ths .menu-default.burger-modal-styles a.item:hover,
 .ths .menu-default.burger-modal-styles a.item:focus,
 .ths .menu-default.burger-modal-styles .fltp.modal-icons .ui.dropdown .menu .item.selected {
-  color: #E13C7E;
+  color: #d3a4b0;
 }
 .ths .menu-default.burger-modal-styles input::-moz-placeholder {
   color: #8f8f8f;
@@ -914,29 +915,29 @@ on .header-item:
 .ths .menu-default.burger-modal-styles input[type="checkbox"]:checked + label:before,
 .ths .menu-default.burger-modal-styles input[type="radio"]:checked + label:before,
 .ths .menu-default.burger-modal-styles .fltp.modal-icons .ui.dropdown .menu .item.selected {
-  border-color: #E13C7E;
+  border-color: #d3a4b0;
 }
 .ths .menu-default.burger-modal-styles .fltp .ui.dropdown.active,
 .ths .menu-default.burger-modal-styles .fltp .ui.dropdown.active .menu {
-  border-color: #E13C7E !important;
+  border-color: #d3a4b0 !important;
 }
 .ths .menu-default.burger-modal-styles input[type="checkbox"]:checked + label:before,
 .ths .menu-default.burger-modal-styles input[type="radio"]:checked + label:before {
-  background-color: #E13C7E;
+  background-color: #d3a4b0;
 }
 .ths .menu-default.burger-modal-styles select {
   background-image: linear-gradient(45deg, transparent 50%, #1f1f1f), linear-gradient(135deg, #1f1f1f, transparent 50%);
 }
 .ths .menu-default.burger-modal-styles select:focus,
 .ths .menu-default.burger-modal-styles select:active {
-  background-image: linear-gradient(45deg, transparent 50%, #E13C7E), linear-gradient(135deg, #E13C7E, transparent 50%);
+  background-image: linear-gradient(45deg, transparent 50%, #d3a4b0), linear-gradient(135deg, #d3a4b0, transparent 50%);
 }
 .ths .menu-default.burger-modal-styles .ui.dropdown .menu > .item:not(.active):hover {
   background-color: transparent;
-  color: #E13C7E;
+  color: #d3a4b0;
 }
 .ths .menu-default.burger-modal-styles .ui.dropdown .menu .selected.item {
-  background-color: #E13C7E;
+  background-color: #d3a4b0;
   color: white;
 }
 .ths .menu-default.burger-modal-styles .calendar-sq .ui.table tbody tr td.link.today:before {
@@ -945,17 +946,17 @@ on .header-item:
 }
 .ths .menu-default.burger-modal-styles .calendar-sq .ui.table tbody tr td.link.focus:not(.today),
 .ths .menu-default.burger-modal-styles .calendar-sq .ui.table tbody tr td.link.range:not(.today) {
-  color: #E13C7E;
+  color: #d3a4b0;
 }
 .ths .menu-default.burger-modal-styles .calendar-sq .ui.table tbody tr td.link.focus:before,
 .ths .menu-default.burger-modal-styles .calendar-sq .ui.table tbody tr td.link.active:before,
 .ths .menu-default.burger-modal-styles .calendar-sq .ui.table tbody tr td.link.active.focus:before,
 .ths .menu-default.burger-modal-styles .calendar-sq .ui.table tbody tr td.link.range.focus:before {
-  border-color: #E13C7E;
+  border-color: #d3a4b0;
 }
 .ths .menu-default.burger-modal-styles .calendar-sq .ui.table tbody tr td.link.active:before,
 .ths .menu-default.burger-modal-styles .calendar-sq .ui.table tbody tr td.link.active.focus:before {
-  background: #E13C7E;
+  background: #d3a4b0;
 }
 .ths .menu-default.burger-modal-styles .hamburger .hamburger-box .hamburger-inner,
 .ths .menu-default.burger-modal-styles .hamburger .hamburger-box .hamburger-inner:before,
@@ -1014,6 +1015,7 @@ on .header-item:
   font-size: 16px;
   letter-spacing: 0.3px;
   color: #6D6D6D;
+  text-transform: lowercase;
 }
 @media only screen and (max-width: 991px) {
   .header-section.mhs .header-content {
@@ -1764,6 +1766,7 @@ on .header-item:
   font-size: 16px;
   letter-spacing: 0.3px;
   color: #000;
+  text-transform: lowercase;
 }
 @media only screen and (max-width: 991px) {
   .header-section.bhs .header-content {
