@@ -68,3 +68,26 @@
 header#filter-search .header-content {
     background-color: #fff;
 }
+
+/* come funziona */
+
+.ui.modal.come-funziona {
+    background-color: #e9175e;
+}
+
+
+.ui.modal.come-funziona h4 {
+    background-color: transparent;
+    color: #fff;
+}
+
+
+.ui.modal.come-funziona .content{
+    background-color: transparent;
+    color: #fff;
+}
+
+.ui.modal.come-funziona .header.center {
+    background-color: transparent;
+    color: #fff;
+}

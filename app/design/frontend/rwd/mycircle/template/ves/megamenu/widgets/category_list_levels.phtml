@@ -1,4 +1,4 @@
-<?php 
+<?php
   $widget = $this->getWidget();
   $show_name = isset($widget['show_name'])?$widget['show_name']: 1;
   $recursion_level = isset($widget['recursion_level'])?(int)$widget['recursion_level']: 1;
@@ -42,7 +42,7 @@
           $html = "";
 
           $html .='
-                      <ul class="submenu transition visible">';
+                      <div class="row">';
                         foreach ($tmp_subcategories as $category_id) {
                           $category = Mage::getModel('catalog/category')->load($category_id);
                           $category_image = "";
@@ -57,7 +57,7 @@
                               $tmp_subsubcategories = $category->getChildren();
                           }
 
-          $html .='                <li'.(($tmp_subsubcategories)?' class="parent dropdown-submenu"':'').'>';
+          $html .='                <div>';
 
                           if($category_image){
 
@@ -87,12 +87,12 @@
                             //Load sub categories
                             if($tmp_subsubcategories){
                               $html.= getMenuTreeCategories($category_id, $tmp_subsubcategories, $level + 1, $show_image, $recursion_level);
-                            } 
-                            
-          $html .='                  </li>';
+                            }
+
+          $html .='                  </div>';
                           }
           $html .='
-                          </ul>
+                          </div>
           ';
           return $html;
         }
@@ -104,53 +104,62 @@
 <div class="menu-title"><a href="<?php echo $category_link; ?>" title="<?php echo $widget['widget_name'];?>"><?php echo $widget['widget_name'];?></a></div>
 <?php
 }?>
-      <ul class="submenu">
-      <?php foreach ($categories as $category_id) { ?>
-      <?php
-        
-        $category = is_object($category_id)?$category_id:Mage::getModel('catalog/category')->load($category_id);
-        $category_image = "";
-        if($show_image) {
-          $category_image = $category->getThumbnail();
-          if(!$category_image) {
-            $category_image = $category->getImage();
-          }
-        }
-        if($recursion_level > 1) {
-          $subcats = $category->getChildren();
-        }
-        
-      ?>
-      <li<?php echo ($subcats)?' class="parent dropdown-submenu"':'';?>>
-        <?php if($category_image): ?>
-        <div class="category_image">
-          <a href="<?php echo $category->getUrl(); ?>" class="item"><img src="<?php echo Mage::getBaseUrl('media').'catalog/category/'.$category_image;?>" alt="<?php echo $category->getName();?>" width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>"/>
-          <?php if($subcats): ?>
-          <b class="caret"></b>
-          <?php endif; ?>
-          </a>
-        </div>
-        <div class="category_name">
-          <a href="<?php echo $category->getUrl(); ?>" class="item"><span class="menu-title"><?php echo $category->getName();?></span>
-            <?php if($subcats): ?>
-              <b class="caret"></b>
-              <?php endif; ?>
-          </a>
-        </div>
-        <?php else: ?>
-        <a href="<?php echo $category->getUrl(); ?>" class="item"><span class="menu-title"><?php echo $category->getName();?></span>
-          <?php if($subcats): ?>
-          <b class="caret"></b>
-          <?php endif; ?>
-        </a>
-        <?php endif; ?>
+      <ul class="submenu first-child">
+          <li class="parent dropdown-submenu">
+              <div class="ui grid">
+                  <?php foreach ($categories as $category_id) { ?>
+                      <?php
 
-        <?php
-        //Load sub categories
-        if($subcats){
-          echo getMenuTreeCategories($category_id, $subcats, 2, $show_image, $recursion_level);
-        } ?>
-      </li>
-      <?php } ?>
+                      $category = is_object($category_id) ? $category_id : Mage::getModel('catalog/category')->load($category_id);
+                      $category_image = "";
+                      if ($show_image) {
+                          $category_image = $category->getThumbnail();
+                          if (!$category_image) {
+                              $category_image = $category->getImage();
+                          }
+                      }
+                      if ($recursion_level > 1) {
+                          $subcats = $category->getChildren();
+                      }
+
+                      ?>
+                      <div class="three wide column">
+                          <?php if ($category_image): ?>
+                              <div class="category_image">
+                                  <a href="<?php echo $category->getUrl(); ?>" class="item"><img
+                                          src="<?php echo Mage::getBaseUrl('media') . 'catalog/category/' . $category_image; ?>"
+                                          alt="<?php echo $category->getName(); ?>" width="<?php echo $image_width; ?>"
+                                          height="<?php echo $image_height; ?>"/>
+                                      <?php if ($subcats): ?>
+                                          <b class="caret"></b>
+                                      <?php endif; ?>
+                                  </a>
+                              </div>
+                              <div class="category_name">
+                                  <a href="<?php echo $category->getUrl(); ?>" class="item"><h4
+                                          class="menu-title"><?php echo $category->getName(); ?></h4>
+                                      <?php if ($subcats): ?>
+                                          <b class="caret"></b>
+                                      <?php endif; ?>
+                                  </a>
+                              </div>
+                          <?php else: ?>
+                              <a href="<?php echo $category->getUrl(); ?>" class="item"><h4
+                                      class="menu-title"><?php echo $category->getName(); ?></h4>
+                                  <?php if ($subcats): ?>
+                                      <b class="caret"></b>
+                                  <?php endif; ?>
+                              </a>
+                          <?php endif; ?>
+
+                          <?php
+                          //Load sub categories
+                          if ($subcats) {
+                              echo getMenuTreeCategories($category_id, $subcats, 2, $show_image, $recursion_level);
+                          } ?>
+                      </div>
+                  <?php } ?>
+              </div>
+          </li>
       </ul>
 <?php } ?>

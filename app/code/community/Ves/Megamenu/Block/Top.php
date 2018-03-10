@@ -417,7 +417,17 @@ class Ves_Megamenu_Block_Top extends Ves_Megamenu_Block_List {
 //						$output .= '<span class="open-child hidden-md hidden-lg hidden-sm">'.$this->__("(open)").'</span>';
 //					}
 
-					$output .= '<a class="item" title="'.$menu->getTitle().'" href="'.$this->getLink( $menu ).'" '.$menu_target.'>';
+					$link = $this->getLink( $menu );
+					$attribute = "";
+					$add_class = "";
+
+					if(strpos($link, "{{") !== false) {
+						$attribute = str_replace(array("{","}"),array("",""),$link);
+						$link = '#';
+						$add_class = "modal-ui-trigger";
+					}
+
+					$output .= '<a '.$attribute.'class="item '.$add_class.'" title="'.$menu->getTitle().'" href="'.$link.'" '.$menu_target.'>';
 					
 					if( $menu->getMenuIconClass()){ $output .= '<i class="'.$menu->getMenuIconClass().'"></i>';	}
 
@@ -500,11 +510,11 @@ class Ves_Megamenu_Block_Top extends Ves_Megamenu_Block_List {
 		}
 
 		if( $parent->getTypeSubmenu() == 'html' ) {
-			$output = '<div class="'.$class.'"><div class="menu-content">';
+			//$output = '<div class="'.$class.'">';
 			$processor = Mage::helper('cms')->getPageTemplateProcessor();
 			$submenu_content = $processor->filter($parent->getSubmenuContent());
-			$output .= $submenu_content;
-			$output .= '</div></div>';
+			$output = $submenu_content;
+			//$output .= '</div>';
 			return $output;
 		}elseif( $parent->getTypeSubmenu() == 'widget' ) {
 
@@ -648,7 +658,7 @@ class Ves_Megamenu_Block_Top extends Ves_Megamenu_Block_List {
 			$output .= '<span class="menu-desc">' . $menu->getDescription() . "</span>";
 		}
 		if( $menu->getImage()){ $output .= '</span>';	}
-		$output .= "<b class=\"caret  hidden-sm hidden-xs\"></b></a>";
+//		$output .= "<b class=\"caret  hidden-sm hidden-xs\"></b></a>";
 
 		if( isset($menu->getMegaconfig()->subwidth) &&  $menu->getMegaconfig()->subwidth ){
             $attrw .= ' style="width:'.$menu->getMegaconfig()->subwidth.'px"' ;
