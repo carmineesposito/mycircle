@@ -179,9 +179,9 @@
             </block>
 
         <block type="page/html_head" name="second_head" as="second_head">
-            <action method="addItem"><type>skin_js</type><name>library/jquery-2.2.0.min.js</name></action>
+            <!--<action method="addItem"><type>skin_js</type><name>library/jquery-2.2.0.min.js</name></action>-->
             <action method="addItem"><type>skin_js</type><name>library/flexmenu.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>library/ouislider.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>library/nouislider.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>library/wNumb.js</name></action>
             <action method="addItem"><type>skin_js</type><name>library/jrespond.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>library/scrollspy.min.js</name></action>

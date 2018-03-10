@@ -5,7 +5,7 @@
 
 //  Magic Grid Variables
 
-@magicGridGutter: 40px;
+@magicGridGutter: 20px;
 
 @magicGridLabelFontSize: @fontSize;
 @magicGridLabelFontFamily: @pageFont;

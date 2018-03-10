@@ -39,7 +39,7 @@
 
 .menu-default > ul > li.has-submenu > a:after {display: none}
 
-.item.menu-default.burger-mobile-sidemenu.burger-tablet-sidemenu.sidemenu-open-left.icons-left.profile-priority.slide-out-sq.dimmed.flexMenu.dropdown-open-left.flex-overflow {
+.header-section.mhs .item.menu-default.burger-mobile-sidemenu.burger-tablet-sidemenu {
     display: table;
     margin: 0 auto;
 }
