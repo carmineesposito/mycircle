@@ -70,7 +70,7 @@
                 pauseOnDotsHover: false,
                 respondTo: 'window',
                 responsive: null,
-                rows: 1,
+                rows: 2,
                 rtl: false,
                 slide: '',
                 slidesPerRow: 1,

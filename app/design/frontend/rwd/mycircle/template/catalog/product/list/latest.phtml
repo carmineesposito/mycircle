@@ -4,66 +4,31 @@
 
             <div class="sq-slick carousel-sq center-sq spread-sq" data-center-mode="false" data-center-padding="0px" data-desktop-center-padding="0px" data-show-slides="3" data-scroll-slides="3" data-desktop-show-slides="2" data-desktop-scroll-slides="2" data-tablet-show-slides="2" data-tablet-scroll-slides="2" data-mobile-show-slides="1" data-mobile-scroll-slides="1" data-tablet-center-padding="0px" data-mobile-center-padding="0px">
 
-                <?php for($i=0;$i<=10;$i++) : ?>
+                <?php if (($_products = $this->getProductCollection()) && $_products->getSize()): ?>
+
+                <?php
+                    $i=0;
+                    foreach ($_products->getItems() as $_product):
+                        $pair = $i % 2;
+                        $class = (!$pair) ? "circle-text-top" : "circle-text-bottom";
+                        ?>
                     <div>
 
                         <div class="circle-text-container">
-                            <div class="circle-text circle-text-top">
-                                <div class="circle__inner">
-                                    <div class="circle__wrapper">
-                                        <div class="circle_background">
-                                            <img src="<?php echo $this->getBaseUrl() ?>media/wysiwyg/banners/parco1.jpg" />
-                                        </div>
-                                        <div class="circle__content circle-separator">
-                                            <div class="circle-main-details">
-                                                <div class="title-row">Mirbilandia</div>
-                                                <div class="date-row">dal 12.11.2017 al 13.11.2017</div>
-                                                <div class="countdown-row">
-                                                    <div class="countdown-container">
-                                                        <p class="countdown-item">20</p>
-                                                        <p class="countdown-label">giorni</p>
-                                                    </div>
-                                                    <div class="countdown-container">
-                                                        <p class="countdown-item">10</p>
-                                                        <p class="countdown-label">ore</p>
-                                                    </div>
-                                                    <div class="countdown-container">
-                                                        <p class="countdown-item">30</p>
-                                                        <p class="countdown-label">minuti</p>
-                                                    </div>
-                                                    <div class="countdown-container">
-                                                        <p class="countdown-item">50</p>
-                                                        <p class="countdown-label">secondi</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr class="circle-separator" />
-                                            <div class="price-box">
-                                                <span class="old-price">295,00 €</span>
-                                                <span class="separator-price">|</span>
-                                                <span class="new-price">195,00 €</span>
-                                            </div>
-                                            <div class="join-box">
-                                                <span class="join-item">
-                                                    <a href="">
-                                                        <img src="<?php echo $this->getSkinUrl() ?>images/join.png" alt="">
-                                                    </a>
 
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="circle-text <?php echo $class ?>">
+                                <div class="circle_number">
+                                    12
                                 </div>
-                            </div>
-                            <div class="circle-text circle-text-bottom">
                                 <div class="circle__inner">
+
                                     <div class="circle__wrapper">
                                         <div class="circle_background">
                                             <img src="<?php echo $this->getBaseUrl() ?>media/wysiwyg/banners/parco1.jpg" />
                                         </div>
                                         <div class="circle__content circle-separator">
                                             <div class="circle-main-details">
-                                                <div class="title-row">Mirbilandia</div>
+                                                <div class="title-row"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_product->getName()) ?>"><?php echo $this->escapeHtml($_product->getName()) ?></a></div>
                                                 <div class="date-row">dal 12.11.2017 al 13.11.2017</div>
                                                 <div class="countdown-row">
                                                     <div class="countdown-container">
@@ -92,7 +57,7 @@
                                             </div>
                                             <div class="join-box">
                                                 <span class="join-item">
-                                                    <a href="">
+                                                    <a href="<?php echo $_product->getProductUrl() ?>">
                                                         <img src="<?php echo $this->getSkinUrl() ?>images/join.png" alt="">
                                                     </a>
 
@@ -106,7 +71,9 @@
 
                     </div>
 
-                <?php endfor; ?>
+                <?php $i++;endforeach; ?>
+
+                <?php endif; ?>
 
             </div>
             <div class="latest-action">

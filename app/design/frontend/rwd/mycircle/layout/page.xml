@@ -200,6 +200,7 @@
             <action method="addItem"><type>skin_js</type><name>library/slick.js</name></action>
             <action method="addItem"><type>skin_js</type><name>library/header.js</name></action>
             <action method="addItem"><type>skin_js</type><name>library/functions.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>library/circle.js</name></action>
         </block>
 
         </block>
